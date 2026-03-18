@@ -251,3 +251,58 @@ document.querySelectorAll('.video-placeholder').forEach(card => {
     if (e.key === 'ArrowRight' && current < items.length-1) showSlide(++current);
   });
 })();
+
+// ============================================
+// SYSTÈME DE TRADUCTION — FR / EN / AR
+// ============================================
+(function () {
+  const DEFAULT_LANG = 'fr';
+
+  function getLang() {
+    return localStorage.getItem('lang') || DEFAULT_LANG;
+  }
+
+  function applyLang(lang) {
+    // 1. Langue + direction sur <html>
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+    // 2. Traduire les éléments data-i18n (textContent)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const t = TRANSLATIONS[key];
+      if (t && t[lang] !== undefined) el.textContent = t[lang];
+    });
+
+    // 3. Traduire les éléments data-i18n-html (innerHTML)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      const t = TRANSLATIONS[key];
+      if (t && t[lang] !== undefined) el.innerHTML = t[lang];
+    });
+
+    // 4. Traduire les placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const t = TRANSLATIONS[key];
+      if (t && t[lang] !== undefined) el.placeholder = t[lang];
+    });
+
+    // 5. Boutons actifs
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // 6. Sauvegarder
+    localStorage.setItem('lang', lang);
+  }
+
+  // Attacher les clics sur les boutons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+
+  // Appliquer la langue au chargement
+  applyLang(getLang());
+})();

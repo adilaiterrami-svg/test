@@ -176,7 +176,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
@@ -199,15 +199,21 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#consultation">Consultation</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#formation">Formation</a></li>
-        <li><a href="#videos">Vidéos</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#apropos"      data-i18n="nav.about">À propos</a></li>
+        <li><a href="#consultation" data-i18n="nav.consultation">Consultation</a></li>
+        <li><a href="#experience"   data-i18n="nav.experience">Expérience</a></li>
+        <li><a href="#formation"    data-i18n="nav.formation">Formation</a></li>
+        <li><a href="#videos"       data-i18n="nav.videos">Vidéos</a></li>
+        <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+        <li><a href="#galerie"      data-i18n="nav.galerie">Galerie</a></li>
+        <li><a href="#contact"      data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <!-- Sélecteur de langue -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">ع</button>
+      </div>
     </div>
   </nav>
 
@@ -222,20 +228,20 @@
         </div>
       </div>
       <div class="hero-text">
-        <p class="hero-label">Professeur · Gastro-Entérologue</p>
+        <p class="hero-label" data-i18n="hero.label">Professeur · Gastro-Entérologue</p>
         <h1 class="hero-name">Pr. Adil Ait Errami</h1>
-        <p class="hero-tagline">Endoscopie Interventionnelle · Hépatologie · Oncologie Digestive</p>
+        <p class="hero-tagline" data-i18n="hero.tagline">Endoscopie Interventionnelle · Hépatologie · Oncologie Digestive</p>
         <div class="hero-badges">
-          <span class="badge"><i class="fas fa-hospital"></i> CHU Mohammed VI</span>
-          <span class="badge"><i class="fas fa-clinic-medical"></i> Cliniques Privées</span>
-          <span class="badge"><i class="fas fa-university"></i> Faculté de Médecine</span>
-          <span class="badge"><i class="fas fa-map-marker-alt"></i> Marrakech</span>
+          <span class="badge"><i class="fas fa-hospital"></i> <span data-i18n="hero.badge.chu">CHU Mohammed VI</span></span>
+          <span class="badge"><i class="fas fa-clinic-medical"></i> <span data-i18n="hero.badge.priv">Cliniques Privées</span></span>
+          <span class="badge"><i class="fas fa-university"></i> <span data-i18n="hero.badge.fac">Faculté de Médecine</span></span>
+          <span class="badge"><i class="fas fa-map-marker-alt"></i> <span data-i18n="hero.badge.city">Marrakech</span></span>
         </div>
         <div class="hero-actions">
           <a href="tel:+212663627258" class="btn btn-primary">
             <i class="fas fa-phone-alt"></i> +212 663 627 258
           </a>
-          <a href="#contact" class="btn btn-outline">Prendre contact</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.cta">Prendre contact</a>
         </div>
       </div>
     </div>
@@ -246,8 +252,8 @@
   <section id="apropos" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Qui suis-je</span>
-        <h2 class="section-title">À propos</h2>
+        <span class="section-label" data-i18n="about.label">Qui suis-je</span>
+        <h2 class="section-title" data-i18n="about.title">À propos</h2>
       </div>
       <div class="about-grid">
         <div class="about-photo-wrap">
@@ -261,35 +267,35 @@
           <div class="about-contact-card">
             <a href="tel:+212663627258"><i class="fas fa-phone-alt"></i> +212 663 627 258</a>
             <a href="mailto:a.aiterrami@uca.ma"><i class="fas fa-envelope"></i> a.aiterrami@uca.ma</a>
-            <a href="https://www.linkedin.com/in/adil-ait-errami-a87480179" target="_blank"><i class="fab fa-linkedin"></i> Profil LinkedIn</a>
+            <a href="https://www.linkedin.com/in/adil-ait-errami-a87480179" target="_blank"><i class="fab fa-linkedin"></i> <span data-i18n="about.linkedin">Profil LinkedIn</span></a>
           </div>
         </div>
         <div class="about-text">
-          <p class="about-lead">
+          <p class="about-lead" data-i18n-html="about.lead">
             Gastro-entérologue spécialisé en <strong>endoscopie interventionnelle</strong>, <strong>hépatologie</strong> et <strong>oncologie digestive</strong>.
           </p>
-          <p>
+          <p data-i18n="about.bio1">
             Parcours clinique, pédagogique et de recherche reconnu à l'échelle nationale et internationale. Formation avancée effectuée en Europe, en Turquie, en Égypte et en Inde. Passionné par l'enseignement basé sur la simulation médicale.
           </p>
-          <p>
+          <p data-i18n-html="about.bio2">
             Membre du Conseil d'Administration de la <strong>Société Marocaine d'Endoscopie Digestive</strong> et du <strong>Groupe des Jeunes Endoscopistes de l'Association Européenne d'Endoscopie Digestive (EAGE)</strong>.
           </p>
           <div class="about-stats">
             <div class="stat">
               <span class="stat-number">7+</span>
-              <span class="stat-label">Ans d'enseignement</span>
+              <span class="stat-label" data-i18n="about.stat.teaching">Ans d'enseignement</span>
             </div>
             <div class="stat">
               <span class="stat-number">10+</span>
-              <span class="stat-label">Publications</span>
+              <span class="stat-label" data-i18n="about.stat.pub">Publications</span>
             </div>
             <div class="stat">
               <span class="stat-number">5</span>
-              <span class="stat-label">Pays de formation</span>
+              <span class="stat-label" data-i18n="about.stat.countries">Pays de formation</span>
             </div>
             <div class="stat">
               <span class="stat-number">3+</span>
-              <span class="stat-label">Postes de direction</span>
+              <span class="stat-label" data-i18n="about.stat.leadership">Postes de direction</span>
             </div>
           </div>
         </div>
@@ -301,18 +307,18 @@
   <section id="consultation" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Rendez-vous</span>
-        <h2 class="section-title">Lieux de Consultation</h2>
+        <span class="section-label" data-i18n="consult.label">Rendez-vous</span>
+        <h2 class="section-title" data-i18n="consult.title">Lieux de Consultation</h2>
       </div>
       <div class="consult-grid">
         <div class="consult-card consult-card--main">
           <div class="consult-icon"><i class="fas fa-hospital-alt"></i></div>
           <h3>CHU Mohammed VI</h3>
-          <p class="consult-subtitle">Hôpital Universitaire Public</p>
+          <p class="consult-subtitle" data-i18n="consult.chu.subtitle">Hôpital Universitaire Public</p>
           <ul class="consult-details">
             <li><i class="fas fa-map-marker-alt"></i> Marrakech, Maroc</li>
-            <li><i class="fas fa-procedures"></i> Unité d'Endoscopie Digestive</li>
-            <li><i class="fas fa-users"></i> Coordinateur du Staff d'Hépatologie</li>
+            <li><i class="fas fa-procedures"></i> <span data-i18n="consult.chu.unit">Unité d'Endoscopie Digestive</span></li>
+            <li><i class="fas fa-users"></i> <span data-i18n="consult.chu.hepato">Coordinateur du Staff d'Hépatologie</span></li>
           </ul>
           <a href="tel:+212663627258" class="btn btn-primary btn-sm">
             <i class="fas fa-phone-alt"></i> +212 663 627 258
@@ -321,12 +327,12 @@
         <div class="consult-card consult-card--private">
           <div class="consult-icon"><i class="fas fa-clinic-medical"></i></div>
           <h3>Cliniques Privées</h3>
-          <p class="consult-subtitle">Consultation &amp; Endoscopie en Secteur Privé</p>
+          <p class="consult-subtitle" data-i18n="consult.priv.subtitle">Consultation &amp; Endoscopie en Secteur Privé</p>
           <ul class="consult-details">
             <li><i class="fas fa-map-marker-alt"></i> Marrakech, Maroc</li>
-            <li><i class="fas fa-stethoscope"></i> Consultations gastro-entérologiques</li>
-            <li><i class="fas fa-procedures"></i> Coloscopie, Gastroscopie, Écho-endoscopie</li>
-            <li><i class="fas fa-building"></i> Plusieurs établissements privés à Marrakech</li>
+            <li><i class="fas fa-stethoscope"></i> <span data-i18n="consult.priv.gastro">Consultations gastro-entérologiques</span></li>
+            <li><i class="fas fa-procedures"></i> <span data-i18n="consult.priv.acts">Coloscopie, Gastroscopie, Écho-endoscopie</span></li>
+            <li><i class="fas fa-building"></i> <span data-i18n="consult.priv.multi">Plusieurs établissements privés à Marrakech</span></li>
           </ul>
           <a href="tel:+212663627258" class="btn btn-blue btn-sm">
             <i class="fas fa-phone-alt"></i> +212 663 627 258
@@ -335,11 +341,11 @@
         <div class="consult-card consult-card--teaching">
           <div class="consult-icon"><i class="fas fa-chalkboard-teacher"></i></div>
           <h3>Faculté de Médecine</h3>
-          <p class="consult-subtitle">Enseignement Universitaire</p>
+          <p class="consult-subtitle" data-i18n="consult.fac.subtitle">Enseignement Universitaire</p>
           <ul class="consult-details">
-            <li><i class="fas fa-map-marker-alt"></i> Faculté de Médecine et de Pharmacie, Marrakech</li>
-            <li><i class="fas fa-user-graduate"></i> Professeur en Gastro-entérologie</li>
-            <li><i class="fas fa-flask"></i> Formation par simulation médicale</li>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="consult.fac.name">Faculté de Médecine et de Pharmacie, Marrakech</span></li>
+            <li><i class="fas fa-user-graduate"></i> <span data-i18n="consult.fac.prof">Professeur en Gastro-entérologie</span></li>
+            <li><i class="fas fa-flask"></i> <span data-i18n="consult.fac.sim">Formation par simulation médicale</span></li>
           </ul>
         </div>
       </div>
@@ -350,8 +356,8 @@
   <section id="experience" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Carrière</span>
-        <h2 class="section-title">Expérience Professionnelle</h2>
+        <span class="section-label" data-i18n="exp.label">Carrière</span>
+        <h2 class="section-title" data-i18n="exp.title">Expérience Professionnelle</h2>
       </div>
       <div class="timeline">
 
@@ -359,14 +365,31 @@
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-meta">
-              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Mars 2019 – Présent</span>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Mars 2019 – <span data-i18n="exp.present">Présent</span></span>
               <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Marrakech</span>
             </div>
-            <h3>Professeur en Gastro-entérologie</h3>
-            <h4>Faculté de Médecine et de Pharmacie, Marrakech</h4>
+            <h3 data-i18n="exp.1.title">Professeur en Gastro-entérologie</h3>
+            <h4 data-i18n="exp.1.org">Faculté de Médecine et de Pharmacie, Marrakech</h4>
             <ul>
-              <li>Enseignement aux étudiants en médecine et aux résidents en gastro-entérologie.</li>
-              <li>Élaboration et mise en œuvre de programmes d'enseignement et de curricula pédagogiques.</li>
+              <li data-i18n="exp.1.li1">Enseignement aux étudiants en médecine et aux résidents en gastro-entérologie.</li>
+              <li data-i18n="exp.1.li2">Élaboration et mise en œuvre de programmes d'enseignement et de curricula pédagogiques.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2021 – <span data-i18n="exp.present">Présent</span></span>
+              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Marrakech</span>
+            </div>
+            <h3 data-i18n="exp.2.title">Responsable de l'Unité d'Endoscopie Digestive</h3>
+            <h4 data-i18n="exp.2.org">CHU Mohammed VI, Marrakech</h4>
+            <ul>
+              <li data-i18n="exp.2.li1">Gestion des opérations de l'unité et maintien de hauts standards de soins.</li>
+              <li data-i18n="exp.2.li2">Réalisation de procédures diagnostiques et thérapeutiques avancées.</li>
+              <li data-i18n="exp.2.li3">Direction d'une équipe pluridisciplinaire de professionnels de santé.</li>
             </ul>
           </div>
         </div>
@@ -378,28 +401,11 @@
               <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2021 – Présent</span>
               <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Marrakech</span>
             </div>
-            <h3>Responsable de l'Unité d'Endoscopie Digestive</h3>
-            <h4>CHU Mohammed VI, Marrakech</h4>
+            <h3 data-i18n="exp.3.title">Coordinateur du Staff d'Hépatologie</h3>
+            <h4 data-i18n="exp.3.org">CHU Mohammed VI, Marrakech</h4>
             <ul>
-              <li>Gestion des opérations de l'unité et maintien de hauts standards de soins.</li>
-              <li>Réalisation de procédures diagnostiques et thérapeutiques avancées.</li>
-              <li>Direction d'une équipe pluridisciplinaire de professionnels de santé.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2021 – Présent</span>
-              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Marrakech</span>
-            </div>
-            <h3>Coordinateur du Staff d'Hépatologie</h3>
-            <h4>CHU Mohammed VI, Marrakech</h4>
-            <ul>
-              <li>Coordination de l'équipe d'hépatologie et organisation des activités cliniques.</li>
-              <li>Élaboration des plans de prise en charge et des stratégies thérapeutiques.</li>
+              <li data-i18n="exp.3.li1">Coordination de l'équipe d'hépatologie et organisation des activités cliniques.</li>
+              <li data-i18n="exp.3.li2">Élaboration des plans de prise en charge et des stratégies thérapeutiques.</li>
             </ul>
           </div>
         </div>
@@ -411,11 +417,11 @@
               <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023 – Présent</span>
               <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Maroc</span>
             </div>
-            <h3>Membre du Conseil National</h3>
-            <h4>Société Marocaine d'Endoscopie Digestive</h4>
+            <h3 data-i18n="exp.4.title">Membre du Conseil National</h3>
+            <h4 data-i18n="exp.4.org">Société Marocaine d'Endoscopie Digestive</h4>
             <ul>
-              <li>Participation active aux activités et à la planification stratégique de la société.</li>
-              <li>Promotion des meilleures pratiques en endoscopie digestive.</li>
+              <li data-i18n="exp.4.li1">Participation active aux activités et à la planification stratégique de la société.</li>
+              <li data-i18n="exp.4.li2">Promotion des meilleures pratiques en endoscopie digestive.</li>
             </ul>
           </div>
         </div>
@@ -427,11 +433,11 @@
               <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Mars 2018 – Février 2019</span>
               <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Essmara</span>
             </div>
-            <h3>Responsable de l'Unité d'Endoscopie Digestive</h3>
-            <h4>Hôpital Provincial d'Essmara</h4>
+            <h3 data-i18n="exp.5.title">Responsable de l'Unité d'Endoscopie Digestive</h3>
+            <h4 data-i18n="exp.5.org">Hôpital Provincial d'Essmara</h4>
             <ul>
-              <li>Gestion des opérations de l'unité et assurance de la qualité des soins.</li>
-              <li>Réalisation de procédures diagnostiques et thérapeutiques endoscopiques.</li>
+              <li data-i18n="exp.5.li1">Gestion des opérations de l'unité et assurance de la qualité des soins.</li>
+              <li data-i18n="exp.5.li2">Réalisation de procédures diagnostiques et thérapeutiques endoscopiques.</li>
             </ul>
           </div>
         </div>
@@ -442,11 +448,11 @@
             <div class="timeline-meta">
               <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2021 – Présent</span>
             </div>
-            <h3>Membre du Comité de Lecture</h3>
-            <h4>Revue Marocaine des Maladies de l'Appareil Digestif (RMMAD)</h4>
+            <h3 data-i18n="exp.6.title">Membre du Comité de Lecture</h3>
+            <h4 data-i18n="exp.6.org">Revue Marocaine des Maladies de l'Appareil Digestif (RMMAD)</h4>
             <ul>
-              <li>Évaluation de travaux scientifiques et de recommandations cliniques.</li>
-              <li>Contribution aux politiques et normes nationales de santé.</li>
+              <li data-i18n="exp.6.li1">Évaluation de travaux scientifiques et de recommandations cliniques.</li>
+              <li data-i18n="exp.6.li2">Contribution aux politiques et normes nationales de santé.</li>
             </ul>
           </div>
         </div>
@@ -459,8 +465,8 @@
   <section id="formation" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Parcours académique</span>
-        <h2 class="section-title">Formation &amp; Diplômes</h2>
+        <span class="section-label" data-i18n="form.label">Parcours académique</span>
+        <h2 class="section-title" data-i18n="form.title">Formation &amp; Diplômes</h2>
       </div>
       <div class="edu-grid">
 
@@ -468,9 +474,9 @@
           <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
           <div class="edu-body">
             <span class="edu-year">Avril 2012</span>
-            <h3>Doctorat en Médecine</h3>
+            <h3 data-i18n="form.deg1.title">Doctorat en Médecine</h3>
             <p>Université Cadi Ayyad, Marrakech</p>
-            <span class="edu-badge">Très honorable avec félicitations du jury</span>
+            <span class="edu-badge" data-i18n="form.deg1.badge">Très honorable avec félicitations du jury</span>
           </div>
         </div>
 
@@ -478,7 +484,7 @@
           <div class="edu-icon"><i class="fas fa-stethoscope"></i></div>
           <div class="edu-body">
             <span class="edu-year">Octobre 2017</span>
-            <h3>Diplôme de Spécialité en Gastro-entérologie</h3>
+            <h3 data-i18n="form.deg2.title">Diplôme de Spécialité en Gastro-entérologie</h3>
             <p>Université Cadi Ayyad, Marrakech</p>
           </div>
         </div>
@@ -487,7 +493,7 @@
           <div class="edu-icon"><i class="fas fa-certificate"></i></div>
           <div class="edu-body">
             <span class="edu-year">2023</span>
-            <h3>DIU – Syndrome de l'Intestin Irritable</h3>
+            <h3 data-i18n="form.deg3.title">DIU – Syndrome de l'Intestin Irritable</h3>
             <p>Université de Lille, France</p>
           </div>
         </div>
@@ -496,7 +502,7 @@
           <div class="edu-icon"><i class="fas fa-briefcase-medical"></i></div>
           <div class="edu-body">
             <span class="edu-year">2026</span>
-            <h3>MBA – Management Hospitalier</h3>
+            <h3 data-i18n="form.deg4.title">MBA – Management Hospitalier</h3>
             <p>Université Mohammed VI des Sciences de la Santé (UM6SS)</p>
           </div>
         </div>
@@ -505,7 +511,7 @@
           <div class="edu-icon"><i class="fas fa-globe"></i></div>
           <div class="edu-body">
             <span class="edu-year">2016 – 2018</span>
-            <h3>Formation Postgraduée – Organisation Mondiale de Gastroentérologie</h3>
+            <h3 data-i18n="form.deg5.title">Formation Postgraduée – Organisation Mondiale de Gastroentérologie</h3>
             <p>OMGE, Rabat</p>
           </div>
         </div>
@@ -514,7 +520,7 @@
           <div class="edu-icon"><i class="fas fa-hospital"></i></div>
           <div class="edu-body">
             <span class="edu-year">Avril – Octobre 2017</span>
-            <h3>Formation en Pancréatologie</h3>
+            <h3 data-i18n="form.deg6.title">Formation en Pancréatologie</h3>
             <p>Hôpital Beaujon, Paris</p>
           </div>
         </div>
@@ -522,7 +528,7 @@
       </div>
 
       <div class="internships">
-        <h3 class="internships-title"><i class="fas fa-plane"></i> Formations en Endoscopie Interventionnelle</h3>
+        <h3 class="internships-title"><i class="fas fa-plane"></i> <span data-i18n="form.internships.title">Formations en Endoscopie Interventionnelle</span></h3>
         <div class="internships-grid">
           <div class="internship-item">
             <span class="internship-flag">🇫🇷</span>
@@ -568,9 +574,9 @@
   <section id="videos" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Gestes endoscopiques</span>
-        <h2 class="section-title">Vidéos de Procédures</h2>
-        <p class="section-desc">Découvrez les gestes techniques réalisés par le Pr. Ait Errami en endoscopie interventionnelle.</p>
+        <span class="section-label" data-i18n="videos.label">Gestes endoscopiques</span>
+        <h2 class="section-title" data-i18n="videos.title">Vidéos de Procédures</h2>
+        <p class="section-desc" data-i18n="videos.desc">Découvrez les gestes techniques réalisés par le Pr. Ait Errami en endoscopie interventionnelle.</p>
       </div>
 
       <div class="videos-grid" id="videosGrid">
@@ -583,7 +589,7 @@
           </div>
           <div class="video-info">
             <h4>Cholangiopancréatographie Rétrograde Endoscopique (ERCP)</h4>
-            <p>Vidéo à venir</p>
+            <p data-i18n="videos.soon">Vidéo à venir</p>
           </div>
         </div>
 
@@ -595,7 +601,7 @@
           </div>
           <div class="video-info">
             <h4>Écho-endoscopie Thérapeutique (EUS)</h4>
-            <p>Vidéo à venir</p>
+            <p data-i18n="videos.soon">Vidéo à venir</p>
           </div>
         </div>
 
@@ -607,7 +613,7 @@
           </div>
           <div class="video-info">
             <h4>Résection Mucosale Endoscopique (EMR)</h4>
-            <p>Vidéo à venir</p>
+            <p data-i18n="videos.soon">Vidéo à venir</p>
           </div>
         </div>
 
@@ -619,7 +625,7 @@
           </div>
           <div class="video-info">
             <h4>Coloscopie Diagnostique &amp; Thérapeutique</h4>
-            <p>Vidéo à venir</p>
+            <p data-i18n="videos.soon">Vidéo à venir</p>
           </div>
         </div>
 
@@ -627,7 +633,7 @@
 
       <p class="videos-note">
         <i class="fas fa-info-circle"></i>
-        Les vidéos de procédures endoscopiques seront ajoutées prochainement.
+        <span data-i18n="videos.note">Les vidéos de procédures endoscopiques seront ajoutées prochainement.</span>
       </p>
     </div>
   </section>
@@ -636,45 +642,45 @@
   <section id="publications" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Recherche &amp; Science</span>
-        <h2 class="section-title">Publications &amp; Congrès</h2>
+        <span class="section-label" data-i18n="pub.label">Recherche &amp; Science</span>
+        <h2 class="section-title" data-i18n="pub.title">Publications &amp; Congrès</h2>
       </div>
 
       <div class="pub-grid">
         <div class="pub-card pub-card--featured">
-          <div class="pub-tag pub-tag--international"><i class="fas fa-globe"></i> Étude Multicentrique Internationale</div>
+          <div class="pub-tag pub-tag--international"><i class="fas fa-globe"></i> <span data-i18n="pub.tag.international">Étude Multicentrique Internationale</span></div>
           <h3>« Rôle de l'évaluation macroscopique sur site lors de la ponction-biopsie guidée par écho-endoscopie : résultats d'une étude prospective multicentrique »</h3>
           <p class="pub-journal"><i class="fas fa-book-open"></i> World Journal of Gastrointestinal Endoscopy — Novembre 2024</p>
         </div>
 
         <div class="pub-card pub-card--award">
-          <div class="pub-tag pub-tag--award"><i class="fas fa-trophy"></i> Prix du Meilleur Travail de Recherche</div>
+          <div class="pub-tag pub-tag--award"><i class="fas fa-trophy"></i> <span data-i18n="pub.tag.award">Prix du Meilleur Travail de Recherche</span></div>
           <h3>« Utilisation d'un simulateur électronique pour l'apprentissage de l'écho-endoscopie »</h3>
           <p class="pub-journal"><i class="fas fa-award"></i> Congrès Européen de Gastroentérologie, Copenhague — 2023</p>
         </div>
 
         <div class="pub-card">
-          <div class="pub-tag"><i class="fas fa-file-alt"></i> Article</div>
+          <div class="pub-tag"><i class="fas fa-file-alt"></i> <span data-i18n="pub.tag.article">Article</span></div>
           <h3>« Application smartphone pour l'amélioration de la préparation à la coloscopie »</h3>
           <p class="pub-authors">Adil Ait Errami, Khadija Krati, Abdelmajid Zyad</p>
           <p class="pub-journal"><i class="fas fa-book-open"></i> United European Gastroenterology Journal — 2021;9</p>
         </div>
 
         <div class="pub-card">
-          <div class="pub-tag"><i class="fas fa-book"></i> Ouvrage</div>
+          <div class="pub-tag"><i class="fas fa-book"></i> <span data-i18n="pub.tag.book">Ouvrage</span></div>
           <h3>« Essentiels en Gastro-entérologie »</h3>
           <p class="pub-journal">Livre publié en 2023</p>
         </div>
 
         <div class="pub-card">
-          <div class="pub-tag"><i class="fas fa-mobile-alt"></i> Innovation numérique</div>
+          <div class="pub-tag"><i class="fas fa-mobile-alt"></i> <span data-i18n="pub.tag.digital">Innovation numérique</span></div>
           <h3>« Développement d'une application mobile pour la prise en charge des urgences gastro-entérologiques »</h3>
           <p class="pub-journal">2023</p>
         </div>
       </div>
 
       <div class="conferences">
-        <h3 class="conferences-title">Congrès &amp; Présentations</h3>
+        <h3 class="conferences-title" data-i18n="pub.conferences.title">Congrès &amp; Présentations</h3>
         <div class="conf-grid">
           <div class="conf-card">
             <div class="conf-header">
@@ -718,41 +724,41 @@
 
       <!-- Compétences & Affiliations -->
       <div class="skills-block">
-        <h3 class="conferences-title">Compétences &amp; Affiliations</h3>
+        <h3 class="conferences-title" data-i18n="skills.title">Compétences &amp; Affiliations</h3>
         <div class="skills-grid">
           <div class="skill-card">
             <div class="skill-icon"><i class="fas fa-procedures"></i></div>
-            <h3>Endoscopie Interventionnelle</h3>
-            <p>Expert en ERCP, EUS, EMR et gestes endoscopiques diagnostiques &amp; thérapeutiques avancés.</p>
+            <h3 data-i18n="skills.endo.title">Endoscopie Interventionnelle</h3>
+            <p data-i18n="skills.endo.desc">Expert en ERCP, EUS, EMR et gestes endoscopiques diagnostiques &amp; thérapeutiques avancés.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon"><i class="fas fa-heartbeat"></i></div>
-            <h3>Hépatologie</h3>
-            <p>Expertise avancée en hépatologie, maladies du foie et oncologie digestive.</p>
+            <h3 data-i18n="skills.hepato.title">Hépatologie</h3>
+            <p data-i18n="skills.hepato.desc">Expertise avancée en hépatologie, maladies du foie et oncologie digestive.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-            <h3>Formation Médicale</h3>
-            <p>Professeur universitaire passionné par la simulation médicale et l'innovation pédagogique.</p>
+            <h3 data-i18n="skills.teach.title">Formation Médicale</h3>
+            <p data-i18n="skills.teach.desc">Professeur universitaire passionné par la simulation médicale et l'innovation pédagogique.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
-            <h3>Leadership</h3>
-            <p>Coordination d'équipes pluridisciplinaires et gestion d'unités hospitalières.</p>
+            <h3 data-i18n="skills.lead.title">Leadership</h3>
+            <p data-i18n="skills.lead.desc">Coordination d'équipes pluridisciplinaires et gestion d'unités hospitalières.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon"><i class="fas fa-flask"></i></div>
-            <h3>Recherche Médicale</h3>
-            <p>Maîtrise de la recherche clinique, de la rédaction scientifique et de la collaboration internationale.</p>
+            <h3 data-i18n="skills.research.title">Recherche Médicale</h3>
+            <p data-i18n="skills.research.desc">Maîtrise de la recherche clinique, de la rédaction scientifique et de la collaboration internationale.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
-            <h3>Santé Numérique</h3>
-            <p>Développement d'applications mobiles pour la gastro-entérologie et l'aide à la pratique médicale.</p>
+            <h3 data-i18n="skills.digital.title">Santé Numérique</h3>
+            <p data-i18n="skills.digital.desc">Développement d'applications mobiles pour la gastro-entérologie et l'aide à la pratique médicale.</p>
           </div>
         </div>
         <div class="memberships">
-          <h3 class="memberships-title">Membres &amp; Affiliations</h3>
+          <h3 class="memberships-title" data-i18n="members.title">Membres &amp; Affiliations</h3>
           <div class="membership-list">
             <div class="membership-item"><i class="fas fa-check-circle"></i><span>Membre du Conseil National — Société Marocaine d'Endoscopie Digestive</span></div>
             <div class="membership-item"><i class="fas fa-check-circle"></i><span>Membre — Groupe des Jeunes Endoscopistes, Association Européenne d'Endoscopie Digestive (EAGE)</span></div>
@@ -770,16 +776,16 @@
   <section id="galerie" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Terrain &amp; International</span>
-        <h2 class="section-title">Galerie</h2>
-        <p class="section-subtitle">Congrès, ateliers pratiques et présentations scientifiques</p>
+        <span class="section-label" data-i18n="gallery.label">Terrain &amp; International</span>
+        <h2 class="section-title" data-i18n="gallery.title">Galerie</h2>
+        <p class="section-subtitle" data-i18n="gallery.subtitle">Congrès, ateliers pratiques et présentations scientifiques</p>
       </div>
 
       <!-- Filtres -->
       <div class="gallery-filters">
-        <button class="gf-btn active" data-filter="all">Tout</button>
-        <button class="gf-btn" data-filter="congres">Congrès</button>
-        <button class="gf-btn" data-filter="presentation">Présentations &amp; Ateliers</button>
+        <button class="gf-btn active" data-filter="all" data-i18n="gallery.filter.all">Tout</button>
+        <button class="gf-btn" data-filter="congres" data-i18n="gallery.filter.cong">Congrès</button>
+        <button class="gf-btn" data-filter="presentation" data-i18n="gallery.filter.pres">Présentations &amp; Ateliers</button>
       </div>
 
       <!-- Grille photos -->
@@ -852,8 +858,8 @@
   <section id="contact" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Nous joindre</span>
-        <h2 class="section-title">Contact</h2>
+        <span class="section-label" data-i18n="contact.label">Nous joindre</span>
+        <h2 class="section-title" data-i18n="contact.title">Contact</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info">
@@ -861,7 +867,7 @@
             <a href="tel:+212663627258" class="contact-phone-big">
               <i class="fas fa-phone-alt"></i>
               <div>
-                <span>Appeler directement</span>
+                <span data-i18n="contact.call">Appeler directement</span>
                 <strong>+212 663 627 258</strong>
               </div>
             </a>
@@ -877,13 +883,13 @@
             <div class="contact-icon"><i class="fas fa-clinic-medical"></i></div>
             <div>
               <h4>Cliniques Privées</h4>
-              <p>Plusieurs établissements privés, Marrakech</p>
+              <p data-i18n="contact.priv.detail">Plusieurs établissements privés, Marrakech</p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
-              <h4>Localisation</h4>
+              <h4 data-i18n="contact.location">Localisation</h4>
               <p>Marrakech, Maroc</p>
             </div>
           </div>
@@ -907,27 +913,27 @@
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom complet" required />
+            <label for="name" data-i18n="form.name.label">Nom complet</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="form.name.placeholder" placeholder="Votre nom complet" required />
           </div>
           <div class="form-group">
-            <label for="email">Adresse e-mail</label>
-            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            <label for="email" data-i18n="form.email.label">Adresse e-mail</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="form.email.placeholder" placeholder="votre@email.com" required />
           </div>
           <div class="form-group">
-            <label for="phone">Téléphone</label>
+            <label for="phone" data-i18n="form.phone.label">Téléphone</label>
             <input type="tel" id="phone" name="phone" placeholder="+212 6XX XXX XXX" />
           </div>
           <div class="form-group">
-            <label for="subject_field">Objet</label>
-            <input type="text" id="subject_field" name="objet" placeholder="Consultation / Collaboration / Autre" required />
+            <label for="subject_field" data-i18n="form.subject.label">Objet</label>
+            <input type="text" id="subject_field" name="objet" data-i18n-placeholder="form.subject.placeholder" placeholder="Consultation / Collaboration / Autre" required />
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+            <label for="message" data-i18n="form.message.label">Message</label>
+            <textarea id="message" name="message" rows="4" data-i18n-placeholder="form.message.placeholder" placeholder="Votre message..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full">
-            <i class="fas fa-paper-plane"></i> Envoyer le message
+            <i class="fas fa-paper-plane"></i> <span data-i18n="form.submit">Envoyer le message</span>
           </button>
         </form>
       </div>
@@ -940,27 +946,27 @@
       <div class="footer-top">
         <div class="footer-brand">
           <h3>Pr. Adil Ait Errami</h3>
-          <p>Gastro-Entérologue · Professeur · Chercheur</p>
-          <p>CHU Mohammed VI · Cliniques Privées · Faculté de Médecine, Marrakech</p>
+          <p data-i18n="footer.role">Gastro-Entérologue · Professeur · Chercheur</p>
+          <p data-i18n="footer.loc">CHU Mohammed VI · Cliniques Privées · Faculté de Médecine, Marrakech</p>
           <a href="tel:+212663627258" class="footer-phone">
             <i class="fas fa-phone-alt"></i> +212 663 627 258
           </a>
         </div>
         <div class="footer-links">
-          <h4>Navigation</h4>
+          <h4 data-i18n="footer.nav">Navigation</h4>
           <ul>
-            <li><a href="#apropos">À propos</a></li>
-            <li><a href="#consultation">Consultation</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#videos">Vidéos</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+            <li><a href="#consultation" data-i18n="nav.consultation">Consultation</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="#formation" data-i18n="nav.formation">Formation</a></li>
+            <li><a href="#videos" data-i18n="nav.videos">Vidéos</a></li>
+            <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+            <li><a href="#galerie" data-i18n="nav.galerie">Galerie</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-social">
-          <h4>Réseaux</h4>
+          <h4 data-i18n="footer.social">Réseaux</h4>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/adil-ait-errami-a87480179" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
@@ -975,11 +981,12 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Pr. Adil Ait Errami. Tous droits réservés.</p>
+        <p data-i18n="footer.copy">&copy; 2025 Pr. Adil Ait Errami. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
