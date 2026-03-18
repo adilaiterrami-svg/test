@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 145" width="495" height="145">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&amp;display=swap');
+    </style>
+    <linearGradient id="blobGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#b2dfd0" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#5ab49a" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ======= BLOB BACKGROUND ======= -->
+  <path d="M 24,100 C 6,80 8,48 22,28 C 36,8 64,3 90,16 C 116,30 126,62 120,94 C 114,126 84,140 57,132 C 36,126 34,114 24,100 Z"
+        fill="url(#blobGrad)"/>
+
+  <!-- ======= STOMACH OUTER WALL ======= -->
+  <!-- Greater curvature (left/outer loop) and lesser curvature (right/inner) -->
+  <path d="M 65,30 C 54,30 42,42 38,60 C 34,78 40,102 56,114 C 72,126 96,120 106,104 C 116,88 110,68 102,56 C 96,46 92,40 94,33 C 95,28 90,24 85,26 C 82,27 80,32 80,32"
+        fill="none" stroke="#1b2c47" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Fundus notch (cardia side indentation) -->
+  <path d="M 65,30 C 62,34 62,40 66,42"
+        fill="none" stroke="#1b2c47" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Mucosal folds (rugae) -->
+  <path d="M 42,68 C 47,64 48,71 43,71" fill="none" stroke="#1b2c47" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 38,82 C 43,78 44,85 39,85" fill="none" stroke="#1b2c47" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 40,95 C 45,91 46,98 41,98" fill="none" stroke="#1b2c47" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- ======= ENDOSCOPE ======= -->
+  <!-- Handle/grip at top -->
+  <rect x="68" y="5" width="12" height="12" rx="3" ry="3" fill="#1b2c47"/>
+
+  <!-- Tube from handle down into cardia -->
+  <path d="M 74,17 C 74,19 73,23 72,28"
+        fill="none" stroke="#1b2c47" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Camera tip (circle with lens) -->
+  <circle cx="71" cy="32" r="5" fill="none" stroke="#1b2c47" stroke-width="3"/>
+  <circle cx="71" cy="32" r="2.2" fill="#1b2c47"/>
+
+  <!-- Small light guide dots on tip -->
+  <circle cx="68.5" cy="30" r="0.9" fill="#7cc5b0"/>
+  <circle cx="73.5" cy="30" r="0.9" fill="#7cc5b0"/>
+
+  <!-- ======= TEXT: Dr. A. Ait Errami ======= -->
+  <text x="140" y="74"
+        font-family="'Dancing Script', 'Brush Script MT', cursive"
+        font-size="56"
+        font-weight="700"
+        fill="#1b2c47">Dr. A. Ait Errami</text>
+
+  <!-- Decorative dash line left -->
+  <line x1="143" y1="104" x2="167" y2="104" stroke="#4a7a9b" stroke-width="1.5"/>
+  <!-- Decorative dash line right -->
+  <line x1="348" y1="104" x2="372" y2="104" stroke="#4a7a9b" stroke-width="1.5"/>
+
+  <!-- ======= TEXT: Digestive endoscopie ======= -->
+  <text x="168" y="110"
+        font-family="'Dancing Script', 'Brush Script MT', cursive"
+        font-size="24"
+        fill="#4a7a9b">Digestive endoscopie</text>
+</svg>
