@@ -17,7 +17,7 @@ const TRANSLATIONS = {
   'hero.label':      { fr: 'Professeur · Gastro-Entérologue',       en: 'Professor · Gastroenterologist',            ar: 'أستاذ · أخصائي أمراض الجهاز الهضمي' },
   'hero.tagline':    { fr: 'Endoscopie Interventionnelle · Hépatologie · Oncologie Digestive', en: 'Interventional Endoscopy · Hepatology · Digestive Oncology', ar: 'التنظير التداخلي · أمراض الكبد · الأورام الهضمية' },
   'hero.badge.chu':  { fr: 'CHU Mohammed VI',     en: 'CHU Mohammed VI',      ar: 'المستشفى الجامعي محمد السادس' },
-  'hero.badge.priv': { fr: 'Cliniques Privées',   en: 'Private Clinics',      ar: 'العيادات الخاصة' },
+  'hero.badge.priv': { fr: 'Clinique Privée',      en: 'Private Clinic',       ar: 'العيادة الخاصة' },
   'hero.badge.fac':  { fr: 'Faculté de Médecine', en: 'Faculty of Medicine',  ar: 'كلية الطب' },
   'hero.badge.city': { fr: 'Marrakech',            en: 'Marrakech',            ar: 'مراكش' },
   'hero.cta':        { fr: 'Prendre contact',      en: 'Get in touch',         ar: 'تواصل معنا' },
@@ -171,7 +171,7 @@ const TRANSLATIONS = {
 
   /* ── FOOTER ── */
   'footer.role':  { fr: 'Gastro-Entérologue · Professeur · Chercheur', en: 'Gastroenterologist · Professor · Researcher', ar: 'أخصائي أمراض الجهاز الهضمي · أستاذ · باحث' },
-  'footer.loc':   { fr: 'CHU Mohammed VI · Cliniques Privées · Faculté de Médecine, Marrakech', en: 'CHU Mohammed VI · Private Clinics · Faculty of Medicine, Marrakech', ar: 'المستشفى الجامعي محمد السادس · العيادات الخاصة · كلية الطب، مراكش' },
+  'footer.loc':   { fr: 'CHU Mohammed VI · Clinique Privée · Faculté de Médecine, Marrakech', en: 'CHU Mohammed VI · Private Clinic · Faculty of Medicine, Marrakech', ar: 'المستشفى الجامعي محمد السادس · العيادة الخاصة · كلية الطب، مراكش' },
   'footer.nav':   { fr: 'Navigation',  en: 'Navigation',  ar: 'التنقل' },
   'footer.social':{ fr: 'Réseaux',     en: 'Networks',    ar: 'الشبكات' },
   'footer.copy':  { fr: '© 2025 Pr. Adil Ait Errami. Tous droits réservés.', en: '© 2025 Pr. Adil Ait Errami. All rights reserved.', ar: '© 2025 الأستاذ عادل عيت أرامي. جميع الحقوق محفوظة.' },
