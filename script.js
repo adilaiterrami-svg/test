@@ -114,14 +114,26 @@ if (contactForm) {
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
 
-    const data = new FormData(contactForm);
+    const fd = new FormData(contactForm);
+    const payload = {
+      name:    fd.get('name'),
+      email:   fd.get('email'),
+      phone:   fd.get('phone') || 'Non renseigné',
+      objet:   fd.get('objet'),
+      message: fd.get('message'),
+      _subject: fd.get('_subject'),
+      _template: 'table',
+      _captcha: 'false'
+    };
+
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('https://formsubmit.co/ajax/adaiterrami@yahoo.com', {
         method: 'POST',
-        body: data
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
       });
       const json = await res.json();
-      if (json.success) {
+      if (json.success === 'true' || json.success === true) {
         contactForm.innerHTML = `
           <div style="text-align:center;padding:40px 20px">
             <i class="fas fa-check-circle" style="font-size:3.5rem;color:var(--blue-mid);display:block;margin-bottom:16px"></i>
