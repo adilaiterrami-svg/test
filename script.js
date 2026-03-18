@@ -108,21 +108,36 @@ if (statsSection) statsObs.observe(statsSection);
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
 
-    setTimeout(() => {
-      contactForm.innerHTML = `
-        <div style="text-align:center;padding:40px 20px">
-          <i class="fas fa-check-circle" style="font-size:3.5rem;color:#2e7d52;display:block;margin-bottom:16px"></i>
-          <h3 style="font-family:'Playfair Display',serif;color:#1a2e22;margin-bottom:8px">Message envoyé !</h3>
-          <p style="color:#4a6358;font-size:0.95rem">Merci pour votre message. Le Pr. Ait Errami vous répondra dans les plus brefs délais.</p>
-        </div>
-      `;
-    }, 1500);
+    const data = new FormData(contactForm);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+      if (json.success) {
+        contactForm.innerHTML = `
+          <div style="text-align:center;padding:40px 20px">
+            <i class="fas fa-check-circle" style="font-size:3.5rem;color:var(--blue-mid);display:block;margin-bottom:16px"></i>
+            <h3 style="font-family:'Playfair Display',serif;color:var(--text);margin-bottom:8px">Message envoyé !</h3>
+            <p style="color:var(--text-muted);font-size:0.95rem">Merci pour votre message. Le Pr. Ait Errami vous répondra dans les plus brefs délais.</p>
+          </div>`;
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
+        alert("Une erreur s'est produite. Veuillez réessayer ou nous contacter par téléphone.");
+      }
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
+      alert("Impossible d'envoyer le message. Vérifiez votre connexion internet.");
+    }
   });
 }
 
