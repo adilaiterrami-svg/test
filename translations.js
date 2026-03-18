@@ -105,7 +105,7 @@ const TRANSLATIONS = {
   'form.deg2.title':  { fr: 'Diplôme de Spécialité en Gastro-entérologie',  en: 'Specialty Diploma in Gastroenterology',      ar: 'دبلوم التخصص في أمراض الجهاز الهضمي' },
   'form.deg3.title':  { fr: 'DIU – Maladies Inflammatoires Chroniques de l\'Intestin (MICI)', en: 'University Diploma – Inflammatory Bowel Disease (IBD)', ar: 'دبلوم جامعي – الأمراض الالتهابية المزمنة للأمعاء (MICI)' },
   'form.deg4.title':  { fr: 'MBA – Management Hospitalier',                 en: 'MBA – Hospital Management',                  ar: 'ماجستير إدارة المستشفيات' },
-  'form.deg5.title':  { fr: 'Formation Postgraduée – Organisation Mondiale de Gastroentérologie', en: 'Postgraduate Training – World Gastroenterology Organisation', ar: 'تكوين ما بعد التخرج – المنظمة العالمية لأمراض الجهاز الهضمي' },
+  'form.deg5.title':  { fr: 'Formation en CPRE', en: 'ERCP Training', ar: 'تكوين في تنظير CPRE' },
   'form.deg6.title':  { fr: 'Formation en Pancréatologie',                  en: 'Training in Pancreatology',                  ar: 'تكوين في أمراض البنكرياس' },
   'form.internships.title': { fr: 'Formations en Endoscopie Interventionnelle', en: 'Interventional Endoscopy Training', ar: 'تكوينات في التنظير التداخلي' },
 
