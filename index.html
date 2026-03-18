@@ -205,6 +205,7 @@
         <li><a href="#formation">Formation</a></li>
         <li><a href="#videos">Vidéos</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#galerie">Galerie</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -765,6 +766,90 @@
     </div>
   </section>
 
+  <!-- ========== GALERIE ========== -->
+  <section id="galerie" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Terrain &amp; International</span>
+        <h2 class="section-title">Galerie</h2>
+        <p class="section-subtitle">Congrès, ateliers pratiques et présentations scientifiques</p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="gallery-filters">
+        <button class="gf-btn active" data-filter="all">Tout</button>
+        <button class="gf-btn" data-filter="congres">Congrès</button>
+        <button class="gf-btn" data-filter="atelier">Ateliers</button>
+        <button class="gf-btn" data-filter="presentation">Présentations</button>
+      </div>
+
+      <!-- Grille photos -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- ── Exemple 1 : remplacer img-src et légendes par vos vraies photos ── -->
+        <div class="gallery-item" data-category="congres" data-caption="Congrès Pan-Arabe de Gastroentérologie — Dubaï 2023">
+          <img src="gallery/congres-dubai-2023.jpg" alt="Congrès Pan-Arabe Gastroentérologie Dubaï 2023" onerror="this.closest('.gallery-item').classList.add('no-img')" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Congrès Pan-Arabe — Dubaï 2023</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="congres" data-caption="Semaine Nationale de Gastroentérologie — Marrakech 2023">
+          <img src="gallery/sng-marrakech-2023.jpg" alt="Semaine Nationale Gastroentérologie Marrakech 2023" onerror="this.closest('.gallery-item').classList.add('no-img')" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>SNG — Marrakech 2023</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="atelier" data-caption="Atelier pratique d'endoscopie interventionnelle — Formation ERCP">
+          <img src="gallery/atelier-ercp.jpg" alt="Atelier endoscopie ERCP CPRE Marrakech" onerror="this.closest('.gallery-item').classList.add('no-img')" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Atelier ERCP</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="presentation" data-caption="Présentation scientifique — Œsophagite à Éosinophiles">
+          <img src="gallery/presentation-eosinophiles.jpg" alt="Présentation Eosinophilic Esophagitis congrès" onerror="this.closest('.gallery-item').classList.add('no-img')" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Présentation — Œsophagite à Éosinophiles</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="congres" data-caption="Congrès International de Gastroentérologie — Paris 2022">
+          <img src="gallery/congres-paris-2022.jpg" alt="Congrès International Gastroentérologie Paris 2022" onerror="this.closest('.gallery-item').classList.add('no-img')" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Congrès International — Paris 2022</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="atelier" data-caption="Formation pratique écho-endoscopie — CHU Mohammed VI">
+          <img src="gallery/atelier-echo-endoscopie.jpg" alt="Formation écho-endoscopie CHU Mohammed VI Marrakech" onerror="this.closest('.gallery-item').classList.add('no-img')" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Formation Écho-Endoscopie</span>
+          </div>
+        </div>
+
+      </div><!-- /gallery-grid -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse photo">
+    <button class="lb-close" id="lbClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <button class="lb-prev"  id="lbPrev"  aria-label="Photo précédente"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-next"  id="lbNext"  aria-label="Photo suivante"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-content">
+      <img id="lbImg" src="" alt="" />
+      <p class="lb-caption" id="lbCaption"></p>
+    </div>
+  </div>
+
   <!-- ========== CONTACT ========== -->
   <section id="contact" class="section">
     <div class="container">
@@ -872,6 +957,7 @@
             <li><a href="#formation">Formation</a></li>
             <li><a href="#videos">Vidéos</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#galerie">Galerie</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
