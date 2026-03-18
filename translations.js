@@ -103,7 +103,7 @@ const TRANSLATIONS = {
   'form.deg1.title':  { fr: 'Doctorat en Médecine',                         en: 'Doctor of Medicine',                         ar: 'دكتوراه في الطب' },
   'form.deg1.badge':  { fr: 'Très honorable avec félicitations du jury',    en: 'With highest honors',                        ar: 'بتقدير مشرف جداً مع تهانئ لجنة التحكيم' },
   'form.deg2.title':  { fr: 'Diplôme de Spécialité en Gastro-entérologie',  en: 'Specialty Diploma in Gastroenterology',      ar: 'دبلوم التخصص في أمراض الجهاز الهضمي' },
-  'form.deg3.title':  { fr: 'DIU – Syndrome de l\'Intestin Irritable',      en: 'University Diploma – Irritable Bowel Syndrome', ar: 'دبلوم جامعي – متلازمة القولون المتهيج' },
+  'form.deg3.title':  { fr: 'DIU – Maladies Inflammatoires Chroniques de l\'Intestin (MICI)', en: 'University Diploma – Inflammatory Bowel Disease (IBD)', ar: 'دبلوم جامعي – الأمراض الالتهابية المزمنة للأمعاء (MICI)' },
   'form.deg4.title':  { fr: 'MBA – Management Hospitalier',                 en: 'MBA – Hospital Management',                  ar: 'ماجستير إدارة المستشفيات' },
   'form.deg5.title':  { fr: 'Formation Postgraduée – Organisation Mondiale de Gastroentérologie', en: 'Postgraduate Training – World Gastroenterology Organisation', ar: 'تكوين ما بعد التخرج – المنظمة العالمية لأمراض الجهاز الهضمي' },
   'form.deg6.title':  { fr: 'Formation en Pancréatologie',                  en: 'Training in Pancreatology',                  ar: 'تكوين في أمراض البنكرياس' },
