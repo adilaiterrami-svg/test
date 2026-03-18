@@ -9,3 +9,4 @@ Renommez vos 5 photos exactement comme suit et déposez-les dans ce dossier :
 | congres-endocrinologie-maghrebin.jpg    | Photo 3 — 48ème Congrès Endocrinologie + 20ème Maghrébin |
 | atelier-polypectomie-emr.jpg            | Photo 4 — Présentation "Outils indispensables" (EMR)   |
 | smed-tanger-2025.jpg                    | Photo 5 — 21ème Congrès SMED Tanger Avril 2025        |
+| lehealthf-casablanca-2025.jpg           | Photo 6 — leHEALTHF 2025, International eHealth Forum, Casablanca |
