@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOX 1 — Polypectomie & Clip | Alliance Sim Endoscopy Africa</title>
+  <meta name="description" content="BOX 1 : simulation de polypectomie et pose de clip hémostatique. BOM, guide de construction, SOP d'usage et de retraitement." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-icon">🔬</div>
+      Alliance Sim <span>Endoscopy Africa</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="les-box.html">Les BOX</a></li>
+      <li><a href="communaute.html">Communauté</a></li>
+      <li><a href="partenariats.html">Partenariats</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="communaute.html" class="nav-cta">Rejoindre →</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero box-1">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span>
+      <a href="les-box.html">Les BOX</a><span class="breadcrumb-sep">›</span>
+      <span>BOX 1</span>
+    </div>
+    <div class="d-flex align-center gap-2 mb-2">
+      <div class="box-number" style="width:52px;height:52px;font-size:1.3rem;background:#e74c3c;">1</div>
+      <div>
+        <h1>Polypectomie et mise en place de clip</h1>
+      </div>
+    </div>
+    <p>Simuler une résection et une hémostase mécanique, avec saignement contrôlé.</p>
+  </div>
+</section>
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+  <div class="grid grid-2" style="gap: 2.5rem; align-items: start;">
+
+    <!-- COLONNE PRINCIPALE -->
+    <div>
+
+      <!-- OBJECTIFS -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🎯</div>
+        <h2>Objectifs pédagogiques</h2>
+      </div>
+      <p>Ce modèle cible l'entraînement aux <strong>séquences motrices</strong> et au contrôle fin de l'endoscope : approche, stabilité, geste de résection simulée, puis déploiement et positionnement du clip sur une zone cible.</p>
+      <ul>
+        <li>Maîtriser l'approche et la stabilisation de l'endoscope face à un polype</li>
+        <li>Réaliser la résection simulée avec l'anse (positionnement, fermeture, traction)</li>
+        <li>Déployer et positionner un clip hémostatique sur une zone cible</li>
+        <li>Gérer un point de saignement simulé (débit contrôlé)</li>
+      </ul>
+      <div class="notice">
+        La démarche s'inscrit dans l'esprit des recommandations ESGE de polypectomie (standardisation, sécurité, choix de techniques selon tailles). Ce BOX reste un outil de simulation et non un protocole patient.
+      </div>
+
+      <hr class="divider" />
+
+      <!-- BOM -->
+      <div class="section-heading">
+        <div class="section-heading-icon">📋</div>
+        <h2>BOM — Matériel requis</h2>
+      </div>
+
+      <!-- PHOTO PLACEHOLDER BOX1 A -->
+      <div class="img-placeholder mb-3">
+        <div class="img-icon">📷</div>
+        <div>
+          <strong>BOX1 photo A</strong><br/>
+          <code>21BF386E-137E-4EB6-84AC-9E3352C9E3BC.jpeg</code><br/>
+          <span style="font-size:.78rem; color:var(--text-muted);">Alt : « Matériel Box 1 : tube annelé, tubulure, poche, colorant, scotch, coton-tiges »</span>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Élément</th>
+              <th>Spécification / alternative</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Conduit</td><td>Tube annelé électrique</td><td>Ø ~30 mm, L ~50 cm</td></tr>
+            <tr><td>Saignement simulé</td><td>Poche de sérum + tubulure</td><td>+ colorant alimentaire rouge</td></tr>
+            <tr><td>« Polypes »</td><td>Cotons-tiges + scotch papier</td><td>2–3 cotons-tiges assemblés</td></tr>
+            <tr><td>Fixation</td><td>Scotch papier</td><td>Remplaçable, faible résidu</td></tr>
+            <tr><td>Outillage</td><td>Outil de perforation</td><td>Aiguille / pointe / alêne</td></tr>
+            <tr><td>Instruments endoscopiques</td><td>Anse + clips</td><td>Selon disponibilité locale</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- CONSTRUCTION -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🔧</div>
+        <h2>Guide de construction (pas-à-pas)</h2>
+      </div>
+      <ol class="steps">
+        <li><div class="step-num">1</div><div>Colorer la poche de sérum avec un colorant rouge alimentaire.</div></li>
+        <li><div class="step-num">2</div><div>Connecter la poche à la tubulure.</div></li>
+        <li><div class="step-num">3</div><div>Introduire la tubulure dans le tube annelé.</div></li>
+        <li><div class="step-num">4</div><div>Laisser dépasser 2–3 mm de tubulure dans la lumière pour simuler un point de saignement.</div></li>
+        <li><div class="step-num">5</div><div>Percer le tube à plusieurs endroits avec l'outil de perforation (sites « polypes »).</div></li>
+        <li><div class="step-num">6</div><div>Assembler 2–3 cotons-tiges avec du scotch papier pour former un pseudo-polype.</div></li>
+        <li><div class="step-num">7</div><div>Introduire les polypes dans les orifices percés.</div></li>
+      </ol>
+
+      <!-- DIAGRAMME -->
+      <div class="section-heading mt-3">
+        <div class="section-heading-icon">📐</div>
+        <h2>Diagramme — Architecture</h2>
+      </div>
+      <div class="mermaid-wrap">
+        <div class="mermaid">
+graph TD
+    A["🔵 Tube annelé Ø30 L50"] --> B["🩸 Tubulure interne"]
+    B --> C["💧 Point de saignement 2-3mm"]
+    A --> D["⭕ Orifices polypes"]
+    D --> E["🌿 Pseudo-polypes coton-tiges"]
+    A --> F["🎯 Zone cible clip"]
+        </div>
+      </div>
+    </div>
+
+    <!-- COLONNE SECONDAIRE -->
+    <div>
+
+      <!-- SOP SESSION -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🔄</div>
+        <h2>Protocole d'utilisation (SOP session)</h2>
+      </div>
+      <div class="sop-grid">
+        <div class="sop-card">
+          <div class="sop-card-icon">⚙️</div>
+          <h4>Setup</h4>
+          <p>2–5 min — vérifier débit saignement simulé, orientation des polypes.</p>
+        </div>
+        <div class="sop-card">
+          <div class="sop-card-icon">▶️</div>
+          <h4>Run</h4>
+          <p>10–20 min — séquence « polypectomie simulée → hémostase par clip ».</p>
+        </div>
+        <div class="sop-card">
+          <div class="sop-card-icon">💬</div>
+          <h4>Debrief</h4>
+          <p>5 min — stabilité, précision, temps, repositionnements.</p>
+        </div>
+        <div class="sop-card">
+          <div class="sop-card-icon">🔄</div>
+          <h4>Reset</h4>
+          <p>2–5 min — remplacer polypes, repositionner tubulure.</p>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- RETRAITEMENT -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🧹</div>
+        <h2>Retraitement / Désinfection (SOP résumé)</h2>
+      </div>
+      <div class="notice notice-warn">
+        <strong>⚠️ Règle impérative :</strong> Même usage = mêmes exigences. Si un endoscope réutilisable est utilisé sur ce BOX, il est retraité comme après un acte clinique.
+      </div>
+      <ul>
+        <li><strong>Pré-nettoyage immédiat</strong> après usage, avant dessiccation.</li>
+        <li><strong>Nettoyage</strong> (manuel/automatisé selon plateau), puis <strong>désinfection validée</strong>.</li>
+        <li><strong>Séchage</strong> complet avant stockage.</li>
+        <li><strong>Stockage conforme</strong> (armoire / ESET si disponible, selon recommandations locales).</li>
+        <li><strong>Traçabilité :</strong> session de simulation = entrée de traçabilité (équipement, opérateur, date).</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <!-- SÉCURITÉ & LIMITES -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🛡️</div>
+        <h2>Sécurité & Limites</h2>
+      </div>
+      <div class="notice notice-danger">
+        <strong>Simulation uniquement.</strong> Ne pas extrapoler comme protocole patient.
+      </div>
+      <ul>
+        <li>Éviter les matériaux abrasifs/adhésifs agressifs : risque canal/gaine de l'endoscope.</li>
+        <li><strong>Gestion du liquide :</strong> protéger la zone, éviter les projections.</li>
+        <li>Clips/anses : usage selon politique locale et encadrement.</li>
+        <li>L'équipe d'encadrement reste responsable des conditions d'usage.</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <!-- NAVIGATION ENTRE BOX -->
+      <div style="background: var(--bg-light); border-radius: var(--radius-lg); padding: 1.25rem;">
+        <h3 style="font-size:.95rem; color:var(--primary); margin-bottom: 1rem;">Navigation BOX</h3>
+        <div style="display:flex; flex-direction:column; gap:.5rem;">
+          <a href="box-1.html" class="btn btn-secondary btn-sm" style="justify-content:center;">📦 BOX 1 — Polypectomie ← (ici)</a>
+          <a href="box-2.html" class="btn btn-ghost btn-sm" style="justify-content:center;">📦 BOX 2 — Biopsie</a>
+          <a href="box-3.html" class="btn btn-ghost btn-sm" style="justify-content:center;">📦 BOX 3 — Dilatation</a>
+          <a href="box-4.html" class="btn btn-ghost btn-sm" style="justify-content:center;">📦 BOX 4 — CPRE</a>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <a href="communaute.html" class="btn btn-primary" style="width:100%; justify-content:center;">💬 Partager une amélioration de la BOX 1</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="d-flex align-center gap-1 mb-2">
+          <div class="nav-brand-icon" style="width:28px;height:28px;font-size:.95rem;">🔬</div>
+          <strong style="color:#fff; font-size:.95rem;">Alliance Sim Endoscopy Africa</strong>
+        </div>
+        <p style="font-size:.83rem; max-width: 300px;">Initiative de formation ouverte, orientée documentation.</p>
+      </div>
+      <div>
+        <h4>Les BOX</h4>
+        <ul class="footer-links">
+          <li><a href="les-box.html">Catalogue</a></li>
+          <li><a href="box-1.html">BOX 1 — Polypectomie</a></li>
+          <li><a href="box-2.html">BOX 2 — Biopsie</a></li>
+          <li><a href="box-3.html">BOX 3 — Dilatation</a></li>
+          <li><a href="box-4.html">BOX 4 — CPRE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul class="footer-links">
+          <li><a href="communaute.html">Communauté</a></li>
+          <li><a href="partenariats.html">Partenariats</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="referentiels.html">Référentiels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="legal.html">Légal & Éthique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Alliance Sim Endoscopy Africa</span>
+      <span>Simulation pédagogique uniquement · Non destiné à un usage patient.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

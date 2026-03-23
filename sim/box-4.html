@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOX 4 — CPRE Cannulation | Alliance Sim Endoscopy Africa</title>
+  <meta name="description" content="BOX 4 : simulation CPRE — cannulation papillaire avec sphinctérotome sur fil-guide. BOM, construction, SOP session et retraitement." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-icon">🔬</div>
+      Alliance Sim <span>Endoscopy Africa</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="les-box.html">Les BOX</a></li>
+      <li><a href="communaute.html">Communauté</a></li>
+      <li><a href="partenariats.html">Partenariats</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="communaute.html" class="nav-cta">Rejoindre →</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero box-4">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span>
+      <a href="les-box.html">Les BOX</a><span class="breadcrumb-sep">›</span>
+      <span>BOX 4</span>
+    </div>
+    <div class="d-flex align-center gap-2 mb-2">
+      <div class="box-number" style="width:52px;height:52px;font-size:1.3rem;background:#8e44ad;">4</div>
+      <div>
+        <h1>CPRE : cannulation papillaire (sphinctérotome sur fil-guide)</h1>
+      </div>
+    </div>
+    <p>Reproduire l'angulation en D2 et travailler la gestuelle de cannulation en conditions « contrôlées ».</p>
+  </div>
+</section>
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+  <div class="grid grid-2" style="gap: 2.5rem; align-items: start;">
+
+    <!-- COLONNE PRINCIPALE -->
+    <div>
+
+      <!-- OBJECTIFS -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🎯</div>
+        <h2>Objectifs pédagogiques</h2>
+      </div>
+      <p>Ce BOX est le plus avancé du catalogue. Il vise à <strong>reproduire l'angulation spécifique</strong> du duodénoscope en D2 et à entraîner la gestuelle de cannulation papillaire par fil-guide.</p>
+      <ul>
+        <li>Travailler l'orientation et la stabilité « face papille » (angulation D2)</li>
+        <li>Manipuler sphinctérotome + fil-guide pour cannulation sélective</li>
+        <li>Scoring : temps, nombre de contacts, succès/échec, accès non intentionnel</li>
+        <li>Analyse des angles, coordination main-œil</li>
+      </ul>
+      <div class="notice">
+        Les recommandations ESGE soutiennent la cannulation assistée par fil-guide comme technique primaire et définissent des critères de « cannulation difficile » (&gt;5 contacts ou &gt;5 min). Le curriculum ESGE pour la CPRE propose un taux ≥80% de succès sur papille native pour passer à une pratique indépendante mentorée — ce qui justifie la logique « répétition + scoring » de ce BOX.
+      </div>
+
+      <hr class="divider" />
+
+      <!-- BOM -->
+      <div class="section-heading">
+        <div class="section-heading-icon">📋</div>
+        <h2>BOM — Matériel requis</h2>
+      </div>
+
+      <!-- PHOTO BOX4 A (hero) -->
+      <div class="img-placeholder mb-3">
+        <div class="img-icon">📷</div>
+        <div>
+          <strong>BOX4 photo A — Montage complet</strong><br/>
+          <code>081c99dc-d4bb-4fe2-aca9-bf0b8633d4b6.png</code><br/>
+          <span style="font-size:.78rem;">Alt : « Box CPRE : montage en T sur support, simulation D2/papille »</span>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Élément</th>
+              <th>Spécification / alternative</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Conduit principal</td><td>Tube annelé (segment principal)</td><td>~30 cm</td></tr>
+            <tr><td>Angulation D2</td><td>Tube annelé (segment secondaire)</td><td>~5 cm — montage en « T »</td></tr>
+            <tr><td>« Papille »</td><td>Extrémité distale sonde d'aspiration</td><td>Fixée sur D2</td></tr>
+            <tr><td>Support</td><td>Oreiller / support stable</td><td>Stabilisation de l'ensemble</td></tr>
+            <tr><td>Fixation</td><td>Ruban adhésif</td><td>Maintien du montage</td></tr>
+            <tr><td>Instruments</td><td>Fil-guide + sphinctérotome</td><td>Pour cannulation</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- CONSTRUCTION -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🔧</div>
+        <h2>Guide de construction (pas-à-pas)</h2>
+      </div>
+
+      <!-- PHOTO BOX4 D (architecture) -->
+      <div class="img-placeholder mb-3">
+        <div class="img-icon">📷</div>
+        <div>
+          <strong>BOX4 photo D — Architecture sans instruments</strong><br/>
+          <code>bde84658-b95b-4900-8e96-5f94f79e2313.png</code><br/>
+          <span style="font-size:.78rem;">Alt : « Vue du montage CPRE sans instruments »</span>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li><div class="step-num">1</div><div>Fixer le <strong>segment principal</strong> (tube annelé ~30 cm) sur un support stable (oreiller).</div></li>
+        <li><div class="step-num">2</div><div>Ajouter un <strong>segment secondaire perpendiculaire</strong> (~5 cm) — montage en « T » : ce segment représente la 2ᵉ portion du duodénum (D2) et reproduit l'angulation de travail du duodénoscope.</div></li>
+        <li><div class="step-num">3</div><div>Construire la <strong>papille simulée</strong> : utiliser la partie distale d'une sonde d'aspiration et la fixer au niveau du segment D2 (zone papillaire simulée).</div></li>
+        <li><div class="step-num">4</div><div>Vérifier que l'orientation du montage <strong>contraint l'axe</strong> et reproduit bien la position « face papille ».</div></li>
+        <li><div class="step-num">5</div><div>Stabiliser l'ensemble avec du ruban adhésif sur le support.</div></li>
+      </ol>
+
+      <!-- PHOTO BOX4 C (stabilisation) -->
+      <div class="img-placeholder mt-3 mb-3">
+        <div class="img-icon">📷</div>
+        <div>
+          <strong>BOX4 photo C — Stabilisation</strong><br/>
+          <code>5e78f14e-e3cb-4579-aa79-fc1c5ddef17b.png</code><br/>
+          <span style="font-size:.78rem;">Alt : « Stabilisation du montage CPRE »</span>
+        </div>
+      </div>
+
+      <!-- DIAGRAMME -->
+      <div class="section-heading">
+        <div class="section-heading-icon">📐</div>
+        <h2>Diagramme — Architecture</h2>
+      </div>
+      <div class="mermaid-wrap">
+        <div class="mermaid">
+graph TD
+    A["🔵 Segment principal<br/>= D1/prox (~30cm)"] --> B["↳ Segment perpendiculaire<br/>= D2 (~5cm)"]
+    B --> C["🎯 Papille simulée<br/>= extrémité sonde aspiration"]
+    A --> D["🛏 Support/oreiller<br/>= stabilité"]
+    C --> E["🔩 Sphinctérotome<br/>+ fil-guide"]
+        </div>
+      </div>
+
+      <!-- PHOTO BOX4 E (tutoriel) -->
+      <div class="img-placeholder mt-3">
+        <div class="img-icon">📷</div>
+        <div>
+          <strong>BOX4 photo E — Tutoriel / slide</strong><br/>
+          <code>6d3277e1-2651-4fd9-b395-4f5b4d2530c5.png</code><br/>
+          <span style="font-size:.78rem;">Alt : « Montage CPRE : version capture pour pas-à-pas »</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLONNE SECONDAIRE -->
+    <div>
+
+      <!-- SOP SESSION -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🔄</div>
+        <h2>Protocole d'utilisation (SOP session)</h2>
+      </div>
+
+      <!-- PHOTO BOX4 B (utilisation) -->
+      <div class="img-placeholder mb-3">
+        <div class="img-icon">📷</div>
+        <div>
+          <strong>BOX4 photo B — Utilisation (geste fil-guide/sphinctérotome)</strong><br/>
+          <code>a1591ed5-6db5-465e-af38-e7be73560f74.png</code><br/>
+          <span style="font-size:.78rem;">Alt : « Manipulation guide/sphinctérotome (simulation cannulation) »</span>
+        </div>
+      </div>
+
+      <div class="sop-grid">
+        <div class="sop-card">
+          <div class="sop-card-icon">⚙️</div>
+          <h4>Setup</h4>
+          <p>Mise en position du duodénoscope, repérage « papille ».</p>
+        </div>
+        <div class="sop-card">
+          <div class="sop-card-icon">▶️</div>
+          <h4>Run</h4>
+          <p>Tentatives de cannulation sur guide. Chronométrer chaque tentative.</p>
+        </div>
+        <div class="sop-card">
+          <div class="sop-card-icon">📊</div>
+          <h4>Scoring</h4>
+          <p>Temps · contacts · succès/échec · accès non intentionnel.</p>
+        </div>
+        <div class="sop-card">
+          <div class="sop-card-icon">💬</div>
+          <h4>Debrief</h4>
+          <p>Angles, stabilité, coordination main-œil, axes à améliorer.</p>
+        </div>
+      </div>
+
+      <!-- GRILLE DE SCORING -->
+      <div class="section-heading mt-3">
+        <div class="section-heading-icon">📊</div>
+        <h2>Grille de scoring minimale</h2>
+      </div>
+      <div style="background: var(--bg-light); border-radius: var(--radius); padding: 1.1rem; font-size: .88rem; margin-bottom:1.5rem;">
+        <table style="width:100%; border-collapse:collapse;">
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.4rem .5rem; font-weight:600;">Indicateur</td>
+            <td style="padding:.4rem .5rem; font-weight:600;">Définition</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.4rem .5rem;">Temps de cannulation</td>
+            <td style="padding:.4rem .5rem;">Secondes / minutes par tentative</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.4rem .5rem;">Nombre de contacts papille</td>
+            <td style="padding:.4rem .5rem;">&gt;5 contacts = « cannulation difficile »</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.4rem .5rem;">Accès non intentionnel</td>
+            <td style="padding:.4rem .5rem;">Entrée canal pancréatique simulé</td>
+          </tr>
+          <tr>
+            <td style="padding:.4rem .5rem;">Taux de succès session</td>
+            <td style="padding:.4rem .5rem;">Objectif ESGE : ≥80% sur papille native</td>
+          </tr>
+        </table>
+        <p style="margin:.75rem 0 0; color:var(--text-muted); font-size:.8rem;">Partager votre grille de scoring sur la communauté pour standardisation inter-centres.</p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- RETRAITEMENT -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🧹</div>
+        <h2>Retraitement / Désinfection (SOP résumé)</h2>
+      </div>
+      <div class="notice notice-warn">
+        <strong>⚠️ Point critique duodénoscope :</strong> Retraitement complet selon SOP locale, particulièrement critique pour les duodénoscopes (référentiel d'actualisation 2018, exigences renforcées DGOS).
+      </div>
+      <ul>
+        <li><strong>Pré-nettoyage immédiat</strong> après usage, avant dessiccation.</li>
+        <li><strong>Nettoyage</strong> + désinfection validée, conformément aux instructions fabricant.</li>
+        <li><strong>Séchage,</strong> stockage conforme + traçabilité de chaque session.</li>
+        <li>Conformité au cadre DGOS (Instruction 2016 + actualisation 2018).</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <!-- SÉCURITÉ & LIMITES -->
+      <div class="section-heading">
+        <div class="section-heading-icon">🛡️</div>
+        <h2>Sécurité & Limites</h2>
+      </div>
+      <div class="notice notice-danger">
+        <strong>Simulation uniquement.</strong> Ce modèle enseigne la gestuelle, pas l'indication clinique.
+      </div>
+      <ul>
+        <li>Pré-cut et gestes avancés : <strong>hors périmètre</strong> de base (réservés aux opérateurs expérimentés, hors simulation frugale standard).</li>
+        <li>Matériaux : éviter toute aspérité interne (préserver l'endoscope).</li>
+        <li>L'équipe d'encadrement reste responsable des conditions d'usage.</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <!-- NAVIGATION -->
+      <div style="background: var(--bg-light); border-radius: var(--radius-lg); padding: 1.25rem;">
+        <h3 style="font-size:.95rem; color:var(--primary); margin-bottom: 1rem;">Navigation BOX</h3>
+        <div style="display:flex; flex-direction:column; gap:.5rem;">
+          <a href="box-1.html" class="btn btn-ghost btn-sm" style="justify-content:center;">📦 BOX 1 — Polypectomie</a>
+          <a href="box-2.html" class="btn btn-ghost btn-sm" style="justify-content:center;">📦 BOX 2 — Biopsie</a>
+          <a href="box-3.html" class="btn btn-ghost btn-sm" style="justify-content:center;">📦 BOX 3 — Dilatation</a>
+          <a href="box-4.html" class="btn btn-secondary btn-sm" style="justify-content:center;">📦 BOX 4 — CPRE ← (ici)</a>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a href="communaute.html" class="btn btn-primary" style="width:100%; justify-content:center;">💬 Publier une variante « papille difficile »</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="d-flex align-center gap-1 mb-2">
+          <div class="nav-brand-icon" style="width:28px;height:28px;font-size:.95rem;">🔬</div>
+          <strong style="color:#fff; font-size:.95rem;">Alliance Sim Endoscopy Africa</strong>
+        </div>
+        <p style="font-size:.83rem;">Initiative de formation ouverte, orientée documentation.</p>
+      </div>
+      <div>
+        <h4>Les BOX</h4>
+        <ul class="footer-links">
+          <li><a href="les-box.html">Catalogue</a></li>
+          <li><a href="box-1.html">BOX 1 — Polypectomie</a></li>
+          <li><a href="box-2.html">BOX 2 — Biopsie</a></li>
+          <li><a href="box-3.html">BOX 3 — Dilatation</a></li>
+          <li><a href="box-4.html">BOX 4 — CPRE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul class="footer-links">
+          <li><a href="communaute.html">Communauté</a></li>
+          <li><a href="partenariats.html">Partenariats</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="referentiels.html">Référentiels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="legal.html">Légal & Éthique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Alliance Sim Endoscopy Africa</span>
+      <span>Simulation pédagogique uniquement · Non destiné à un usage patient.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

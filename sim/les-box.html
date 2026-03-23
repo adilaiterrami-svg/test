@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les BOX — Alliance Sim Endoscopy Africa</title>
+  <meta name="description" content="Catalogue des 4 BOX de simulation endoscopique frugale : Polypectomie, Biopsie, Dilatation, CPRE. BOM, SOP et guides de construction." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-icon">🔬</div>
+      Alliance Sim <span>Endoscopy Africa</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="les-box.html">Les BOX</a></li>
+      <li><a href="communaute.html">Communauté</a></li>
+      <li><a href="partenariats.html">Partenariats</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="communaute.html" class="nav-cta">Rejoindre →</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Les BOX</span>
+    </div>
+    <h1>Les BOX de simulation</h1>
+    <p>Quatre modèles, un socle commun : apprendre, répéter, mesurer, transmettre.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 3rem; align-items: start;">
+      <div>
+        <span class="section-label">Présentation</span>
+        <h2 class="section-title">Architecture des BOX</h2>
+        <p>Chaque BOX est conçu comme un <strong>module autonome</strong> : une architecture simple, des pièces faciles à trouver, et une documentation reproductible. Les BOX sont organisés en <strong>progression pédagogique</strong> : geste thérapeutique (hémostase/clip), gestes de base (biopsie/extraction), gestes sur guide (dilatation), et gestuelle avancée de cannulation (CPRE).</p>
+        <p>Les compétences s'acquièrent par répétition structurée, avec debrief et traçabilité des sessions.</p>
+        <div class="notice">
+          <strong>Public cible :</strong> professionnels de santé (médecins, infirmier·e·s d'endoscopie, équipes biomédicales). La simulation prépare le geste, mais ne remplace ni la supervision clinique ni les référentiels de compétences.
+        </div>
+      </div>
+      <div>
+        <div class="mermaid-wrap">
+          <div class="mermaid">
+graph TD
+    A["🔬 Base commune<br/>Principes partagés"] --> B["📦 BOX 1<br/>Polypectomie & Clip"]
+    A --> C["📦 BOX 2<br/>Biopsie & Corps étranger"]
+    A --> D["📦 BOX 3<br/>Dilatation sur fil-guide"]
+    A --> E["📦 BOX 4<br/>CPRE - Cannulation"]
+    B --> F["💬 Communauté<br/>Retours & Versions"]
+    C --> F
+    D --> F
+    E --> F
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPES COMMUNS -->
+<section class="section" style="background: var(--bg-light);">
+  <div class="container">
+    <span class="section-label">Méthode</span>
+    <h2 class="section-title">Principes communs à toutes les BOX</h2>
+    <div class="grid grid-4" style="margin: 2rem 0;">
+      <div class="card">
+        <div class="card-body">
+          <div style="font-size:2rem; margin-bottom:.75rem;">📋</div>
+          <h3 style="font-size:.95rem; color:var(--primary);">BOM documentée</h3>
+          <p style="font-size:.85rem; color:var(--text-muted);">Liste de pièces précise + alternatives locales. Reproductible partout en Afrique.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div style="font-size:2rem; margin-bottom:.75rem;">🔄</div>
+          <h3 style="font-size:.95rem; color:var(--primary);">SOP d'usage</h3>
+          <p style="font-size:.85rem; color:var(--text-muted);">Setup → Run → Debrief → Reset. Protocole standardisé, orienté brief/debrief.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div style="font-size:2rem; margin-bottom:.75rem;">🧹</div>
+          <h3 style="font-size:.95rem; color:var(--primary);">SOP retraitement</h3>
+          <p style="font-size:.85rem; color:var(--text-muted);">Pré-nettoyage · Nettoyage · Désinfection · Séchage · Stockage · Traçabilité.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div style="font-size:2rem; margin-bottom:.75rem;">📊</div>
+          <h3 style="font-size:.95rem; color:var(--primary);">Niveaux de difficulté</h3>
+          <p style="font-size:.85rem; color:var(--text-muted);">Facile / Intermédiaire / Avancé. Paramétrable selon le public formé.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOP Flow -->
+    <div class="mermaid-wrap">
+      <div class="mermaid">
+flowchart LR
+    S["⚙️ Setup<br/>2–5 min"] --> R["▶️ Run<br/>10–20 min"] --> D["💬 Debrief<br/>5 min"] --> RS["🔄 Reset<br/>2–5 min"] --> RT["🧹 Retraitement<br/>SOP locale"]
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOX CARDS DÉTAILLÉES -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Catalogue</span>
+    <h2 class="section-title mb-4">Les 4 BOX en détail</h2>
+
+    <!-- BOX 1 -->
+    <div class="box-card box-1 mb-4" style="margin-bottom:2rem;">
+      <div class="box-card-header" style="background: linear-gradient(135deg, #fef9f9, #fff);">
+        <div class="box-number" style="width:56px;height:56px;font-size:1.4rem;">1</div>
+        <div>
+          <h2 style="font-size:1.25rem; color:#c0392b; margin-bottom:.25rem;">Polypectomie et mise en place de clip</h2>
+          <p style="font-size:.88rem; color:var(--text-muted); margin:0;">Simuler une résection et une hémostase mécanique, avec saignement contrôlé.</p>
+        </div>
+      </div>
+      <div class="box-card-body" style="padding:1.5rem;">
+        <div class="grid grid-2" style="gap:2rem;">
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🎯 Objectifs pédagogiques</h4>
+            <ul>
+              <li>Approche, stabilité et contrôle fin de l'endoscope</li>
+              <li>Geste de résection simulée (anse)</li>
+              <li>Déploiement et positionnement du clip sur zone cible</li>
+              <li>Gestion du saignement simulé</li>
+            </ul>
+            <div class="d-flex gap-1 flex-wrap mt-2">
+              <span class="tag">🩺 Anse de polypectomie</span>
+              <span class="tag">📎 Clips hémostatiques</span>
+              <span class="tag">⏱ 20–45 min</span>
+              <span class="tag">💰 ~5–25 €</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🔧 Matériaux principaux</h4>
+            <ul>
+              <li>Tube annelé électrique Ø ~30 mm, L ~50 cm</li>
+              <li>Poche de sérum + tubulure + colorant alimentaire rouge</li>
+              <li>Cotons-tiges + scotch papier (pseudo-polypes)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box-card-footer">
+        <a href="box-1.html" class="btn btn-secondary btn-sm">Documentation complète BOX 1 →</a>
+        <a href="communaute.html" class="btn btn-ghost btn-sm">Partager une amélioration</a>
+      </div>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="box-card box-2 mb-4" style="margin-bottom:2rem;">
+      <div class="box-card-header" style="background: linear-gradient(135deg, #f9fafe, #fff);">
+        <div class="box-number" style="width:56px;height:56px;font-size:1.4rem;">2</div>
+        <div>
+          <h2 style="font-size:1.25rem; color:#2980b9; margin-bottom:.25rem;">Biopsie endoscopique simple et extraction de corps étranger</h2>
+          <p style="font-size:.88rem; color:var(--text-muted); margin:0;">Ciblage, prise, trajectoire et récupération.</p>
+        </div>
+      </div>
+      <div class="box-card-body" style="padding:1.5rem;">
+        <div class="grid grid-2" style="gap:2rem;">
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🎯 Objectifs pédagogiques</h4>
+            <ul>
+              <li>Standardiser le geste de biopsie (approche, stabilisation, retrait)</li>
+              <li>Extraction d'objets variés (pince / panier)</li>
+              <li>Variation de formes, positions et niveaux de difficulté</li>
+            </ul>
+            <div class="d-flex gap-1 flex-wrap mt-2">
+              <span class="tag">🩺 Pince à biopsie</span>
+              <span class="tag">🪝 Pince corps étranger</span>
+              <span class="tag">⏱ 10–30 min</span>
+              <span class="tag">💰 ~2–15 €</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🔧 Matériaux principaux</h4>
+            <ul>
+              <li>Panier plastique (support externe)</li>
+              <li>Tube annelé Ø ~30 mm, L ~30 cm</li>
+              <li>Boîte en carton (cavité simulée)</li>
+              <li>Scotch (cibles biopsie) + objets variés</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box-card-footer">
+        <a href="box-2.html" class="btn btn-secondary btn-sm">Documentation complète BOX 2 →</a>
+        <a href="communaute.html" class="btn btn-ghost btn-sm">Proposer un pack difficulté</a>
+      </div>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="box-card box-3 mb-4" style="margin-bottom:2rem;">
+      <div class="box-card-header" style="background: linear-gradient(135deg, #f9fef9, #fff);">
+        <div class="box-number" style="width:56px;height:56px;font-size:1.4rem;">3</div>
+        <div>
+          <h2 style="font-size:1.25rem; color:#27ae60; margin-bottom:.25rem;">Dilatation endoscopique sur fil-guide + manomètre</h2>
+          <p style="font-size:.88rem; color:var(--text-muted); margin:0;">Franchissement de sténose, dilatation au ballon et coordination IDE–endoscopiste.</p>
+        </div>
+      </div>
+      <div class="box-card-body" style="padding:1.5rem;">
+        <div class="grid grid-2" style="gap:2rem;">
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🎯 Objectifs pédagogiques</h4>
+            <ul>
+              <li>Passer un fil-guide à travers une sténose simulée</li>
+              <li>Faire progresser un ballon sur guide, dilatation contrôlée</li>
+              <li>Intégrer l'usage du manomètre (compétence paramédicale)</li>
+              <li>Coordination en équipe (IDE + endoscopiste)</li>
+            </ul>
+            <div class="d-flex gap-1 flex-wrap mt-2">
+              <span class="tag">🧵 Fil-guide</span>
+              <span class="tag">🎈 Ballon + manomètre</span>
+              <span class="tag">⏱ 15–30 min</span>
+              <span class="tag">💰 ~2–10 €</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🔧 Matériaux principaux</h4>
+            <ul>
+              <li>Tube annelé Ø ~30 mm, L ~50 cm</li>
+              <li>Disque carton rigide Ø ~30 mm (sténose)</li>
+              <li>Fil-guide endoscopique</li>
+              <li>Ballon de dilatation + manomètre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box-card-footer">
+        <a href="box-3.html" class="btn btn-secondary btn-sm">Documentation complète BOX 3 →</a>
+        <a href="communaute.html" class="btn btn-ghost btn-sm">Partager un scoring manomètre</a>
+      </div>
+    </div>
+
+    <!-- BOX 4 -->
+    <div class="box-card box-4 mb-4">
+      <div class="box-card-header" style="background: linear-gradient(135deg, #fdf9ff, #fff);">
+        <div class="box-number" style="width:56px;height:56px;font-size:1.4rem;">4</div>
+        <div>
+          <h2 style="font-size:1.25rem; color:#8e44ad; margin-bottom:.25rem;">CPRE : cannulation papillaire (sphinctérotome sur fil-guide)</h2>
+          <p style="font-size:.88rem; color:var(--text-muted); margin:0;">Angulation D2, stabilité face papille et gestuelle de cannulation.</p>
+        </div>
+      </div>
+      <div class="box-card-body" style="padding:1.5rem;">
+        <div class="grid grid-2" style="gap:2rem;">
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🎯 Objectifs pédagogiques</h4>
+            <ul>
+              <li>Orientation et stabilité « face papille » (angulation D2)</li>
+              <li>Manipulation sphinctérotome + fil-guide (cannulation)</li>
+              <li>Scoring : temps, contacts, succès/échec</li>
+              <li>Coordination main-œil, analyse des angles</li>
+            </ul>
+            <div class="d-flex gap-1 flex-wrap mt-2">
+              <span class="tag">🔩 Sphinctérotome</span>
+              <span class="tag">🧵 Fil-guide</span>
+              <span class="tag">⏱ 20–40 min</span>
+              <span class="tag">💰 ~3–15 €</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="color:var(--primary); margin-bottom:.75rem;">🔧 Matériaux principaux</h4>
+            <ul>
+              <li>Tubes annelés (segment principal ~30 cm + segment D2 ~5 cm)</li>
+              <li>Extrémité distale sonde d'aspiration (papille simulée)</li>
+              <li>Support/oreiller + ruban adhésif</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box-card-footer">
+        <a href="box-4.html" class="btn btn-secondary btn-sm">Documentation complète BOX 4 →</a>
+        <a href="communaute.html" class="btn btn-ghost btn-sm">Publier une variante papille difficile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLEAU COMPARATIF -->
+<section class="section" style="background: var(--bg-light);">
+  <div class="container">
+    <span class="section-label">Comparaison</span>
+    <h2 class="section-title">Tableau comparatif des BOX</h2>
+    <p class="section-subtitle">Coûts estimés « frugal » (matériaux locaux, hors endoscope/colonne, hors consommables endoscopiques). À ajuster selon pays et disponibilité.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>BOX</th>
+            <th>Compétences ciblées</th>
+            <th>Matériaux frugaux principaux</th>
+            <th>Instruments</th>
+            <th>Temps montage</th>
+            <th>Coût matériaux</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="box-badge badge-1">BOX 1</span></td>
+            <td>Polypectomie + clip + hémostase</td>
+            <td>Tube annelé, tubulure, poche, colorant, coton-tiges, scotch</td>
+            <td>Anse + clips</td>
+            <td>20–45 min</td>
+            <td>~5–25 €</td>
+          </tr>
+          <tr>
+            <td><span class="box-badge badge-2">BOX 2</span></td>
+            <td>Biopsie + extraction corps étranger</td>
+            <td>Panier, boîte carton, scotch, objets variés</td>
+            <td>Pince biopsie + pince CE</td>
+            <td>10–30 min</td>
+            <td>~2–15 €</td>
+          </tr>
+          <tr>
+            <td><span class="box-badge badge-3">BOX 3</span></td>
+            <td>Dilatation sur guide + manomètre</td>
+            <td>Tube annelé, disque carton</td>
+            <td>Fil-guide + ballon + manomètre</td>
+            <td>15–30 min</td>
+            <td>~2–10 €</td>
+          </tr>
+          <tr>
+            <td><span class="box-badge badge-4">BOX 4</span></td>
+            <td>Cannulation CPRE (guide + sphinctérotome)</td>
+            <td>Tubes annelés, sonde aspiration, support</td>
+            <td>Fil-guide + sphinctérotome</td>
+            <td>20–40 min</td>
+            <td>~3–15 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin: 2rem 0 1rem; font-size:1.1rem;">BOM commune (réutilisable entre BOX)</h3>
+    <div style="overflow-x:auto;">
+      <table class="bom-table">
+        <thead>
+          <tr>
+            <th>Élément</th>
+            <th>Usage</th>
+            <th>Recommandation terrain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Tubes annelés Ø30</td><td>Conduits principaux</td><td>Couper proprement, éviter les bavures</td></tr>
+          <tr><td>Scotch papier</td><td>Fixation / cibles</td><td>Limiter les résidus, remplacer souvent</td></tr>
+          <tr><td>Carton rigide</td><td>Inserts (sténoses, chambres)</td><td>Pièces remplaçables, stock « prêt »</td></tr>
+          <tr><td>Support (oreiller/plan)</td><td>Stabilité</td><td>Limiter les mouvements pendant les gestes</td></tr>
+          <tr><td>Marqueur</td><td>Repères de difficulté</td><td>Standardiser les repères entre sessions</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE RETRAITEMENT -->
+<section class="section-sm">
+  <div class="container">
+    <div class="notice notice-warn">
+      <strong>⚠️ Retraitement obligatoire :</strong> Même usage = mêmes exigences. Si un endoscope est utilisé sur un BOX, il est retraité comme après un acte clinique, selon les procédures et instructions fabricant (Instruction DGOS 2016, recommandations ESGE). Traçabilité de chaque session requise.
+    </div>
+    <div class="text-center mt-3">
+      <a href="communaute.html" class="btn btn-primary">💬 Rejoindre la communauté →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="d-flex align-center gap-1 mb-2">
+          <div class="nav-brand-icon" style="width:28px;height:28px;font-size:.95rem;">🔬</div>
+          <strong style="color:#fff; font-size:.95rem;">Alliance Sim Endoscopy Africa</strong>
+        </div>
+        <p style="font-size:.83rem; max-width: 300px;">Initiative de formation ouverte, orientée documentation. BOX de simulation frugales pour l'endoscopie digestive.</p>
+      </div>
+      <div>
+        <h4>Les BOX</h4>
+        <ul class="footer-links">
+          <li><a href="les-box.html">Catalogue</a></li>
+          <li><a href="box-1.html">BOX 1 — Polypectomie</a></li>
+          <li><a href="box-2.html">BOX 2 — Biopsie</a></li>
+          <li><a href="box-3.html">BOX 3 — Dilatation</a></li>
+          <li><a href="box-4.html">BOX 4 — CPRE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul class="footer-links">
+          <li><a href="communaute.html">Communauté</a></li>
+          <li><a href="partenariats.html">Partenariats</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="referentiels.html">Référentiels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="legal.html">Légal & Éthique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Alliance Sim Endoscopy Africa — Documentation sous licence ouverte.</span>
+      <span>Simulation pédagogique uniquement · Non destiné à un usage patient.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

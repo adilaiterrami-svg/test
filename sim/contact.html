@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Alliance Sim Endoscopy Africa</title>
+  <meta name="description" content="Contactez Alliance Sim Endoscopy Africa pour déployer une BOX, contribuer à la documentation, organiser un atelier ou devenir partenaire." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-icon">🔬</div>
+      Alliance Sim <span>Endoscopy Africa</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="les-box.html">Les BOX</a></li>
+      <li><a href="communaute.html">Communauté</a></li>
+      <li><a href="partenariats.html">Partenariats</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="communaute.html" class="nav-cta">Rejoindre →</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span><span>Contact</span>
+    </div>
+    <h1>Contact</h1>
+    <p>Vous souhaitez déployer une BOX, contribuer à la documentation, organiser un atelier ou devenir partenaire ?</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 3rem; align-items: start;">
+
+      <!-- FORMULAIRE -->
+      <div>
+        <span class="section-label">Formulaire</span>
+        <h2 class="section-title">Écrivez-nous</h2>
+
+        <form id="contact-form">
+          <div class="grid grid-2" style="gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="nom">Nom *</label>
+              <input type="text" class="form-control" id="nom" name="nom" required placeholder="Votre nom" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="structure">Structure</label>
+              <input type="text" class="form-control" id="structure" name="structure" placeholder="CHU, clinique, association…" />
+            </div>
+          </div>
+          <div class="grid grid-2" style="gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="pays">Pays *</label>
+              <input type="text" class="form-control" id="pays" name="pays" required placeholder="Pays" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="role">Rôle / Profession</label>
+              <input type="text" class="form-control" id="role" name="role" placeholder="Médecin, IDE, biomédical…" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" class="form-control" id="email" name="email" required placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="objet">Objet *</label>
+            <select class="form-control" id="objet" name="objet" required>
+              <option value="">— Sélectionner un objet —</option>
+              <option value="deploiement">Déploiement d'une BOX</option>
+              <option value="contribution">Contribution à la documentation</option>
+              <option value="partenariat">Partenariat / Financement</option>
+              <option value="atelier">Organisation d'un atelier</option>
+              <option value="question">Question générale</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message *</label>
+            <textarea class="form-control" id="message" name="message" required rows="5" placeholder="Décrivez votre demande, votre contexte, vos questions…"></textarea>
+          </div>
+          <div class="notice" style="font-size:.83rem; margin-bottom:1.25rem;">
+            En envoyant ce formulaire, vous acceptez que vos données soient utilisées uniquement pour traiter votre demande.
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">📨 Envoyer le message</button>
+        </form>
+
+        <!-- Confirmation (hidden by default) -->
+        <div id="form-thanks" style="display:none; background:var(--bg-light); border-radius:var(--radius-lg); padding:2rem; text-align:center; border:2px solid var(--success);">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">✅</div>
+          <h3 style="color:var(--success); margin-bottom:.5rem;">Message envoyé !</h3>
+          <p style="color:var(--text-muted);">Nous reviendrons vers vous dans les meilleurs délais.</p>
+          <a href="index.html" class="btn btn-secondary mt-2">Retour à l'accueil</a>
+        </div>
+      </div>
+
+      <!-- INFOS + CTA -->
+      <div>
+        <span class="section-label">Autres canaux</span>
+        <h2 class="section-title">Rejoindre directement</h2>
+        <p>Pour rejoindre la communauté immédiatement, utilisez le groupe WhatsApp ou consultez la page Communauté.</p>
+
+        <div style="display:flex; flex-direction:column; gap:1rem; margin: 1.5rem 0;">
+          <a href="communaute.html" class="btn btn-primary btn-lg" style="justify-content:center;">💬 Rejoindre WhatsApp</a>
+          <a href="partenariats.html" class="btn btn-ghost btn-lg" style="justify-content:center;">🤝 Voir les partenariats</a>
+        </div>
+
+        <hr class="divider" />
+
+        <h3 style="font-size:1rem; color:var(--primary-dark); margin-bottom:1rem;">Vous souhaitez…</h3>
+        <div style="display:flex; flex-direction:column; gap:.75rem;">
+          <div style="display:flex; gap:.75rem; align-items:flex-start;">
+            <div style="width:36px;height:36px;background:var(--bg-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🏗</div>
+            <div>
+              <strong style="font-size:.9rem;">Déployer une BOX</strong>
+              <p style="font-size:.83rem; color:var(--text-muted); margin:.2rem 0 0;">Nous vous aidons à adapter la documentation à votre contexte.</p>
+            </div>
+          </div>
+          <div style="display:flex; gap:.75rem; align-items:flex-start;">
+            <div style="width:36px;height:36px;background:var(--bg-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📝</div>
+            <div>
+              <strong style="font-size:.9rem;">Contribuer à la documentation</strong>
+              <p style="font-size:.83rem; color:var(--text-muted); margin:.2rem 0 0;">Via GitHub (Issue, Pull Request) ou WhatsApp pour les retours terrain.</p>
+            </div>
+          </div>
+          <div style="display:flex; gap:.75rem; align-items:flex-start;">
+            <div style="width:36px;height:36px;background:var(--bg-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎓</div>
+            <div>
+              <strong style="font-size:.9rem;">Organiser un atelier</strong>
+              <p style="font-size:.83rem; color:var(--text-muted); margin:.2rem 0 0;">Workshops régionaux train-the-trainers : présentez votre contexte et besoins.</p>
+            </div>
+          </div>
+          <div style="display:flex; gap:.75rem; align-items:flex-start;">
+            <div style="width:36px;height:36px;background:var(--bg-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">💰</div>
+            <div>
+              <strong style="font-size:.9rem;">Devenir partenaire</strong>
+              <p style="font-size:.83rem; color:var(--text-muted); margin:.2rem 0 0;">Matériaux, ateliers, documentation : voir les <a href="partenariats.html">offres de partenariat</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="notice">
+          <strong>Délai de réponse :</strong> nous répondons généralement dans les 48h–72h ouvrées. Pour les urgences ou questions rapides, privilégiez le groupe WhatsApp.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="d-flex align-center gap-1 mb-2">
+          <div class="nav-brand-icon" style="width:28px;height:28px;font-size:.95rem;">🔬</div>
+          <strong style="color:#fff; font-size:.95rem;">Alliance Sim Endoscopy Africa</strong>
+        </div>
+        <p style="font-size:.83rem;">Initiative de formation ouverte, orientée documentation.</p>
+      </div>
+      <div>
+        <h4>Les BOX</h4>
+        <ul class="footer-links">
+          <li><a href="les-box.html">Catalogue</a></li>
+          <li><a href="box-1.html">BOX 1 — Polypectomie</a></li>
+          <li><a href="box-2.html">BOX 2 — Biopsie</a></li>
+          <li><a href="box-3.html">BOX 3 — Dilatation</a></li>
+          <li><a href="box-4.html">BOX 4 — CPRE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul class="footer-links">
+          <li><a href="communaute.html">Communauté</a></li>
+          <li><a href="partenariats.html">Partenariats</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="referentiels.html">Référentiels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="legal.html">Légal & Éthique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Alliance Sim Endoscopy Africa</span>
+      <span>Simulation pédagogique uniquement · Non destiné à un usage patient.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
