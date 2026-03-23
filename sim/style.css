@@ -661,41 +661,211 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   border-radius: 100px;
 }
 
-/* QR placeholder */
+/* ── QR Code placeholder ─────────────────────────────────── */
 .qr-placeholder {
-  width: 180px; height: 180px;
-  background: var(--bg-light);
-  border: 2px dashed var(--border);
-  border-radius: var(--radius);
+  width: 200px; height: 200px;
+  background: #fff;
+  border: 3px dashed var(--primary-light);
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  font-size: .8rem;
+  color: var(--primary);
+  font-size: .78rem;
   text-align: center;
-  gap: .5rem;
+  gap: .6rem;
   font-weight: 600;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
-.qr-placeholder .qr-icon { font-size: 2.5rem; }
+.qr-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(45,158,143,.04) 6px,
+    rgba(45,158,143,.04) 12px
+  );
+}
+.qr-placeholder .qr-icon {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+}
+.qr-placeholder .qr-label {
+  position: relative;
+  z-index: 1;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: .82rem;
+}
+.qr-placeholder .qr-sub {
+  font-size: .7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
 
-/* Image placeholder */
+/* ── Photo placeholder ───────────────────────────────────── */
 .img-placeholder {
-  background: var(--bg-light);
-  border: 2px dashed var(--border);
+  background: linear-gradient(135deg, #f0f7f5 0%, #e8f4f1 100%);
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  padding: 1.1rem 1.4rem;
+  min-height: 90px;
+  position: relative;
+  overflow: hidden;
+}
+.img-placeholder::after {
+  content: 'À VENIR';
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--primary-light);
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  padding: .2rem .55rem;
+  border-radius: 100px;
+}
+.img-placeholder-icon {
+  width: 56px; height: 56px;
+  background: var(--primary);
   border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  color: #fff;
+}
+.img-placeholder-body { flex: 1; min-width: 0; }
+.img-placeholder-body strong { display: block; font-size: .88rem; color: var(--primary-dark); margin-bottom: .2rem; }
+.img-placeholder-body code { font-size: .74rem; }
+.img-placeholder-body span { font-size: .75rem; color: var(--text-muted); display: block; margin-top: .2rem; font-style: italic; }
+
+/* ── Full-width photo placeholder (large format) ─────────── */
+.img-placeholder-lg {
+  background: linear-gradient(135deg, #f0f7f5 0%, #e8f4f1 100%);
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  font-size: .82rem;
+  gap: .75rem;
+  padding: 3rem 2rem;
+  min-height: 260px;
   text-align: center;
-  gap: .5rem;
-  padding: 2rem 1rem;
-  min-height: 200px;
+  position: relative;
 }
-.img-placeholder .img-icon { font-size: 2.5rem; opacity: .5; }
+.img-placeholder-lg::after {
+  content: 'PHOTO À INTÉGRER';
+  position: absolute;
+  top: 12px; right: 12px;
+  background: var(--primary-light);
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  padding: .25rem .65rem;
+  border-radius: 100px;
+}
+.img-placeholder-lg .ph-icon { font-size: 3rem; opacity: .6; }
+.img-placeholder-lg .ph-title { font-size: .95rem; font-weight: 700; color: var(--primary-dark); }
+.img-placeholder-lg .ph-file { font-size: .78rem; }
+.img-placeholder-lg .ph-alt { font-size: .75rem; color: var(--text-muted); font-style: italic; max-width: 400px; }
+
+/* ── Video placeholder ───────────────────────────────────── */
+.video-placeholder {
+  background: linear-gradient(135deg, #1a2332 0%, #2d3a4a 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  padding: 2.5rem 1.5rem;
+  min-height: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(255,255,255,.02) 8px,
+    rgba(255,255,255,.02) 16px
+  );
+}
+.video-placeholder-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: rgba(232,160,32,.9);
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  padding: .25rem .65rem;
+  border-radius: 100px;
+}
+.video-play-btn {
+  width: 60px; height: 60px;
+  background: rgba(255,255,255,.1);
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,.7);
+  position: relative;
+  z-index: 1;
+}
+.video-placeholder .vp-title {
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.video-placeholder .vp-sub {
+  color: rgba(255,255,255,.5);
+  font-size: .78rem;
+  position: relative;
+  z-index: 1;
+}
+.video-placeholder .vp-file {
+  font-size: .72rem;
+  color: rgba(255,255,255,.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Media grid (photos + videos side by side) ───────────── */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
 
 /* Governance table */
 .gov-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
