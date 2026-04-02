@@ -1247,6 +1247,16 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
+.footer-seo {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 24px 0 8px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.8;
+}
+.footer-seo p { margin-bottom: 6px; }
+.footer-seo strong { color: rgba(255,255,255,0.5); font-weight: 500; }
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.07);
   padding: 22px 0;
