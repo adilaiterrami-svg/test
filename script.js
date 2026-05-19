@@ -1,308 +1,106 @@
-// ============================================
-// TOPBAR + NAVBAR : effet scroll
-// ============================================
-const navbar  = document.getElementById('navbar');
-const topbar  = document.getElementById('topbar');
+/* Cabinet Notarial – Maître Sara Ahmanna */
+
+// ===== NAVBAR =====
+const navbar   = document.querySelector('.navbar');
 const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 
-function updateNavbar() {
-  const topbarH = topbar ? topbar.offsetHeight : 0;
-  if (window.scrollY > 60) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-}
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
 
-window.addEventListener('scroll', updateNavbar);
-updateNavbar();
-
-// ============================================
-// MENU MOBILE
-// ============================================
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  const spans = navToggle.querySelectorAll('span');
+  navLinks.classList.contains('open')
+    ? (spans[0].style.transform = 'rotate(45deg) translate(5px,5px)',
+       spans[1].style.opacity   = '0',
+       spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)')
+    : (spans[0].style.transform = '',
+       spans[1].style.opacity   = '',
+       spans[2].style.transform = '');
 });
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+// Close menu on link click
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.querySelectorAll('span').forEach(s => {
+      s.style.transform = ''; s.style.opacity = '';
+    });
+  });
 });
 
-// ============================================
-// HIGHLIGHT LIEN ACTIF
-// ============================================
+// Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
       navLinks.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-      const active = navLinks.querySelector(`a[href="#${entry.target.id}"]`);
+      const active = navLinks.querySelector(`a[href="#${e.target.id}"]`);
       if (active) active.classList.add('active');
     }
   });
-}, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
+}, { rootMargin: '-40% 0px -50% 0px' });
 
-sections.forEach(s => sectionObserver.observe(s));
+sections.forEach(s => observer.observe(s));
 
-// ============================================
-// ANIMATIONS FADE-UP AU SCROLL
-// ============================================
+// ===== FAQ ACCORDION =====
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+});
+
+// ===== FADE-IN ON SCROLL =====
 const fadeEls = document.querySelectorAll(
-  '.timeline-card, .edu-card, .pub-card, .skill-card, .conf-card, ' +
-  '.internship-item, .membership-item, .contact-item, .stat, ' +
-  '.video-card, .consult-card'
+  '.service-card, .engagement-card, .faq-item, .value-item, .contact-card'
 );
-
-fadeEls.forEach(el => el.classList.add('fade-up'));
-
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const siblings = Array.from(entry.target.parentElement.children);
-      const idx = siblings.indexOf(entry.target);
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, Math.min(idx * 80, 400));
-      fadeObserver.unobserve(entry.target);
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      fadeObs.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.12 });
 
-fadeEls.forEach(el => fadeObserver.observe(el));
+fadeEls.forEach(el => { el.classList.add('fade-in'); fadeObs.observe(el); });
 
-// ============================================
-// COMPTEUR ANIMÉ (statistiques)
-// ============================================
-function animateCounter(el, target, suffix = '') {
-  const step = Math.max(1, Math.ceil(target / 45));
-  let current = 0;
-  const interval = setInterval(() => {
-    current = Math.min(current + step, target);
-    el.textContent = current + suffix;
-    if (current >= target) clearInterval(interval);
-  }, 38);
-}
+// ===== CONTACT FORM =====
+const form    = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
 
-const statsObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.stat-number').forEach(el => {
-        const raw = el.textContent.trim();
-        const num = parseInt(raw);
-        const suffix = raw.replace(String(num), '');
-        animateCounter(el, num, suffix);
-      });
-      statsObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.about-stats');
-if (statsSection) statsObs.observe(statsSection);
-
-// ============================================
-// FORMULAIRE DE CONTACT
-// ============================================
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
+if (form) {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"]');
+    const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-
-    const fd = new FormData(contactForm);
-    const payload = {
-      name:    fd.get('name'),
-      email:   fd.get('email'),
-      phone:   fd.get('phone') || 'Non renseigné',
-      objet:   fd.get('objet'),
-      message: fd.get('message'),
-      _subject: fd.get('_subject'),
-      _template: 'table',
-      _captcha: 'false'
-    };
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours…';
+    formMsg.className = 'form-msg';
+    formMsg.textContent = '';
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/adaiterrami@yahoo.com', {
+      const data = new FormData(form);
+      const body = Object.fromEntries(data.entries());
+      await fetch('https://formsubmit.co/ajax/contact@ahmanna-notaire.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(body)
       });
-      const json = await res.json();
-      if (json.success === 'true' || json.success === true) {
-        contactForm.innerHTML = `
-          <div style="text-align:center;padding:40px 20px">
-            <i class="fas fa-check-circle" style="font-size:3.5rem;color:var(--blue-mid);display:block;margin-bottom:16px"></i>
-            <h3 style="font-family:'Playfair Display',serif;color:var(--text);margin-bottom:8px">Message envoyé !</h3>
-            <p style="color:var(--text-muted);font-size:0.95rem">Merci pour votre message. Le Pr. Ait Errami vous répondra dans les plus brefs délais.</p>
-          </div>`;
-      } else {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
-        alert("Une erreur s'est produite. Veuillez réessayer ou nous contacter par téléphone.");
-      }
+      formMsg.className = 'form-msg success';
+      formMsg.textContent = 'Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.';
+      form.reset();
     } catch {
+      formMsg.className = 'form-msg error';
+      formMsg.textContent = 'Une erreur est survenue. Veuillez nous contacter directement par téléphone.';
+    } finally {
       btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
-      alert("Impossible d'envoyer le message. Vérifiez votre connexion internet.");
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer ma demande';
     }
   });
 }
-
-// ============================================
-// SCROLL FLUIDE (compatibilité anciens navigateurs)
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
-
-// ============================================
-// VIDÉOS — placeholder click (à remplacer par vraies vidéos)
-// ============================================
-document.querySelectorAll('.video-placeholder').forEach(card => {
-  card.addEventListener('click', () => {
-    const title = card.querySelector('h4')?.textContent || 'Vidéo';
-    alert(`La vidéo "${title}" sera disponible prochainement.`);
-  });
-});
-
-// ============================================
-// GALERIE — Filtres + Lightbox
-// ============================================
-(function () {
-  const grid    = document.getElementById('galleryGrid');
-  const lightbox = document.getElementById('lightbox');
-  const lbImg    = document.getElementById('lbImg');
-  const lbCaption= document.getElementById('lbCaption');
-  const lbClose  = document.getElementById('lbClose');
-  const lbPrev   = document.getElementById('lbPrev');
-  const lbNext   = document.getElementById('lbNext');
-  if (!grid || !lightbox) return;
-
-  let items = [];  // items visibles (après filtre)
-  let current = 0;
-
-  // ── FILTRES ──
-  document.querySelectorAll('.gf-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        const show = filter === 'all' || item.dataset.category === filter;
-        item.classList.toggle('hidden', !show);
-      });
-    });
-  });
-
-  // ── OUVRIR LIGHTBOX ──
-  function openLightbox(index) {
-    items = Array.from(document.querySelectorAll('.gallery-item:not(.hidden)'));
-    current = index;
-    showSlide(current);
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function showSlide(i) {
-    const item = items[i];
-    if (!item) return;
-    const img = item.querySelector('img');
-    lbImg.src = img ? img.src : '';
-    lbImg.alt = img ? img.alt : '';
-    lbCaption.textContent = item.dataset.caption || '';
-    lbPrev.style.visibility = i > 0 ? 'visible' : 'hidden';
-    lbNext.style.visibility = i < items.length - 1 ? 'visible' : 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.gallery-item').forEach((item, idx) => {
-    item.addEventListener('click', () => {
-      const visibleItems = Array.from(document.querySelectorAll('.gallery-item:not(.hidden)'));
-      openLightbox(visibleItems.indexOf(item));
-    });
-  });
-
-  lbClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-  lbPrev.addEventListener('click', e => { e.stopPropagation(); if (current > 0) showSlide(--current); });
-  lbNext.addEventListener('click', e => { e.stopPropagation(); if (current < items.length - 1) showSlide(++current); });
-
-  document.addEventListener('keydown', e => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape')      closeLightbox();
-    if (e.key === 'ArrowLeft'  && current > 0)              showSlide(--current);
-    if (e.key === 'ArrowRight' && current < items.length-1) showSlide(++current);
-  });
-})();
-
-// ============================================
-// SYSTÈME DE TRADUCTION — FR / EN / AR
-// ============================================
-(function () {
-  const DEFAULT_LANG = 'fr';
-
-  function getLang() {
-    return localStorage.getItem('lang') || DEFAULT_LANG;
-  }
-
-  function applyLang(lang) {
-    // 1. Langue + direction sur <html>
-    const html = document.documentElement;
-    html.setAttribute('lang', lang);
-    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-    // 2. Traduire les éléments data-i18n (textContent)
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const t = TRANSLATIONS[key];
-      if (t && t[lang] !== undefined) el.textContent = t[lang];
-    });
-
-    // 3. Traduire les éléments data-i18n-html (innerHTML)
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.getAttribute('data-i18n-html');
-      const t = TRANSLATIONS[key];
-      if (t && t[lang] !== undefined) el.innerHTML = t[lang];
-    });
-
-    // 4. Traduire les placeholders
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      const t = TRANSLATIONS[key];
-      if (t && t[lang] !== undefined) el.placeholder = t[lang];
-    });
-
-    // 5. Boutons actifs
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-
-    // 6. Sauvegarder
-    localStorage.setItem('lang', lang);
-  }
-
-  // Attacher les clics sur les boutons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-  });
-
-  // Appliquer la langue au chargement
-  applyLang(getLang());
-})();

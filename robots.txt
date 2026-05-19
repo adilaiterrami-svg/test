@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.draiterrami.com/sitemap.xml
+Sitemap: https://www.ahmanna-notaire.com/sitemap.xml
 
 # Autoriser les moteurs de recherche et IA
 User-agent: Googlebot
