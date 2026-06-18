@@ -106,7 +106,7 @@ const TRANSLATIONS = {
   'form.deg3.title':  { fr: 'DIU – Maladies Inflammatoires Chroniques de l\'Intestin (MICI)', en: 'University Diploma – Inflammatory Bowel Disease (IBD)', ar: 'دبلوم جامعي – الأمراض الالتهابية المزمنة للأمعاء (MICI)' },
   'form.deg4.title':  { fr: 'MBA – Management Hospitalier',                 en: 'MBA – Hospital Management',                  ar: 'ماجستير إدارة المستشفيات' },
   'form.deg5.title':  { fr: 'Formation en CPRE', en: 'ERCP Training', ar: 'تكوين في تنظير CPRE' },
-  'form.deg6.title':  { fr: 'Formation en Pancréatologie',                  en: 'Training in Pancreatology',                  ar: 'تكوين في أمراض البنكرياس' },
+  'form.deg6.title':  { fr: 'Formation en Endoscopie Interventionnelle',     en: 'Interventional Endoscopy Training',         ar: 'تكوين في التنظير التداخلي' },
   'form.internships.title': { fr: 'Formations en Endoscopie Interventionnelle', en: 'Interventional Endoscopy Training', ar: 'تكوينات في التنظير التداخلي' },
 
   /* ── VIDÉOS ── */
