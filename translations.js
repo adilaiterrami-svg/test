@@ -11,6 +11,7 @@ const TRANSLATIONS = {
   'nav.videos':         { fr: 'Vidéos',        en: 'Videos',         ar: 'مقاطع الفيديو' },
   'nav.publications':   { fr: 'Publications',  en: 'Publications',   ar: 'المنشورات' },
   'nav.galerie':        { fr: 'Galerie',       en: 'Gallery',        ar: 'المعرض' },
+  'nav.faq':            { fr: 'FAQ',           en: 'FAQ',            ar: 'الأسئلة الشائعة' },
   'nav.contact':        { fr: 'Contact',       en: 'Contact',        ar: 'التواصل' },
 
   /* ── HERO ── */
@@ -149,6 +150,11 @@ const TRANSLATIONS = {
   'gallery.filter.all':   { fr: 'Tout',                              en: 'All',                               ar: 'الكل' },
   'gallery.filter.cong':  { fr: 'Congrès',                          en: 'Congresses',                        ar: 'المؤتمرات' },
   'gallery.filter.pres':  { fr: 'Présentations & Ateliers',         en: 'Presentations & Workshops',         ar: 'العروض والورشات' },
+
+  /* ── FAQ ── */
+  'faq.label':   { fr: 'Questions Fréquentes', en: 'Frequently Asked Questions', ar: 'الأسئلة الشائعة' },
+  'faq.title':   { fr: 'FAQ — Gastro-Entérologie à Marrakech', en: 'FAQ — Gastroenterology in Marrakech', ar: 'الأسئلة الشائعة - أمراض الجهاز الهضمي في مراكش' },
+  'faq.desc':    { fr: 'Les réponses aux questions les plus posées sur les consultations, examens et pathologies digestives.', en: 'Answers to the most common questions about consultations, procedures and digestive conditions.', ar: 'إجابات على الأسئلة الأكثر شيوعًا حول الاستشارات والفحوصات وأمراض الجهاز الهضمي.' },
 
   /* ── CONTACT ── */
   'contact.label':         { fr: 'Nous joindre',       en: 'Get in touch',     ar: 'تواصل معنا' },
