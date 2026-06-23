@@ -1590,37 +1590,56 @@ html[lang="ar"] .faq-question { text-align: right; }
   flex-shrink: 0;
 }
 .lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: 1.5px solid rgba(255,255,255,0.35);
-  color: rgba(255,255,255,0.75);
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 4px 9px;
+  padding: 3px;
   border-radius: 6px;
   cursor: pointer;
   transition: all var(--transition);
-  letter-spacing: 0.5px;
+  line-height: 0;
+}
+.lang-btn .flag-icon {
+  display: block;
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
 }
 .lang-btn:hover {
   background: rgba(255,255,255,0.15);
-  color: #fff;
   border-color: rgba(255,255,255,0.6);
 }
 .lang-btn.active {
   background: rgba(255,255,255,0.22);
-  color: #fff;
   border-color: rgba(255,255,255,0.8);
 }
 #navbar.scrolled .lang-btn {
   border-color: rgba(21,101,192,0.35);
-  color: var(--text-muted);
 }
 #navbar.scrolled .lang-btn:hover,
 #navbar.scrolled .lang-btn.active {
-  background: var(--blue);
+  background: rgba(21,101,192,0.12);
   border-color: var(--blue);
-  color: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Garde les numéros de téléphone non inversés dans le texte arabe (RTL) */
+bdi {
+  unicode-bidi: isolate;
+  direction: ltr;
 }
 
 /* ============================================

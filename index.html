@@ -359,7 +359,7 @@
     <div class="topbar-inner">
       <span><i class="fas fa-map-marker-alt"></i> CHU Mohammed VI, Marrakech &nbsp;|&nbsp; <i class="fas fa-clinic-medical"></i> Clinique Privée, Marrakech</span>
       <a href="tel:+212663627258" class="topbar-phone">
-        <i class="fas fa-phone-alt"></i> +212 663 627 258
+        <i class="fas fa-phone-alt"></i> <bdi>+212 663 627 258</bdi>
       </a>
     </div>
   </div>
@@ -384,9 +384,35 @@
       </ul>
       <!-- Sélecteur de langue -->
       <div class="lang-switcher" id="langSwitcher">
-        <button class="lang-btn active" data-lang="fr">FR</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ar">ع</button>
+        <button class="lang-btn active" data-lang="fr" aria-label="Français" title="Français">
+          <svg class="flag-icon" viewBox="0 0 3 2" aria-hidden="true">
+            <rect width="1" height="2" x="0" fill="#002395"/>
+            <rect width="1" height="2" x="1" fill="#fff"/>
+            <rect width="1" height="2" x="2" fill="#ED2939"/>
+          </svg>
+          <span class="sr-only">Français</span>
+        </button>
+        <button class="lang-btn" data-lang="en" aria-label="English" title="English">
+          <svg class="flag-icon" viewBox="0 0 60 30" aria-hidden="true">
+            <clipPath id="uk-clip"><path d="M0,0 V30 H60 V0 Z"/></clipPath>
+            <g clip-path="url(#uk-clip)">
+              <rect width="60" height="30" fill="#00247d"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+              <path d="M0,0 L60,30" stroke="#cf142b" stroke-width="2"/>
+              <path d="M60,0 L0,30" stroke="#cf142b" stroke-width="2"/>
+              <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
+              <path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/>
+            </g>
+          </svg>
+          <span class="sr-only">English</span>
+        </button>
+        <button class="lang-btn" data-lang="ar" aria-label="العربية" title="العربية">
+          <svg class="flag-icon" viewBox="0 0 3 2" aria-hidden="true">
+            <rect width="3" height="2" fill="#c1272d"/>
+            <polygon points="1.5,0.62 1.677,1.13 2.214,1.13 1.768,1.44 1.927,1.94 1.5,1.62 1.073,1.94 1.232,1.44 0.786,1.13 1.323,1.13" fill="none" stroke="#006233" stroke-width="0.06"/>
+          </svg>
+          <span class="sr-only">العربية</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -403,7 +429,7 @@
       </div>
       <div class="hero-text">
         <p class="hero-label" data-i18n="hero.label">Professeur · Gastro-Entérologue</p>
-        <h1 class="hero-name">Pr. Adil Ait Errami</h1>
+        <h1 class="hero-name" data-i18n="hero.name">Pr. Adil Ait Errami</h1>
         <p class="hero-tagline" data-i18n="hero.tagline">Endoscopie Interventionnelle · Hépatologie · Oncologie Digestive</p>
         <div class="hero-badges">
           <span class="badge"><i class="fas fa-hospital"></i> <span data-i18n="hero.badge.chu">CHU Mohammed VI</span></span>
@@ -413,7 +439,7 @@
         </div>
         <div class="hero-actions">
           <a href="tel:+212663627258" class="btn btn-primary">
-            <i class="fas fa-phone-alt"></i> +212 663 627 258
+            <i class="fas fa-phone-alt"></i> <bdi>+212 663 627 258</bdi>
           </a>
           <a href="#contact" class="btn btn-outline" data-i18n="hero.cta">Prendre contact</a>
         </div>
@@ -439,7 +465,7 @@
             </div>
           </div>
           <div class="about-contact-card">
-            <a href="tel:+212663627258"><i class="fas fa-phone-alt"></i> +212 663 627 258</a>
+            <a href="tel:+212663627258"><i class="fas fa-phone-alt"></i> <bdi>+212 663 627 258</bdi></a>
             <a href="mailto:a.aiterrami@uca.ma"><i class="fas fa-envelope"></i> a.aiterrami@uca.ma</a>
             <a href="https://www.linkedin.com/in/adil-ait-errami-a87480179" target="_blank"><i class="fab fa-linkedin"></i> <span data-i18n="about.linkedin">Profil LinkedIn</span></a>
           </div>
@@ -495,7 +521,7 @@
             <li><i class="fas fa-users"></i> <span data-i18n="consult.chu.hepato">Coordinateur du Staff d'Hépatologie</span></li>
           </ul>
           <a href="tel:+212663627258" class="btn btn-primary btn-sm">
-            <i class="fas fa-phone-alt"></i> +212 663 627 258
+            <i class="fas fa-phone-alt"></i> <bdi>+212 663 627 258</bdi>
           </a>
         </div>
         <div class="consult-card consult-card--private">
@@ -509,7 +535,7 @@
             <li><i class="fas fa-building"></i> <span data-i18n="consult.priv.multi">Clinique privée, Marrakech</span></li>
           </ul>
           <a href="tel:+212663627258" class="btn btn-blue btn-sm">
-            <i class="fas fa-phone-alt"></i> +212 663 627 258
+            <i class="fas fa-phone-alt"></i> <bdi>+212 663 627 258</bdi>
           </a>
         </div>
         <div class="consult-card consult-card--teaching">
@@ -1029,7 +1055,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-            <p data-i18n="faq.a1">Vous pouvez contacter le Pr. Adil Ait Errami au +212 663 627 258 ou par email à a.aiterrami@uca.ma. Il consulte au CHU Mohammed VI et en clinique privée à Marrakech. Son site officiel est www.draiterrami.com.</p>
+            <p data-i18n-html="faq.a1">Vous pouvez contacter le Pr. Adil Ait Errami au +212 663 627 258 ou par email à a.aiterrami@uca.ma. Il consulte au CHU Mohammed VI et en clinique privée à Marrakech. Son site officiel est www.draiterrami.com.</p>
           </div>
         </div>
 
@@ -1059,7 +1085,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-            <p data-i18n="faq.a4">La CPRE (Cholangiopancréatographie Rétrograde Endoscopique) est une technique endoscopique interventionnelle permettant de diagnostiquer et traiter les maladies des voies biliaires et du pancréas. Le Pr. Adil Ait Errami est l'un des spécialistes de la CPRE à Marrakech et au Maroc. Contactez-le au +212 663 627 258.</p>
+            <p data-i18n-html="faq.a4">La CPRE (Cholangiopancréatographie Rétrograde Endoscopique) est une technique endoscopique interventionnelle permettant de diagnostiquer et traiter les maladies des voies biliaires et du pancréas. Le Pr. Adil Ait Errami est l'un des spécialistes de la CPRE à Marrakech et au Maroc. Contactez-le au +212 663 627 258.</p>
           </div>
         </div>
 
@@ -1079,7 +1105,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
-            <p data-i18n="faq.a6">Le Pr. Adil Ait Errami est professeur universitaire en gastro-entérologie au CHU Mohammed VI de Marrakech, spécialisé en endoscopie interventionnelle (CPRE, écho-endoscopie), hépatologie et oncologie digestive. Il est joignable au +212 663 627 258 et sur son site www.draiterrami.com.</p>
+            <p data-i18n-html="faq.a6">Le Pr. Adil Ait Errami est professeur universitaire en gastro-entérologie au CHU Mohammed VI de Marrakech, spécialisé en endoscopie interventionnelle (CPRE, écho-endoscopie), hépatologie et oncologie digestive. Il est joignable au +212 663 627 258 et sur son site www.draiterrami.com.</p>
           </div>
         </div>
 
@@ -1089,7 +1115,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7">
-            <p data-i18n="faq.a7">Oui, le Pr. Adil Ait Errami est un expert en endoscopie digestive interventionnelle au Maroc. Il exerce à Marrakech au CHU Mohammed VI et propose des actes d'endoscopie diagnostique et thérapeutique : gastroscopie, coloscopie, CPRE, écho-endoscopie. Site : www.draiterrami.com, Tél : +212 663 627 258.</p>
+            <p data-i18n-html="faq.a7">Oui, le Pr. Adil Ait Errami est un expert en endoscopie digestive interventionnelle au Maroc. Il exerce à Marrakech au CHU Mohammed VI et propose des actes d'endoscopie diagnostique et thérapeutique : gastroscopie, coloscopie, CPRE, écho-endoscopie. Site : www.draiterrami.com, Tél : +212 663 627 258.</p>
           </div>
         </div>
 
@@ -1099,7 +1125,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8">
-            <p data-i18n="faq.a8">La coloscopie à Marrakech est réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI et en clinique privée à Marrakech. La coloscopie permet de dépister les polypes, les cancers du côlon et les maladies inflammatoires de l'intestin. Prenez rendez-vous au +212 663 627 258 ou via www.draiterrami.com.</p>
+            <p data-i18n-html="faq.a8">La coloscopie à Marrakech est réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI et en clinique privée à Marrakech. La coloscopie permet de dépister les polypes, les cancers du côlon et les maladies inflammatoires de l'intestin. Prenez rendez-vous au +212 663 627 258 ou via www.draiterrami.com.</p>
           </div>
         </div>
 
@@ -1109,7 +1135,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a9" role="region" aria-labelledby="faq-q9">
-            <p data-i18n="faq.a9">Le Pr. Adil Ait Errami réalise des gastroscopies (fibroscopies digestives hautes) à Marrakech au CHU Mohammed VI et en clinique privée. La gastroscopie explore l'œsophage, l'estomac et le duodénum pour diagnostiquer ulcères, reflux et tumeurs. Contact : +212 663 627 258.</p>
+            <p data-i18n-html="faq.a9">Le Pr. Adil Ait Errami réalise des gastroscopies (fibroscopies digestives hautes) à Marrakech au CHU Mohammed VI et en clinique privée. La gastroscopie explore l'œsophage, l'estomac et le duodénum pour diagnostiquer ulcères, reflux et tumeurs. Contact : +212 663 627 258.</p>
           </div>
         </div>
 
@@ -1119,7 +1145,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a10" role="region" aria-labelledby="faq-q10">
-            <p data-i18n="faq.a10">Le Pr. Adil Ait Errami est hépatologue spécialiste des maladies du foie à Marrakech : hépatites virales, cirrhose, stéatose hépatique (NASH/NAFLD), hypertension portale, cholestase. Il exerce au CHU Mohammed VI de Marrakech. Rdv : +212 663 627 258.</p>
+            <p data-i18n-html="faq.a10">Le Pr. Adil Ait Errami est hépatologue spécialiste des maladies du foie à Marrakech : hépatites virales, cirrhose, stéatose hépatique (NASH/NAFLD), hypertension portale, cholestase. Il exerce au CHU Mohammed VI de Marrakech. Rdv : +212 663 627 258.</p>
           </div>
         </div>
 
@@ -1139,7 +1165,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a12" role="region" aria-labelledby="faq-q12">
-            <p data-i18n="faq.a12">Consultez le Pr. Adil Ait Errami, gastroentérologue à Marrakech, en cas de : douleurs abdominales persistantes, brûlures d'estomac ou reflux, troubles du transit (diarrhée ou constipation chronique), saignements digestifs, jaunisse, perte de poids inexpliquée, ballonnements chroniques, dysphagie (difficulté à avaler). Rdv : +212 663 627 258.</p>
+            <p data-i18n-html="faq.a12">Consultez le Pr. Adil Ait Errami, gastroentérologue à Marrakech, en cas de : douleurs abdominales persistantes, brûlures d'estomac ou reflux, troubles du transit (diarrhée ou constipation chronique), saignements digestifs, jaunisse, perte de poids inexpliquée, ballonnements chroniques, dysphagie (difficulté à avaler). Rdv : +212 663 627 258.</p>
           </div>
         </div>
 
@@ -1149,7 +1175,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a13" role="region" aria-labelledby="faq-q13">
-            <p data-i18n="faq.a13">Le Pr. Adil Ait Errami est spécialiste de la lithiase biliaire (calculs dans la vésicule biliaire ou les voies biliaires) à Marrakech. Il réalise la CPRE pour extraire les calculs des voies biliaires par endoscopie, sans chirurgie. Contact : +212 663 627 258, www.draiterrami.com.</p>
+            <p data-i18n-html="faq.a13">Le Pr. Adil Ait Errami est spécialiste de la lithiase biliaire (calculs dans la vésicule biliaire ou les voies biliaires) à Marrakech. Il réalise la CPRE pour extraire les calculs des voies biliaires par endoscopie, sans chirurgie. Contact : +212 663 627 258, www.draiterrami.com.</p>
           </div>
         </div>
 
@@ -1159,7 +1185,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer" id="faq-a14" role="region" aria-labelledby="faq-q14">
-            <p data-i18n="faq.a14">Oui, le Pr. Adil Ait Errami prend en charge les maladies inflammatoires chroniques de l'intestin (MICI) à Marrakech : maladie de Crohn, rectocolite hémorragique (RCH). Il a obtenu un Diplôme Inter-Universitaire en MICI à l'Université de Lille (France) en 2023. Consultations au CHU Mohammed VI, Marrakech. Tél : +212 663 627 258.</p>
+            <p data-i18n-html="faq.a14">Oui, le Pr. Adil Ait Errami prend en charge les maladies inflammatoires chroniques de l'intestin (MICI) à Marrakech : maladie de Crohn, rectocolite hémorragique (RCH). Il a obtenu un Diplôme Inter-Universitaire en MICI à l'Université de Lille (France) en 2023. Consultations au CHU Mohammed VI, Marrakech. Tél : +212 663 627 258.</p>
           </div>
         </div>
 
@@ -1181,7 +1207,7 @@
               <i class="fas fa-phone-alt"></i>
               <div>
                 <span data-i18n="contact.call">Appeler directement</span>
-                <strong>+212 663 627 258</strong>
+                <strong><bdi>+212 663 627 258</bdi></strong>
               </div>
             </a>
           </div>
@@ -1262,7 +1288,7 @@
           <p data-i18n="footer.role">Gastro-Entérologue · Professeur · Chercheur</p>
           <p data-i18n="footer.loc">CHU Mohammed VI · Clinique Privée · Faculté de Médecine, Marrakech</p>
           <a href="tel:+212663627258" class="footer-phone">
-            <i class="fas fa-phone-alt"></i> +212 663 627 258
+            <i class="fas fa-phone-alt"></i> <bdi>+212 663 627 258</bdi>
           </a>
         </div>
         <div class="footer-links">
@@ -1301,7 +1327,7 @@
           et en clinique privée. Professeur à la Faculté de Médecine de Marrakech (Université Cadi Ayyad), il est
           chef de l'Unité d'Endoscopie Digestive et membre du Conseil National de la
           <strong>Société Marocaine d'Endoscopie Digestive (SMED)</strong>. Son site officiel : <strong>www.draiterrami.com</strong>.
-          Consultations et rendez-vous : <strong>+212 663 627 258</strong>.
+          Consultations et rendez-vous : <strong><bdi>+212 663 627 258</bdi></strong>.
         </p>
         <p>
           Actes pratiqués à Marrakech et au Maroc : <strong>coloscopie</strong>, <strong>gastroscopie</strong>,
