@@ -52,6 +52,15 @@
         "image": "https://www.draiterrami.com/photo.jpg",
         "telephone": "+212663627258",
         "email": "a.aiterrami@uca.ma",
+        "worksFor": { "@id": "https://www.draiterrami.com/#clinic" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+212663627258",
+          "email": "a.aiterrami@uca.ma",
+          "contactType": "Rendez-vous / Appointments",
+          "areaServed": "MA",
+          "availableLanguage": ["French", "Arabic", "English"]
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "CHU Mohammed VI",
@@ -129,6 +138,9 @@
         "name": "Pr. Adil Ait Errami – Gastroentérologue Marrakech",
         "description": "Cabinet de gastroentérologie à Marrakech : CPRE, écho-endoscopie interventionnelle, coloscopie, gastroscopie, hépatologie et oncologie digestive. Pr. Adil Ait Errami au CHU Mohammed VI et en clinique privée.",
         "url": "https://www.draiterrami.com/",
+        "isPartOf": { "@id": "https://www.draiterrami.com/#website" },
+        "employee": { "@id": "https://www.draiterrami.com/#physician" },
+        "founder": { "@id": "https://www.draiterrami.com/#physician" },
         "telephone": "+212663627258",
         "email": "a.aiterrami@uca.ma",
         "priceRange": "$$",
@@ -213,11 +225,17 @@
         "url": "https://www.draiterrami.com/",
         "name": "Pr. Adil Ait Errami – Gastro-Entérologue Marrakech",
         "description": "Site officiel du Pr. Adil Ait Errami, gastro-entérologue spécialiste à Marrakech.",
-        "inLanguage": "fr-MA",
+        "inLanguage": ["fr-MA", "en", "ar"],
+        "about": { "@id": "https://www.draiterrami.com/#physician" },
+        "publisher": { "@id": "https://www.draiterrami.com/#physician" },
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://www.draiterrami.com/#contact",
           "query-input": "required name=search_term_string"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero-label", ".hero-name", ".hero-tagline", ".about-text"]
         }
       },
       {

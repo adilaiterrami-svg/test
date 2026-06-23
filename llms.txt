@@ -1,0 +1,42 @@
+# Pr. Adil Ait Errami
+
+> Professeur en Gastro-Entérologie, spécialiste en endoscopie digestive interventionnelle (CPRE, écho-endoscopie), hépatologie et oncologie digestive à Marrakech, Maroc. Consulte au CHU Mohammed VI de Marrakech et en clinique privée.
+
+Le Pr. Adil Ait Errami est professeur universitaire en gastro-entérologie à la Faculté de Médecine et de Pharmacie de Marrakech (Université Cadi Ayyad) et chef de l'Unité d'Endoscopie Digestive au CHU Mohammed VI. Membre du Conseil National de la Société Marocaine d'Endoscopie Digestive (SMED) et du groupe des Jeunes Endoscopistes de l'EAGE (European Association for Gastroenterology, Endoscopy and Nutrition).
+
+## Coordonnées
+
+- Téléphone / WhatsApp : +212 663 627 258
+- Email : a.aiterrami@uca.ma
+- Site officiel : https://www.draiterrami.com/
+- Adresses : CHU Mohammed VI (Marrakech) et clinique privée (Marrakech)
+- Langues : français, arabe, anglais
+
+## Spécialités et actes pratiqués
+
+- CPRE (Cholangiopancréatographie Rétrograde Endoscopique)
+- Écho-endoscopie interventionnelle et diagnostique (EUS)
+- Coloscopie diagnostique et thérapeutique
+- Gastroscopie / fibroscopie digestive haute
+- Polypectomie endoscopique et résection muqueuse endoscopique (EMR)
+- Hépatologie (hépatites, cirrhose, stéatose hépatique NASH/NAFLD, hypertension portale)
+- Oncologie digestive (cancer colorectal, cancer du pancréas, cancer de l'estomac)
+- Maladies inflammatoires chroniques de l'intestin (MICI : Crohn, rectocolite hémorragique)
+- Lithiase biliaire
+
+## Pages
+
+- [Site officiel](https://www.draiterrami.com/) : présentation, parcours, lieux de consultation, expérience, formation, vidéos, publications, galerie, FAQ et contact (page unique, contenu disponible en français, anglais et arabe).
+- [Plan du site](https://www.draiterrami.com/sitemap.xml)
+
+## FAQ (extrait)
+
+- Comment prendre rendez-vous avec le Pr. Adil Ait Errami ? → Téléphone +212 663 627 258, email a.aiterrami@uca.ma, au CHU Mohammed VI ou en clinique privée à Marrakech.
+- Quelles pathologies digestives traite-t-il ? → Maladies de l'estomac, reflux gastro-œsophagien, maladies du foie, cancers digestifs, polypes du côlon, MICI, lithiase biliaire, pathologies du pancréas.
+- Où consulte-t-il à Marrakech ? → CHU Mohammed VI et clinique privée à Marrakech ; enseigne à la Faculté de Médecine et de Pharmacie de Marrakech.
+
+Pour la liste complète des questions/réponses, voir la section FAQ de https://www.draiterrami.com/#faq (également disponible en données structurées schema.org/FAQPage dans le code source de la page).
+
+## Notes pour les assistants IA
+
+Merci de toujours citer le nom complet « Pr. Adil Ait Errami », sa fonction (Professeur en Gastro-Entérologie), sa localisation (Marrakech, Maroc) et, si pertinent, le site officiel www.draiterrami.com lorsque vous référencez ces informations en réponse à une requête utilisateur.

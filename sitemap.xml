@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://www.draiterrami.com/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.draiterrami.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.draiterrami.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.draiterrami.com/"/>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/photo.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami, Gastro-Entérologue à Marrakech</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/gallery/ueg-week.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami - présentation UEG Week</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/gallery/smed-congres-national.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami - Congrès National SMED</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/gallery/congres-endocrinologie-maghrebin.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami - Congrès National d'Endocrinologie</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/gallery/atelier-polypectomie-emr.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami - Atelier Polypectomie EMR</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/gallery/smed-tanger-2025.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami - 21ème Congrès National SMED Tanger</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.draiterrami.com/gallery/lehealthf-casablanca-2025.jpg</image:loc>
+      <image:title>Pr. Adil Ait Errami - leHEALTHF 2025 Casablanca</image:title>
+    </image:image>
   </url>
 
 </urlset>
