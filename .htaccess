@@ -11,6 +11,11 @@
   RewriteRule ^(.*)$ https://www.draiterrami.com/$1 [L,R=301]
 </IfModule>
 
+# ===== Types MIME (au cas où non définis par le serveur) =====
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+
 # ===== Compression =====
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/xml text/plain
