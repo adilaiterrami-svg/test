@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://www.ahmanna-notaire.com/</loc>
@@ -10,6 +11,43 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ahmanna-notaire.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.ahmanna-notaire.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahmanna-notaire.com/"/>
+
+    <image:image>
+      <image:loc>https://www.ahmanna-notaire.com/notaire-marrakech-sara-ahmanna.jpg</image:loc>
+      <image:title>Maître Sara Ahmanna – Notaire à Marrakech</image:title>
+      <image:caption>Maître Sara Ahmanna, notaire officielle à Marrakech, spécialisée en droit immobilier, successions et droit des sociétés au Maroc.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.ahmanna-notaire.com/cabinet-notarial-marrakech.jpg</image:loc>
+      <image:title>Cabinet Notarial Maître Sara Ahmanna – Marrakech</image:title>
+      <image:caption>Cabinet notarial de Maître Sara Ahmanna à Marrakech. Actes immobiliers, successions, droit des sociétés.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.ahmanna-notaire.com/images/achat-immobilier-marrakech-notaire.jpg</image:loc>
+      <image:title>Achat immobilier Marrakech – Notaire</image:title>
+      <image:caption>Achat d'appartement, villa ou riad à Marrakech avec notaire. Titre foncier, acte authentique de vente.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.ahmanna-notaire.com/images/succession-heritage-maroc-notaire-marrakech.jpg</image:loc>
+      <image:title>Succession et héritage Maroc – Notaire Marrakech</image:title>
+      <image:caption>Règlement de successions et héritages au Maroc par Maître Sara Ahmanna, notaire à Marrakech.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.ahmanna-notaire.com/images/creation-societe-sarl-marrakech-notaire.jpg</image:loc>
+      <image:title>Création société SARL Marrakech – Notaire</image:title>
+      <image:caption>Création de SARL, SA et SNC à Marrakech par Maître Sara Ahmanna. Statuts authentifiés, immatriculation.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.ahmanna-notaire.com/images/mre-marocains-etranger-notaire-marrakech.jpg</image:loc>
+      <image:title>MRE Notaire Marrakech – Marocains résidant à l'étranger</image:title>
+      <image:caption>Service notarial pour les MRE (Marocains résidant à l'étranger) à Marrakech. Procurations, achat immobilier, successions.</image:caption>
+    </image:image>
+
   </url>
 
 </urlset>
