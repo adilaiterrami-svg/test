@@ -14,6 +14,7 @@
   <link rel="canonical" href="https://www.ahmanna-notaire.com/" />
   <link rel="alternate" hreflang="fr" href="https://www.ahmanna-notaire.com/" />
   <link rel="alternate" hreflang="ar" href="https://www.ahmanna-notaire.com/" />
+  <link rel="alternate" hreflang="es" href="https://www.ahmanna-notaire.com/" />
   <link rel="alternate" hreflang="x-default" href="https://www.ahmanna-notaire.com/" />
   <meta name="theme-color" content="#0c1a3a" />
 
@@ -336,9 +337,9 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-info">
-        <span><i class="fas fa-map-marker-alt"></i> Marrakech, Maroc</span>
+        <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="topbar.location">Marrakech, Maroc</span></span>
         <span class="sep">|</span>
-        <span><i class="fas fa-clock"></i> Lun – Ven : 09h – 18h</span>
+        <span><i class="fas fa-clock"></i> <span data-i18n="topbar.hours">Lun – Ven : 09h – 18h</span></span>
       </div>
       <div class="topbar-contact">
         <a href="mailto:contact@ahmanna-notaire.com"><i class="fas fa-envelope"></i> contact@ahmanna-notaire.com</a>
@@ -354,17 +355,24 @@
         <span class="logo-title">M<sup>e</sup> Sara Ahmanna</span>
         <span class="logo-sub">Notaire</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#apropos">Le Cabinet</a></li>
-        <li><a href="#engagements">Engagements</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#guide">Guide</a></li>
-        <li><a href="#contact" class="nav-cta">Prendre rendez-vous</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#apropos" data-i18n="nav.cabinet">Le Cabinet</a></li>
+        <li><a href="#engagements" data-i18n="nav.engagements">Engagements</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#guide" data-i18n="nav.guide">Guide</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Prendre rendez-vous</a></li>
       </ul>
+      <div class="nav-end">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -374,25 +382,25 @@
     <div class="hero-content">
       <div class="hero-badge-line">
         <span class="hero-ornament">&#10070;</span>
-        <span class="hero-pretitle">Cabinet Notarial</span>
+        <span class="hero-pretitle" data-i18n="hero.pretitle">Cabinet Notarial</span>
         <span class="hero-ornament">&#10070;</span>
       </div>
       <h1 class="hero-title">Maître Sara Ahmanna</h1>
-      <p class="hero-subtitle">Notaire à Marrakech</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Notaire à Marrakech</p>
       <div class="hero-divider">
         <span class="divider-line"></span>
         <span class="divider-icon"><i class="fas fa-balance-scale"></i></span>
         <span class="divider-line"></span>
       </div>
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="hero.desc">
         Conseils juridiques d'excellence · Actes authentiques · Sécurité de vos droits
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-gold">
-          <i class="fas fa-calendar-check"></i> Prendre rendez-vous
+          <i class="fas fa-calendar-check"></i> <span data-i18n="hero.cta1">Prendre rendez-vous</span>
         </a>
         <a href="#services" class="btn btn-outline-light">
-          <i class="fas fa-arrow-down"></i> Nos services
+          <i class="fas fa-arrow-down"></i> <span data-i18n="hero.cta2">Nos services</span>
         </a>
       </div>
     </div>
@@ -405,23 +413,23 @@
       <div class="trust-grid">
         <div class="trust-item">
           <i class="fas fa-shield-alt"></i>
-          <span>Actes authentifiés</span>
+          <span data-i18n="trust.t1">Actes authentifiés</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-lock"></i>
-          <span>Confidentialité absolue</span>
+          <span data-i18n="trust.t2">Confidentialité absolue</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-balance-scale"></i>
-          <span>Officier ministériel</span>
+          <span data-i18n="trust.t3">Officier ministériel</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-hand-holding-heart"></i>
-          <span>Accompagnement personnalisé</span>
+          <span data-i18n="trust.t4">Accompagnement personnalisé</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-clock"></i>
-          <span>Réactivité &amp; rigueur</span>
+          <span data-i18n="trust.t5">Réactivité &amp; rigueur</span>
         </div>
       </div>
     </div>
@@ -431,10 +439,10 @@
   <section id="services" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Notre expertise</span>
-        <h2 class="section-title">Domaines d'intervention</h2>
+        <span class="section-label" data-i18n="services.label">Notre expertise</span>
+        <h2 class="section-title" data-i18n="services.title">Domaines d'intervention</h2>
         <div class="title-ornament"><span></span><i class="fas fa-star"></i><span></span></div>
-        <p class="section-subtitle">Un accompagnement notarial complet pour sécuriser chaque étape de votre vie juridique</p>
+        <p class="section-subtitle" data-i18n="services.subtitle">Un accompagnement notarial complet pour sécuriser chaque étape de votre vie juridique</p>
       </div>
 
       <div class="services-grid">
@@ -452,13 +460,13 @@
             class="service-img"
             onerror="this.style.display='none'"
           />
-          <h3>Droit Immobilier</h3>
-          <p>Ventes, acquisitions, hypothèques, baux commerciaux, copropriété. Sécurisation complète de vos transactions foncières et immobilières.</p>
+          <h3 data-i18n="services.s1_title">Droit Immobilier</h3>
+          <p data-i18n="services.s1_desc">Ventes, acquisitions, hypothèques, baux commerciaux, copropriété. Sécurisation complète de vos transactions foncières et immobilières.</p>
           <ul class="service-list">
-            <li>Promesses et actes de vente</li>
-            <li>Crédit immobilier &amp; hypothèque</li>
-            <li>Lotissements &amp; copropriété</li>
-            <li>Baux commerciaux</li>
+            <li data-i18n="services.s1_l1">Promesses et actes de vente</li>
+            <li data-i18n="services.s1_l2">Crédit immobilier &amp; hypothèque</li>
+            <li data-i18n="services.s1_l3">Lotissements &amp; copropriété</li>
+            <li data-i18n="services.s1_l4">Baux commerciaux</li>
           </ul>
         </div>
 
@@ -466,13 +474,13 @@
           <div class="service-icon-wrap">
             <div class="service-icon"><i class="fas fa-scroll"></i></div>
           </div>
-          <h3>Successions &amp; Héritage</h3>
-          <p>Règlement des successions dans le respect du droit marocain et des volontés du défunt. Accompagnement des héritiers à chaque étape.</p>
+          <h3 data-i18n="services.s2_title">Successions &amp; Héritage</h3>
+          <p data-i18n="services.s2_desc">Règlement des successions dans le respect du droit marocain et des volontés du défunt. Accompagnement des héritiers à chaque étape.</p>
           <ul class="service-list">
-            <li>Déclarations de succession</li>
-            <li>Partages successoraux</li>
-            <li>Testaments &amp; donations</li>
-            <li>Certificats d'hérédité</li>
+            <li data-i18n="services.s2_l1">Déclarations de succession</li>
+            <li data-i18n="services.s2_l2">Partages successoraux</li>
+            <li data-i18n="services.s2_l3">Testaments &amp; donations</li>
+            <li data-i18n="services.s2_l4">Certificats d'hérédité</li>
           </ul>
         </div>
 
@@ -480,13 +488,13 @@
           <div class="service-icon-wrap">
             <div class="service-icon"><i class="fas fa-rings-wedding"></i></div>
           </div>
-          <h3>Droit de la Famille</h3>
-          <p>Sécurisez les liens familiaux par des actes notariaux rigoureux : contrats de mariage, donations entre époux, pactes civils.</p>
+          <h3 data-i18n="services.s3_title">Droit de la Famille</h3>
+          <p data-i18n="services.s3_desc">Sécurisez les liens familiaux par des actes notariaux rigoureux : contrats de mariage, donations entre époux, pactes civils.</p>
           <ul class="service-list">
-            <li>Contrats de mariage</li>
-            <li>Donations entre époux</li>
-            <li>Régimes matrimoniaux</li>
-            <li>Adoptions &amp; tutelles</li>
+            <li data-i18n="services.s3_l1">Contrats de mariage</li>
+            <li data-i18n="services.s3_l2">Donations entre époux</li>
+            <li data-i18n="services.s3_l3">Régimes matrimoniaux</li>
+            <li data-i18n="services.s3_l4">Adoptions &amp; tutelles</li>
           </ul>
         </div>
 
@@ -494,13 +502,13 @@
           <div class="service-icon-wrap">
             <div class="service-icon"><i class="fas fa-briefcase"></i></div>
           </div>
-          <h3>Droit des Sociétés</h3>
-          <p>Création, modification et dissolution de vos structures juridiques. Accompagnement des entrepreneurs et investisseurs au Maroc.</p>
+          <h3 data-i18n="services.s4_title">Droit des Sociétés</h3>
+          <p data-i18n="services.s4_desc">Création, modification et dissolution de vos structures juridiques. Accompagnement des entrepreneurs et investisseurs au Maroc.</p>
           <ul class="service-list">
-            <li>Constitutions de sociétés</li>
-            <li>Cessions de parts &amp; actions</li>
-            <li>Statuts &amp; pactes d'associés</li>
-            <li>Fusions &amp; acquisitions</li>
+            <li data-i18n="services.s4_l1">Constitutions de sociétés</li>
+            <li data-i18n="services.s4_l2">Cessions de parts &amp; actions</li>
+            <li data-i18n="services.s4_l3">Statuts &amp; pactes d'associés</li>
+            <li data-i18n="services.s4_l4">Fusions &amp; acquisitions</li>
           </ul>
         </div>
 
@@ -508,13 +516,13 @@
           <div class="service-icon-wrap">
             <div class="service-icon"><i class="fas fa-file-signature"></i></div>
           </div>
-          <h3>Authentifications</h3>
-          <p>Légalisation et certification de documents officiels. Traductions assermentées, procurations et légalisations diverses.</p>
+          <h3 data-i18n="services.s5_title">Authentifications</h3>
+          <p data-i18n="services.s5_desc">Légalisation et certification de documents officiels. Traductions assermentées, procurations et légalisations diverses.</p>
           <ul class="service-list">
-            <li>Procurations notariées</li>
-            <li>Légalisations de signatures</li>
-            <li>Certifications conformes</li>
-            <li>Traductions &amp; apostilles</li>
+            <li data-i18n="services.s5_l1">Procurations notariées</li>
+            <li data-i18n="services.s5_l2">Légalisations de signatures</li>
+            <li data-i18n="services.s5_l3">Certifications conformes</li>
+            <li data-i18n="services.s5_l4">Traductions &amp; apostilles</li>
           </ul>
         </div>
 
@@ -522,13 +530,13 @@
           <div class="service-icon-wrap">
             <div class="service-icon"><i class="fas fa-handshake"></i></div>
           </div>
-          <h3>Conseil Juridique</h3>
-          <p>Consultation personnalisée pour anticiper et prévenir les risques juridiques de vos projets personnels et professionnels.</p>
+          <h3 data-i18n="services.s6_title">Conseil Juridique</h3>
+          <p data-i18n="services.s6_desc">Consultation personnalisée pour anticiper et prévenir les risques juridiques de vos projets personnels et professionnels.</p>
           <ul class="service-list">
-            <li>Audit juridique patrimonial</li>
-            <li>Stratégie successorale</li>
-            <li>Investissements immobiliers</li>
-            <li>Conseil aux entreprises</li>
+            <li data-i18n="services.s6_l1">Audit juridique patrimonial</li>
+            <li data-i18n="services.s6_l2">Stratégie successorale</li>
+            <li data-i18n="services.s6_l3">Investissements immobiliers</li>
+            <li data-i18n="services.s6_l4">Conseil aux entreprises</li>
           </ul>
         </div>
 
@@ -558,39 +566,39 @@
             </div>
             <div class="about-badge">
               <i class="fas fa-balance-scale"></i>
-              <span>Notaire Officielle</span>
+              <span data-i18n="about.badge">Notaire Officielle</span>
             </div>
           </div>
           <div class="about-card-accent">
             <div class="accent-item">
               <span class="accent-num">15+</span>
-              <span class="accent-label">Années d'expérience</span>
+              <span class="accent-label" data-i18n="about.years">Années d'expérience</span>
             </div>
             <div class="accent-divider"></div>
             <div class="accent-item">
               <span class="accent-num">3 000+</span>
-              <span class="accent-label">Actes établis</span>
+              <span class="accent-label" data-i18n="about.acts">Actes établis</span>
             </div>
             <div class="accent-divider"></div>
             <div class="accent-item">
               <span class="accent-num">100%</span>
-              <span class="accent-label">Sécurité juridique</span>
+              <span class="accent-label" data-i18n="about.security">Sécurité juridique</span>
             </div>
           </div>
         </div>
 
         <div class="about-text">
-          <span class="section-label section-label--light">Le Cabinet</span>
-          <h2 class="section-title section-title--light">Maître Sara Ahmanna</h2>
+          <span class="section-label section-label--light" data-i18n="about.label">Le Cabinet</span>
+          <h2 class="section-title section-title--light" data-i18n="about.title">Maître Sara Ahmanna</h2>
           <div class="title-ornament title-ornament--gold"><span></span><i class="fas fa-star"></i><span></span></div>
 
-          <p class="about-lead">
+          <p class="about-lead" data-i18n="about.lead">
             Notaire assermentée à Marrakech, Maître Sara Ahmanna met son expertise au service de la sécurité juridique de ses clients depuis plus de 15 ans.
           </p>
-          <p>
+          <p data-i18n="about.bio1">
             Titulaire d'un Doctorat en Droit Notarial et inscrite au Conseil Régional des Notaires de Marrakech, elle accompagne particuliers, familles et entreprises dans leurs démarches juridiques les plus importantes.
           </p>
-          <p>
+          <p data-i18n="about.bio2">
             Le cabinet notarial d'Ahmanna Sara se distingue par une approche rigoureuse, une écoute attentive et un conseil personnalisé, garantissant à chaque client la protection de ses intérêts dans le plein respect du droit marocain.
           </p>
 
@@ -598,22 +606,22 @@
             <div class="value-item">
               <div class="value-icon"><i class="fas fa-gavel"></i></div>
               <div>
-                <h4>Rigueur juridique</h4>
-                <p>Chaque acte est rédigé avec la plus grande précision pour garantir sa validité et sa pérennité.</p>
+                <h4 data-i18n="about.v1_title">Rigueur juridique</h4>
+                <p data-i18n="about.v1_desc">Chaque acte est rédigé avec la plus grande précision pour garantir sa validité et sa pérennité.</p>
               </div>
             </div>
             <div class="value-item">
               <div class="value-icon"><i class="fas fa-user-shield"></i></div>
               <div>
-                <h4>Confidentialité</h4>
-                <p>Le secret professionnel est au cœur de notre exercice. Vos informations restent strictement confidentielles.</p>
+                <h4 data-i18n="about.v2_title">Confidentialité</h4>
+                <p data-i18n="about.v2_desc">Le secret professionnel est au cœur de notre exercice. Vos informations restent strictement confidentielles.</p>
               </div>
             </div>
             <div class="value-item">
               <div class="value-icon"><i class="fas fa-comments"></i></div>
               <div>
-                <h4>Conseil éclairé</h4>
-                <p>Nous vous guidons avec pédagogie pour que vous compreniez chaque étape de votre démarche.</p>
+                <h4 data-i18n="about.v3_title">Conseil éclairé</h4>
+                <p data-i18n="about.v3_desc">Nous vous guidons avec pédagogie pour que vous compreniez chaque étape de votre démarche.</p>
               </div>
             </div>
           </div>
@@ -626,8 +634,8 @@
   <section id="engagements" class="section section-cream">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Notre promesse</span>
-        <h2 class="section-title">Nos engagements</h2>
+        <span class="section-label" data-i18n="engagements.label">Notre promesse</span>
+        <h2 class="section-title" data-i18n="engagements.title">Nos engagements</h2>
         <div class="title-ornament"><span></span><i class="fas fa-star"></i><span></span></div>
       </div>
 
@@ -635,26 +643,26 @@
         <div class="engagement-card">
           <div class="eng-number">01</div>
           <div class="eng-icon"><i class="fas fa-stopwatch"></i></div>
-          <h3>Réactivité</h3>
-          <p>Nous traitons vos demandes avec rapidité et efficacité. Chaque dossier bénéficie d'un suivi rigoureux et de délais maîtrisés.</p>
+          <h3 data-i18n="engagements.e1_title">Réactivité</h3>
+          <p data-i18n="engagements.e1_desc">Nous traitons vos demandes avec rapidité et efficacité. Chaque dossier bénéficie d'un suivi rigoureux et de délais maîtrisés.</p>
         </div>
         <div class="engagement-card">
           <div class="eng-number">02</div>
           <div class="eng-icon"><i class="fas fa-eye"></i></div>
-          <h3>Transparence</h3>
-          <p>Nos honoraires sont clairs et conformes au barème officiel. Aucune surprise : chaque tarif vous est communiqué à l'avance.</p>
+          <h3 data-i18n="engagements.e2_title">Transparence</h3>
+          <p data-i18n="engagements.e2_desc">Nos honoraires sont clairs et conformes au barème officiel. Aucune surprise : chaque tarif vous est communiqué à l'avance.</p>
         </div>
         <div class="engagement-card">
           <div class="eng-number">03</div>
           <div class="eng-icon"><i class="fas fa-map-marker-check"></i></div>
-          <h3>Accessibilité</h3>
-          <p>Situé en plein cœur de Marrakech, notre cabinet est facilement accessible. Nous nous adaptons à vos contraintes de disponibilité.</p>
+          <h3 data-i18n="engagements.e3_title">Accessibilité</h3>
+          <p data-i18n="engagements.e3_desc">Situé en plein cœur de Marrakech, notre cabinet est facilement accessible. Nous nous adaptons à vos contraintes de disponibilité.</p>
         </div>
         <div class="engagement-card">
           <div class="eng-number">04</div>
           <div class="eng-icon"><i class="fas fa-award"></i></div>
-          <h3>Excellence</h3>
-          <p>Une formation continue et une veille juridique permanente pour vous offrir un conseil toujours en phase avec l'évolution du droit.</p>
+          <h3 data-i18n="engagements.e4_title">Excellence</h3>
+          <p data-i18n="engagements.e4_desc">Une formation continue et une veille juridique permanente pour vous offrir un conseil toujours en phase avec l'évolution du droit.</p>
         </div>
       </div>
     </div>
@@ -664,8 +672,8 @@
   <section id="faq" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Questions fréquentes</span>
-        <h2 class="section-title">FAQ Notariale</h2>
+        <span class="section-label" data-i18n="faq.label">Questions fréquentes</span>
+        <h2 class="section-title" data-i18n="faq.title">FAQ Notariale</h2>
         <div class="title-ornament"><span></span><i class="fas fa-star"></i><span></span></div>
       </div>
 
@@ -739,10 +747,10 @@
   <section id="contact" class="section section-dark">
     <div class="container">
       <div class="section-header">
-        <span class="section-label section-label--light">Nous contacter</span>
-        <h2 class="section-title section-title--light">Prendre rendez-vous</h2>
+        <span class="section-label section-label--light" data-i18n="contact.label">Nous contacter</span>
+        <h2 class="section-title section-title--light" data-i18n="contact.title">Prendre rendez-vous</h2>
         <div class="title-ornament title-ornament--gold"><span></span><i class="fas fa-star"></i><span></span></div>
-        <p class="section-subtitle section-subtitle--light">Votre première consultation est l'occasion de nous exposer votre situation en toute confidentialité</p>
+        <p class="section-subtitle section-subtitle--light" data-i18n="contact.subtitle">Votre première consultation est l'occasion de nous exposer votre situation en toute confidentialité</p>
       </div>
 
       <div class="contact-layout">
@@ -750,55 +758,55 @@
           <div class="contact-card">
             <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
-              <h4>Adresse</h4>
-              <p>Marrakech, Maroc</p>
+              <h4 data-i18n="contact.address_title">Adresse</h4>
+              <p data-i18n="contact.address">Marrakech, Maroc</p>
             </div>
           </div>
           <div class="contact-card">
             <div class="cc-icon"><i class="fas fa-phone-alt"></i></div>
             <div>
-              <h4>Téléphone</h4>
+              <h4 data-i18n="contact.phone_title">Téléphone</h4>
               <a href="tel:+212500000000">+212 5XX XX XX XX</a>
             </div>
           </div>
           <div class="contact-card">
             <div class="cc-icon"><i class="fas fa-envelope"></i></div>
             <div>
-              <h4>Email</h4>
+              <h4 data-i18n="contact.email_title">Email</h4>
               <a href="mailto:contact@ahmanna-notaire.com">contact@ahmanna-notaire.com</a>
             </div>
           </div>
           <div class="contact-card">
             <div class="cc-icon"><i class="fas fa-clock"></i></div>
             <div>
-              <h4>Horaires</h4>
-              <p>Lundi – Vendredi : 09h00 – 18h00</p>
+              <h4 data-i18n="contact.hours_title">Horaires</h4>
+              <p data-i18n="contact.hours">Lundi – Vendredi : 09h00 – 18h00</p>
             </div>
           </div>
 
           <div class="contact-note">
             <i class="fas fa-info-circle"></i>
-            <p>Pour toute urgence, merci de nous contacter directement par téléphone.</p>
+            <p data-i18n="contact.note">Pour toute urgence, merci de nous contacter directement par téléphone.</p>
           </div>
         </div>
 
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="nom">Nom complet *</label>
-              <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required />
+              <label for="nom" data-i18n="contact.f_nom">Nom complet *</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom complet" data-i18n-placeholder="contact.f_nom_p" required />
             </div>
             <div class="form-group">
-              <label for="telephone">Téléphone</label>
-              <input type="tel" id="telephone" name="telephone" placeholder="+212 6XX XXX XXX" />
+              <label for="telephone" data-i18n="contact.f_tel">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="+212 6XX XXX XXX" data-i18n-placeholder="contact.f_tel_p" />
             </div>
           </div>
           <div class="form-group">
-            <label for="email">Adresse e-mail *</label>
-            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            <label for="email" data-i18n="contact.f_email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" data-i18n-placeholder="contact.f_email_p" required />
           </div>
           <div class="form-group">
-            <label for="service">Type de service *</label>
+            <label for="service" data-i18n="contact.f_service">Type de service *</label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Sélectionnez un domaine</option>
               <option>Droit Immobilier</option>
@@ -811,15 +819,15 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Votre message *</label>
-            <textarea id="message" name="message" rows="5" placeholder="Décrivez brièvement votre situation ou votre demande..." required></textarea>
+            <label for="message" data-i18n="contact.f_msg">Votre message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez brièvement votre situation ou votre demande..." data-i18n-placeholder="contact.f_msg_p" required></textarea>
           </div>
           <div class="form-privacy">
             <i class="fas fa-lock"></i>
-            <span>Vos informations restent strictement confidentielles conformément au secret professionnel notarial.</span>
+            <span data-i18n="contact.f_privacy">Vos informations restent strictement confidentielles conformément au secret professionnel notarial.</span>
           </div>
           <button type="submit" class="btn btn-gold btn-full">
-            <i class="fas fa-paper-plane"></i> Envoyer ma demande
+            <i class="fas fa-paper-plane"></i> <span data-i18n="contact.f_submit">Envoyer ma demande</span>
           </button>
           <div class="form-msg" id="formMsg"></div>
         </form>
@@ -831,10 +839,10 @@
   <section class="section section-cream" id="guide">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Informations juridiques</span>
-        <h2 class="section-title">Guide du droit notarial à Marrakech</h2>
+        <span class="section-label" data-i18n="guide.label">Informations juridiques</span>
+        <h2 class="section-title" data-i18n="guide.title">Guide du droit notarial à Marrakech</h2>
         <div class="title-ornament"><span></span><i class="fas fa-star"></i><span></span></div>
-        <p class="section-subtitle">Tout ce que vous devez savoir sur les démarches notariales au Maroc</p>
+        <p class="section-subtitle" data-i18n="guide.subtitle">Tout ce que vous devez savoir sur les démarches notariales au Maroc</p>
       </div>
       <div class="guide-grid">
 
@@ -849,7 +857,7 @@
             onerror="this.style.display='none'"
           />
           <div class="guide-icon"><i class="fas fa-home"></i></div>
-          <h3>Acheter un bien immobilier à Marrakech</h3>
+          <h3 data-i18n="guide.g1_title">Acheter un bien immobilier à Marrakech</h3>
           <p>L'achat d'un appartement, d'une villa, d'un riad ou d'un terrain à Marrakech nécessite obligatoirement l'intervention d'un notaire pour authentifier l'acte de vente. Le notaire vérifie le titre foncier, purge les hypothèques et sécurise votre acquisition.</p>
           <ul class="guide-list">
             <li>Vérification du titre foncier et de la situation juridique du bien</li>
@@ -871,7 +879,7 @@
             onerror="this.style.display='none'"
           />
           <div class="guide-icon"><i class="fas fa-scroll"></i></div>
-          <h3>Succession et héritage au Maroc</h3>
+          <h3 data-i18n="guide.g2_title">Succession et héritage au Maroc</h3>
           <p>Le règlement d'une succession au Maroc fait intervenir le notaire pour établir les actes officiels, identifier les héritiers légaux et procéder au partage des biens selon le droit marocain (Moudawwana) ou les dispositions testamentaires.</p>
           <ul class="guide-list">
             <li>Établissement du certificat d'hérédité (acte de notoriété)</li>
@@ -893,7 +901,7 @@
             onerror="this.style.display='none'"
           />
           <div class="guide-icon"><i class="fas fa-briefcase"></i></div>
-          <h3>Créer une société à Marrakech</h3>
+          <h3 data-i18n="guide.g3_title">Créer une société à Marrakech</h3>
           <p>La création d'une SARL, SA ou SNC au Maroc nécessite l'authentification des statuts par un notaire. Le cabinet Ahmanna accompagne entrepreneurs et investisseurs étrangers dans toutes les étapes de la constitution de leur structure juridique.</p>
           <ul class="guide-list">
             <li>Rédaction et authentification des statuts</li>
@@ -915,7 +923,7 @@
             onerror="this.style.display='none'"
           />
           <div class="guide-icon"><i class="fas fa-globe"></i></div>
-          <h3>Marocains Résidant à l'Étranger (MRE)</h3>
+          <h3 data-i18n="guide.g4_title">Marocains Résidant à l'Étranger (MRE)</h3>
           <p>Maître Sara Ahmanna accompagne les MRE dans leurs démarches juridiques et immobilières au Maroc. Une procuration notariée vous permet d'acheter, vendre ou gérer votre patrimoine marocain sans vous déplacer.</p>
           <ul class="guide-list">
             <li>Procurations générales et spéciales pour achats/ventes</li>
@@ -936,27 +944,27 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo">M<sup>e</sup> Sara Ahmanna</div>
-          <p class="footer-tagline">Notaire · Officier Public · Marrakech</p>
+          <p class="footer-tagline" data-i18n="footer.role">Notaire · Officier Public · Marrakech</p>
           <div class="footer-seal">
             <i class="fas fa-stamp"></i>
-            <span>Inscrite au Conseil Régional des Notaires</span>
+            <span data-i18n="footer.seal">Inscrite au Conseil Régional des Notaires</span>
           </div>
         </div>
 
         <div class="footer-nav">
-          <h4>Navigation</h4>
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
           <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#apropos">Le Cabinet</a></li>
-            <li><a href="#engagements">Engagements</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#apropos" data-i18n="nav.cabinet">Le Cabinet</a></li>
+            <li><a href="#engagements" data-i18n="nav.engagements">Engagements</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#contact" data-i18n="nav.cta">Prendre rendez-vous</a></li>
           </ul>
         </div>
 
         <div class="footer-services">
-          <h4>Domaines</h4>
-          <ul>
+          <h4 data-i18n="footer.domains_title">Domaines</h4>
+          <ul id="footerDomains">
             <li>Droit Immobilier</li>
             <li>Successions</li>
             <li>Droit de la Famille</li>
@@ -966,12 +974,12 @@
         </div>
 
         <div class="footer-contact">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact_title">Contact</h4>
           <ul>
-            <li><i class="fas fa-map-marker-alt"></i> Marrakech, Maroc</li>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="contact.address">Marrakech, Maroc</span></li>
             <li><i class="fas fa-phone-alt"></i> <a href="tel:+212500000000">+212 5XX XX XX XX</a></li>
             <li><i class="fas fa-envelope"></i> <a href="mailto:contact@ahmanna-notaire.com">contact@ahmanna-notaire.com</a></li>
-            <li><i class="fas fa-clock"></i> Lun–Ven 09h–18h</li>
+            <li><i class="fas fa-clock"></i> <span data-i18n="contact.hours">Lun–Ven 09h–18h</span></li>
           </ul>
         </div>
       </div>
@@ -996,12 +1004,13 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Cabinet Notarial Maître Sara Ahmanna. Tous droits réservés.</p>
-        <p class="footer-legal">Officier Public et Ministériel · Conseil Régional des Notaires · Marrakech, Maroc</p>
+        <p data-i18n="footer.copy">&copy; 2026 Cabinet Notarial Maître Sara Ahmanna. Tous droits réservés.</p>
+        <p class="footer-legal" data-i18n="footer.legal">Officier Public et Ministériel · Conseil Régional des Notaires · Marrakech, Maroc</p>
       </div>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -79,8 +79,9 @@ if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
+    const t = TRANSLATIONS[localStorage.getItem('lang') || 'fr'];
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours…';
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
     formMsg.className = 'form-msg';
     formMsg.textContent = '';
 
@@ -93,14 +94,75 @@ if (form) {
         body: JSON.stringify(body)
       });
       formMsg.className = 'form-msg success';
-      formMsg.textContent = 'Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.';
+      formMsg.textContent = t.contact.success;
       form.reset();
     } catch {
       formMsg.className = 'form-msg error';
-      formMsg.textContent = 'Une erreur est survenue. Veuillez nous contacter directement par téléphone.';
+      formMsg.textContent = t.contact.error;
     } finally {
       btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer ma demande';
+      btn.innerHTML = `<i class="fas fa-paper-plane"></i> <span data-i18n="contact.f_submit">${t.contact.f_submit}</span>`;
     }
   });
 }
+
+// ===== LANGUAGE SWITCHER =====
+function getNestedValue(obj, path) {
+  return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj);
+}
+
+function applyLanguage(lang) {
+  const t = TRANSLATIONS[lang];
+  if (!t) return;
+
+  document.documentElement.lang = t.lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = getNestedValue(t, el.dataset.i18n);
+    if (val !== undefined) el.textContent = val;
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const val = getNestedValue(t, el.dataset.i18nPlaceholder);
+    if (val !== undefined) el.placeholder = val;
+  });
+
+  // Rebuild service select options
+  const serviceSelect = document.getElementById('service');
+  if (serviceSelect) {
+    const current = serviceSelect.value;
+    serviceSelect.innerHTML = `<option value="" disabled selected>${t.contact.f_service_default}</option>`;
+    t.contact.f_services.forEach(s => {
+      const opt = document.createElement('option');
+      opt.textContent = s;
+      serviceSelect.appendChild(opt);
+    });
+    serviceSelect.value = current || '';
+  }
+
+  // Rebuild footer domains list
+  const footerDomains = document.getElementById('footerDomains');
+  if (footerDomains) {
+    footerDomains.innerHTML = '';
+    t.footer.domains.forEach(d => {
+      const li = document.createElement('li');
+      li.textContent = d;
+      footerDomains.appendChild(li);
+    });
+  }
+
+  // Update active lang button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  localStorage.setItem('lang', lang);
+}
+
+// Language button click handlers
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+});
+
+// Init with saved language or default to French
+applyLanguage(localStorage.getItem('lang') || 'fr');
