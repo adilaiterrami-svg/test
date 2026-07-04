@@ -91,7 +91,7 @@ const TRANSLATIONS = {
       label: "Nous contacter",
       title: "Prendre rendez-vous",
       subtitle: "Votre première consultation est l’occasion de nous exposer votre situation en toute confidentialité",
-      address_title: "Adresse", address: "Marrakech, Maroc",
+      address_title: "Adresse", address: "50 Rue Ibn Aïcha, Guéliz – Marrakech",
       phone_title: "Téléphone",
       email_title: "Email",
       hours_title: "Horaires", hours: "Lundi – Vendredi : 09h00 – 18h00",
