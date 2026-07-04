@@ -1047,6 +1047,98 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================================
+   GUIDE PRATIQUE
+   ============================================================ */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.guide-card {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  transition: all var(--transition);
+  position: relative;
+}
+.guide-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.guide-card:hover::before { transform: scaleX(1); }
+
+.guide-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.guide-card h3 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.guide-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.guide-list {
+  margin-bottom: 20px;
+}
+.guide-list li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 6px 0 6px 20px;
+  position: relative;
+  border-bottom: 1px solid var(--cream-dark);
+}
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 8px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.guide-note {
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 10px 14px;
+  font-size: 0.82rem !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 0 !important;
+}
+.guide-note i { color: var(--gold); margin-right: 6px; }
+
+@media (max-width: 768px) {
+  .guide-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    ANIMATIONS
    ============================================================ */
 .fade-in {
