@@ -275,22 +275,22 @@ h1, h2, h3, h4 {
 }
 .lang-btn {
   background: none;
-  border: 1px solid var(--gold);
-  color: var(--text-muted);
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 4px 8px;
-  border-radius: 3px;
+  border: 2px solid transparent;
+  font-size: 1.35rem;
+  padding: 2px 3px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition);
+  opacity: 0.45;
   line-height: 1;
+  transition: opacity var(--transition), border-color var(--transition), transform 0.15s;
 }
-.lang-btn:hover,
+.lang-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
 .lang-btn.active {
-  background: var(--gold);
-  color: var(--white);
+  opacity: 1;
+  border-color: var(--gold);
 }
 
 .nav-toggle {
@@ -1056,7 +1056,7 @@ h1, h2, h3, h4 {
   }
   .nav-links.open { display: flex; }
   .nav-toggle   { display: flex; }
-  .lang-btn     { padding: 3px 6px; font-size: 0.65rem; }
+  .lang-btn     { font-size: 1.15rem; padding: 2px; }
   .hero-actions { flex-direction: column; align-items: center; }
   .trust-item   {
     border-right: none;
