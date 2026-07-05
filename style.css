@@ -1190,6 +1190,84 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================================
+   GOOGLE MAPS
+   ============================================================ */
+.contact-map {
+  margin-top: 20px;
+}
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color var(--transition);
+}
+.map-link:hover { color: var(--gold-light); }
+
+/* ============================================================
+   ZONES D'INTERVENTION
+   ============================================================ */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.zone-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  transition: border-color var(--transition), background var(--transition);
+}
+.zone-card:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+.zone-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(201,168,76,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+.zone-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.zone-card p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+}
+@media (max-width: 1024px) {
+  .zones-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .zones-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    ANIMATIONS
    ============================================================ */
 .fade-in {

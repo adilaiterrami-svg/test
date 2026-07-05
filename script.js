@@ -58,7 +58,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 
 // ===== FADE-IN ON SCROLL =====
 const fadeEls = document.querySelectorAll(
-  '.service-card, .engagement-card, .faq-item, .value-item, .contact-card'
+  '.service-card, .engagement-card, .faq-item, .value-item, .contact-card, .zone-card'
 );
 const fadeObs = new IntersectionObserver(entries => {
   entries.forEach((e, i) => {
