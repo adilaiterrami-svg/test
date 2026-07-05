@@ -14,6 +14,27 @@ const TRANSLATIONS = {
   'nav.faq':            { fr: 'FAQ',           en: 'FAQ',            ar: 'الأسئلة الشائعة' },
   'nav.contact':        { fr: 'Contact',       en: 'Contact',        ar: 'التواصل' },
 
+  /* ── EXPERTISE STRIP ── */
+  'strip.prof.title':  { fr: 'Professeur Universitaire',          en: 'University Professor',              ar: 'أستاذ جامعي' },
+  'strip.prof.desc':   { fr: 'Faculté de Médecine, Université Cadi Ayyad, Marrakech', en: 'Faculty of Medicine, Cadi Ayyad University', ar: 'كلية الطب والصيدلة، جامعة القاضي عياض، مراكش' },
+  'strip.intl.title':  { fr: 'Formation Internationale',           en: 'International Training',            ar: 'تكوين دولي' },
+  'strip.intl.desc':   { fr: 'France · Turquie · Égypte · Inde · Belgique', en: 'France · Turkey · Egypt · India · Belgium', ar: 'فرنسا · تركيا · مصر · الهند · بلجيكا' },
+  'strip.endo.title':  { fr: 'Expert Endoscopie Avancée',          en: 'Advanced Endoscopy Expert',         ar: 'خبير في التنظير المتقدم' },
+  'strip.endo.desc':   { fr: 'CPRE · Écho-endoscopie · Vidéo-capsule', en: 'ERCP · Endoscopic Ultrasound · Capsule Endoscopy', ar: 'CPRE · الإيكو-إندوسكوبي · التنظير بالكبسولة' },
+  'strip.chief.title': { fr: "Chef de l'Unité d'Endoscopie",       en: 'Head of Endoscopy Unit',            ar: 'رئيس وحدة التنظير الهضمي' },
+  'strip.chief.desc':  { fr: 'CHU Mohammed VI de Marrakech',        en: 'CHU Mohammed VI of Marrakech',      ar: 'المستشفى الجامعي محمد السادس بمراكش' },
+  'strip.pub.title':   { fr: '+10 Publications Internationales',    en: '+10 International Publications',    ar: '+10 منشورات علمية دولية' },
+  'strip.pub.desc':    { fr: 'Revues médicales à comité de lecture', en: 'Peer-reviewed medical journals',   ar: 'مجلات طبية دولية محكّمة' },
+
+  /* ── BOOKING STEPS ── */
+  'consult.steps.title':    { fr: 'Comment prendre rendez-vous',                           en: 'How to book an appointment',                                ar: 'كيفية حجز موعد' },
+  'consult.steps.s1.title': { fr: 'Contactez-nous',                                        en: 'Contact us',                                                ar: 'تواصل معنا' },
+  'consult.steps.s1.desc':  { fr: 'Par téléphone, WhatsApp ou email selon votre convenance', en: 'By phone, WhatsApp or email at your convenience',          ar: 'عبر الهاتف أو واتساب أو البريد الإلكتروني' },
+  'consult.steps.s2.title': { fr: 'Consultation initiale',                                 en: 'Initial consultation',                                      ar: 'الاستشارة الأولى' },
+  'consult.steps.s2.desc':  { fr: 'Examen clinique, bilan et orientation diagnostique',    en: 'Clinical examination, assessment and diagnostic guidance',  ar: 'فحص سريري وتقييم وتوجيه تشخيصي' },
+  'consult.steps.s3.title': { fr: 'Prise en charge',                                       en: 'Care & follow-up',                                          ar: 'الرعاية والمتابعة' },
+  'consult.steps.s3.desc':  { fr: 'Endoscopie, traitement ou suivi au CHU ou en clinique privée', en: 'Endoscopy, treatment or follow-up at CHU or private clinic', ar: 'تنظير أو علاج أو متابعة بالمستشفى الجامعي أو بعيادة خاصة' },
+
   /* ── HERO ── */
   'hero.label':      { fr: 'Professeur · Gastro-Entérologue',       en: 'Professor · Gastroenterologist',            ar: 'أستاذ · أخصائي أمراض الجهاز الهضمي' },
   'hero.name':       { fr: 'Pr. Adil Ait Errami',                   en: 'Pr. Adil Ait Errami',                       ar: 'الأستاذ عادل أيت الرامي' },

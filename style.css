@@ -444,6 +444,164 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================
+   EXPERTISE STRIP
+   ============================================ */
+.expertise-strip {
+  background: var(--bg-dark);
+  padding: 0;
+  border-bottom: 3px solid var(--blue-mid);
+}
+.expertise-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.expertise-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 180px;
+  padding: 22px 24px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  transition: background var(--transition);
+}
+.expertise-item:last-child { border-right: none; }
+.expertise-item:hover { background: rgba(255,255,255,0.04); }
+.expertise-icon {
+  font-size: 1.5rem;
+  color: var(--blue-light);
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+.expertise-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.expertise-content strong {
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.expertise-content span {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+@media (max-width: 960px) {
+  .expertise-grid { flex-direction: column; }
+  .expertise-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 20px;
+  }
+  .expertise-item:last-child { border-bottom: none; }
+}
+
+/* ============================================
+   BOOKING STEPS
+   ============================================ */
+.booking-steps {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.booking-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 36px;
+  font-weight: 600;
+}
+.steps-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 260px;
+  text-align: left;
+  padding: 0 16px;
+}
+.step-arrow {
+  color: var(--blue-mid);
+  font-size: 1rem;
+  padding-top: 10px;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+.step-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(21,101,192,0.35);
+}
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 8px;
+}
+.step-content strong {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.step-content span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.booking-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.btn-whatsapp:hover { background: #1da851; color: #fff; transform: translateY(-2px); }
+@media (max-width: 680px) {
+  .step-arrow { display: none; }
+  .step-item { max-width: 100%; min-width: 100%; border-bottom: 1px solid var(--border); padding: 0 0 20px; margin-bottom: 20px; }
+  .step-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .steps-grid { flex-direction: column; align-items: flex-start; text-align: left; }
+}
+
+/* ============================================
    ABOUT
    ============================================ */
 .about-grid {
@@ -1685,6 +1843,13 @@ html[lang="ar"] .form-group textarea { text-align: right; direction: rtl; }
 html[lang="ar"] .nav-links { flex-direction: row-reverse; }
 html[lang="ar"] .footer-links ul { text-align: right; }
 html[lang="ar"] .topbar-inner { flex-direction: row-reverse; }
+html[lang="ar"] .expertise-item { flex-direction: row-reverse; text-align: right; border-right: none; border-left: 1px solid rgba(255,255,255,0.08); }
+html[lang="ar"] .expertise-item:first-child { border-left: 1px solid rgba(255,255,255,0.08); }
+html[lang="ar"] .expertise-item:last-child { border-left: none; }
+html[lang="ar"] .step-item { flex-direction: row-reverse; text-align: right; }
+html[lang="ar"] .step-arrow { transform: scaleX(-1); }
+html[lang="ar"] .booking-steps { text-align: right; }
+html[lang="ar"] .booking-cta { flex-direction: row-reverse; }
 
 @media (max-width: 768px) {
   .lang-switcher { margin-left: 8px; }
