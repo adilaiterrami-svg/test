@@ -1,0 +1,24 @@
+{
+  "name": "Comptes Rendus Endoscopie",
+  "short_name": "Endoscopie",
+  "description": "Génération de comptes rendus d'endoscopie digestive par dictée vocale",
+  "start_url": "/endoscopy/",
+  "display": "standalone",
+  "background_color": "#0d3b7a",
+  "theme_color": "#1565c0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
