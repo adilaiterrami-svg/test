@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Endoscopie">
+  <meta name="theme-color" content="#0d3b7a">
+  <title>Comptes Rendus Endoscopie</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #1565c0;
+  --blue-dark: #0d3b7a;
+  --blue-mid: #1976d2;
+  --blue-light: #42a5f5;
+  --blue-pale: #dbeeff;
+  --blue-subtle: #f0f6ff;
+  --text: #1a2535;
+  --text-muted: #4a5e75;
+  --bg: #ffffff;
+  --bg-alt: #f4f8fc;
+  --border: #ccddef;
+  --gold: #c9920a;
+  --green: #2e7d32;
+  --green-light: #e8f5e9;
+  --red: #c62828;
+  --red-light: #ffebee;
+  --radius: 10px;
+  --shadow: 0 2px 12px rgba(21,101,192,0.10);
+}
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: -apple-system, 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg-alt);
+  min-height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ── Header ── */
+.app-header {
+  background: var(--blue-dark);
+  color: #fff;
+  padding: 16px 20px;
+  padding-top: calc(16px + env(safe-area-inset-top));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.app-header h1 { font-size: 1.1rem; font-weight: 700; flex: 1; line-height: 1.3; }
+.app-header .subtitle { font-size: 0.7rem; opacity: 0.75; }
+.btn-back {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Home screen ── */
+.home {
+  padding: 24px 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.home-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 6px;
+}
+.home-sub {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 28px;
+}
+.proc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.proc-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: var(--shadow);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.proc-card:active { transform: scale(0.96); background: var(--blue-subtle); }
+.proc-card .icon { font-size: 2.2rem; margin-bottom: 8px; }
+.proc-card .name { font-size: 0.9rem; font-weight: 700; color: var(--blue-dark); line-height: 1.3; }
+.proc-card .abbr { font-size: 0.72rem; color: var(--text-muted); margin-top: 3px; }
+
+/* ── Form ── */
+.form-page {
+  display: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.form-page.active { display: block; }
+
+.section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blue-mid);
+  padding: 18px 0 8px;
+  border-bottom: 2px solid var(--blue-pale);
+  margin-bottom: 12px;
+}
+
+.field-group {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.field-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 10px 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px 10px;
+}
+.field-row input,
+.field-row select,
+.field-row textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: transparent;
+  resize: none;
+}
+.field-row textarea { min-height: 60px; }
+.field-row select { cursor: pointer; }
+
+.btn-mic {
+  background: none;
+  border: 2px solid var(--blue-pale);
+  color: var(--blue-mid);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 1.15rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-mic:active, .btn-mic.listening {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(198,40,40,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(198,40,40,0); }
+}
+
+/* Radio / checkbox groups */
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 14px 12px;
+}
+.opt-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-alt);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.opt-btn.selected {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: #fff;
+}
+
+/* Score bar for Boston */
+.boston-row {
+  display: flex;
+  gap: 6px;
+  padding: 8px 14px 12px;
+}
+.score-seg {
+  flex: 1;
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.score-seg.s0.selected { background: var(--red); border-color: var(--red); color: #fff; }
+.score-seg.s1.selected { background: #f57c00; border-color: #f57c00; color: #fff; }
+.score-seg.s2.selected { background: #fbc02d; border-color: #fbc02d; color: #222; }
+.score-seg.s3.selected { background: var(--green); border-color: var(--green); color: #fff; }
+.score-seg strong { display: block; font-size: 1.1rem; }
+
+/* Polyp cards */
+.polyp-list { padding: 8px 14px 12px; }
+.polyp-card {
+  background: var(--blue-subtle);
+  border: 1.5px solid var(--blue-pale);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.polyp-card h4 { font-size: 0.78rem; color: var(--blue-dark); margin-bottom: 6px; }
+.polyp-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.polyp-field label { font-size: 0.68rem; color: var(--text-muted); display: block; margin-bottom: 2px; }
+.polyp-field select,
+.polyp-field input {
+  width: 100%;
+  font-size: 0.82rem;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+}
+.btn-del-polyp {
+  position: absolute; top: 8px; right: 8px;
+  background: var(--red-light); border: none;
+  color: var(--red); width: 24px; height: 24px;
+  border-radius: 50%; font-size: 0.9rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.btn-add {
+  width: 100%;
+  padding: 10px;
+  background: var(--blue-subtle);
+  border: 1.5px dashed var(--blue-light);
+  border-radius: 8px;
+  color: var(--blue-mid);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0 16px;
+}
+.btn-primary, .btn-secondary {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-primary { background: var(--blue-dark); color: #fff; }
+.btn-primary:active { background: var(--blue-mid); }
+.btn-secondary { background: #fff; color: var(--blue-dark); border: 2px solid var(--blue-pale); }
+
+/* Preview / Output */
+.report-preview {
+  display: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.report-preview.visible { display: block; }
+
+.toast {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  left: 50%; transform: translateX(-50%);
+  background: var(--green);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 999;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }
+
+/* Listening indicator */
+.listening-badge {
+  display: none;
+  position: fixed;
+  bottom: calc(80px + env(safe-area-inset-bottom));
+  left: 50%; transform: translateX(-50%);
+  background: var(--red);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  z-index: 200;
+  align-items: center;
+  gap: 8px;
+}
+.listening-badge.show { display: flex; }
+.mic-dot { width: 10px; height: 10px; background: #fff; border-radius: 50%; animation: pulse 1s infinite; }
+
+  </style>
+</head>
+<body>
+
+<header class="app-header">
+  <button class="btn-back" id="btn-back" aria-label="Retour" style="display:none">&#8249;</button>
+  <div>
+    <h1 id="header-title">Endoscopie Digestive</h1>
+    <div class="subtitle" id="header-sub">Comptes rendus — Dictée vocale</div>
+  </div>
+</header>
+
+<div id="home">
+  <div class="home">
+    <div class="home-title">Choisir une procédure</div>
+    <div class="home-sub">Appuyez sur 🎙️ à côté d'un champ pour le dicter</div>
+    <div class="proc-grid">
+      <div class="proc-card" data-proc="colo">
+        <div class="icon">🔵</div>
+        <div class="name">Coloscopie</div>
+        <div class="abbr">Colonoscopie totale</div>
+      </div>
+      <div class="proc-card" data-proc="fogd">
+        <div class="icon">🔴</div>
+        <div class="name">Gastroscopie</div>
+        <div class="abbr">FOGD</div>
+      </div>
+      <div class="proc-card" data-proc="cpre">
+        <div class="icon">🟡</div>
+        <div class="name">CPRE</div>
+        <div class="abbr">Voies biliaires</div>
+      </div>
+      <div class="proc-card" data-proc="capsule">
+        <div class="icon">🟢</div>
+        <div class="name">Vidéocapsule</div>
+        <div class="abbr">Intestin grêle</div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;padding:16px;background:#fff;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);">
+      <div style="font-size:0.78rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px;">📱 Installer sur iPhone</div>
+      <ol style="font-size:0.78rem;color:var(--text-muted);line-height:2;padding-left:18px;">
+        <li>Ouvrir dans <strong>Safari</strong></li>
+        <li>Appuyer sur <strong>Partager</strong> (icône ↑)</li>
+        <li>« <strong>Sur l'écran d'accueil</strong> »</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div id="form-page" style="display:none">
+  <div id="form-content"></div>
+  <div class="form-page active" style="padding-top:0;">
+    <pre class="report-preview" id="report-output"></pre>
+  </div>
+</div>
+
+<div class="listening-badge" id="listening-badge">
+  <div class="mic-dot"></div>
+  Dictée en cours… Parlez maintenant
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+
+// ── Speech Recognition ──────────────────────────────────────
+const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recog = null, activeTarget = null, activeMicBtn = null;
+
+function initSpeech() {
+  if (!SpeechRec) return;
+  recog = new SpeechRec();
+  recog.lang = 'fr-FR';
+  recog.continuous = false;
+  recog.interimResults = true;
+
+  recog.onresult = e => {
+    const t = Array.from(e.results).map(r => r[0].transcript).join('');
+    if (activeTarget) {
+      if (activeTarget.tagName === 'SELECT') {
+        matchSelect(activeTarget, t);
+      } else {
+        const cur = activeTarget.value;
+        activeTarget.value = cur ? cur + ' ' + t : t;
+      }
+    }
+  };
+
+  recog.onend = () => {
+    badge.classList.remove('show');
+    if (activeMicBtn) { activeMicBtn.classList.remove('listening'); activeMicBtn = null; }
+    activeTarget = null;
+  };
+
+  recog.onerror = () => {
+    badge.classList.remove('show');
+    if (activeMicBtn) { activeMicBtn.classList.remove('listening'); activeMicBtn = null; }
+  };
+}
+
+function matchSelect(sel, text) {
+  const t = text.toLowerCase().trim();
+  for (const opt of sel.options) {
+    if (opt.value && opt.text.toLowerCase().includes(t)) {
+      sel.value = opt.value;
+      return;
+    }
+  }
+}
+
+function startMic(target, btn) {
+  if (!recog) { alert('Dictée vocale non disponible sur ce navigateur.'); return; }
+  if (activeMicBtn) { recog.stop(); return; }
+  activeTarget = target;
+  activeMicBtn = btn;
+  btn.classList.add('listening');
+  badge.classList.add('show');
+  try { recog.start(); } catch(e) {}
+}
+
+// ── DOM helpers ─────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const badge = document.getElementById('listening-badge');
+
+function micBtn(targetId) {
+  const b = document.createElement('button');
+  b.className = 'btn-mic';
+  b.title = 'Dicter';
+  b.innerHTML = '🎙️';
+  b.type = 'button';
+  b.addEventListener('click', () => {
+    const el = document.getElementById(targetId);
+    if (el) startMic(el, b);
+  });
+  return b;
+}
+
+function optRow(name, options, multi = false) {
+  const row = document.createElement('div');
+  row.className = 'options-row';
+  options.forEach(opt => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'opt-btn';
+    b.textContent = opt;
+    b.dataset.val = opt;
+    b.addEventListener('click', () => {
+      if (!multi) row.querySelectorAll('.opt-btn').forEach(x => x.classList.remove('selected'));
+      b.classList.toggle('selected');
+    });
+    row.appendChild(b);
+  });
+  row.dataset.name = name;
+  return row;
+}
+
+function getOptRow(row) {
+  return Array.from(row.querySelectorAll('.opt-btn.selected')).map(b => b.dataset.val).join(', ');
+}
+
+function fieldGroup(labelText, inputEl, hasMic = false, micId = null) {
+  const g = document.createElement('div');
+  g.className = 'field-group';
+  const lbl = document.createElement('label');
+  lbl.className = 'field-label';
+  lbl.textContent = labelText;
+  g.appendChild(lbl);
+  const row = document.createElement('div');
+  row.className = 'field-row';
+  row.appendChild(inputEl);
+  if (hasMic && micId) { inputEl.id = micId; row.appendChild(micBtn(micId)); }
+  g.appendChild(row);
+  return g;
+}
+
+function sectionTitle(text) {
+  const d = document.createElement('div');
+  d.className = 'section-title';
+  d.textContent = text;
+  return d;
+}
+
+function makeInput(type = 'text', placeholder = '') {
+  const el = document.createElement(type === 'textarea' ? 'textarea' : 'input');
+  if (type !== 'textarea') el.type = type;
+  el.placeholder = placeholder;
+  return el;
+}
+
+function makeSelect(options) {
+  const s = document.createElement('select');
+  options.forEach(([val, txt]) => {
+    const o = document.createElement('option');
+    o.value = val; o.textContent = txt;
+    s.appendChild(o);
+  });
+  return s;
+}
+
+function bostonScore(id) {
+  const g = document.createElement('div');
+  g.className = 'field-group';
+  const lbl = document.createElement('label');
+  lbl.className = 'field-label';
+  lbl.textContent = 'Qualité de préparation — Score de Boston (BBPS)';
+  g.appendChild(lbl);
+  const row = document.createElement('div');
+  row.className = 'boston-row';
+  const segments = ['Côlon D', 'Côlon T', 'Côlon G'];
+  const scores = [0, 1, 2, 3];
+  const labels = ['Muqueuse non vue', 'Résidus solides', 'Résidus liquides', 'Excellente'];
+
+  segments.forEach((seg, si) => {
+    const col = document.createElement('div');
+    col.style.cssText = 'flex:1;display:flex;flex-direction:column;gap:4px;';
+    const segLbl = document.createElement('div');
+    segLbl.style.cssText = 'font-size:0.68rem;color:var(--text-muted);text-align:center;margin-bottom:4px;';
+    segLbl.textContent = seg;
+    col.appendChild(segLbl);
+    scores.forEach(sc => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `score-seg s${sc}`;
+      btn.dataset.seg = si;
+      btn.dataset.score = sc;
+      btn.title = labels[sc];
+      btn.innerHTML = `<strong>${sc}</strong>`;
+      btn.addEventListener('click', () => {
+        col.querySelectorAll('.score-seg').forEach(x => x.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+      col.appendChild(btn);
+    });
+    row.appendChild(col);
+  });
+  g.appendChild(row);
+  g.id = id;
+  return g;
+}
+
+function getBostonTotal(g) {
+  let total = 0;
+  g.querySelectorAll('.score-seg.selected').forEach(b => total += +b.dataset.score);
+  const selected = g.querySelectorAll('.score-seg.selected').length;
+  if (selected < 3) return null;
+  const labels = ['Insuffisante', 'Mauvaise', 'Médiocre', 'Acceptable', 'Bonne', 'Bonne', 'Bonne', 'Excellente', 'Excellente', 'Excellente'];
+  return `${total}/9 (${labels[total]})`;
+}
+
+// ── Polyp manager ────────────────────────────────────────────
+let polypCount = 0;
+
+function polypCard(num) {
+  const card = document.createElement('div');
+  card.className = 'polyp-card';
+  card.dataset.polyp = num;
+  card.innerHTML = `<h4>Polype n°${num}</h4>
+    <button type="button" class="btn-del-polyp" onclick="this.closest('.polyp-card').remove()">✕</button>
+    <div class="polyp-fields">
+      <div class="polyp-field"><label>Localisation</label>
+        <select name="loc"><option value="">—</option>
+          <option>Caecum</option><option>Côlon ascendant</option><option>Angle hépatique</option>
+          <option>Côlon transverse</option><option>Angle splénique</option><option>Côlon descendant</option>
+          <option>Sigmoïde</option><option>Rectum</option>
+        </select></div>
+      <div class="polyp-field"><label>Taille (mm)</label><input type="number" min="1" max="150" placeholder="mm"></div>
+      <div class="polyp-field"><label>Morphologie (Paris)</label>
+        <select name="paris"><option value="">—</option>
+          <option>Ip (pédiculé)</option><option>Is (sessile large)</option>
+          <option>IIa (plan surélevé)</option><option>IIb (plan)</option><option>IIc (déprimé)</option>
+          <option>IIa+IIc</option><option>III (excavé)</option>
+        </select></div>
+      <div class="polyp-field"><label>Résection</label>
+        <select name="resection"><option value="">—</option>
+          <option>Pince froide</option><option>Anse froide</option><option>Anse chaude</option>
+          <option>Mucosectomie (EMR)</option><option>Sous-muqueuse (ESD)</option>
+          <option>Non réséqué</option><option>Tatouage + biopsie</option>
+        </select></div>
+      <div class="polyp-field"><label>Récupération</label>
+        <select name="recup"><option value="">—</option>
+          <option>Aspiration</option><option>Pince à panier</option><option>Filet de récupération</option>
+          <option>Non récupéré</option>
+        </select></div>
+      <div class="polyp-field"><label>Aspect NBI/Pit pattern</label>
+        <select name="nbi"><option value="">—</option>
+          <option>NICE 1 (hyperplasique)</option><option>NICE 2 (adénomateux)</option>
+          <option>NICE 3 (invasif)</option><option>Non évalué</option>
+        </select></div>
+    </div>`;
+  return card;
+}
+
+// ── Navigation ───────────────────────────────────────────────
+let currentProc = null;
+const home = $('home');
+const formPage = $('form-page');
+const headerTitle = $('header-title');
+const headerSub = $('header-sub');
+const btnBack = $('btn-back');
+const formContent = $('form-content');
+const reportOut = $('report-output');
+const toast = $('toast');
+
+const PROC_LABELS = {
+  colo:    ['Coloscopie', 'Compte rendu'],
+  fogd:    ['Gastroscopie (FOGD)', 'Fibroscopie Oeso-Gastro-Duodénale'],
+  cpre:    ['CPRE', 'Cholangiopancréatographie Rétrograde'],
+  capsule: ['Vidéocapsule', 'Intestin grêle'],
+};
+
+document.querySelectorAll('.proc-card').forEach(card => {
+  card.addEventListener('click', () => openProc(card.dataset.proc));
+});
+
+btnBack.addEventListener('click', () => {
+  home.style.display = '';
+  formPage.style.display = 'none';
+  reportOut.classList.remove('visible');
+  currentProc = null;
+});
+
+function openProc(proc) {
+  currentProc = proc;
+  home.style.display = 'none';
+  formPage.style.display = 'block';
+  const [title, sub] = PROC_LABELS[proc];
+  headerTitle.textContent = title;
+  headerSub.textContent = sub;
+  formContent.innerHTML = '';
+  reportOut.classList.remove('visible');
+  reportOut.textContent = '';
+  polypCount = 0;
+  builders[proc]();
+}
+
+// ── Patient info (shared) ─────────────────────────────────────
+function buildPatientInfo(idPrefix) {
+  formContent.appendChild(sectionTitle('Identification'));
+
+  const nom = makeInput('text', 'Nom et prénom');
+  formContent.appendChild(fieldGroup('Patient', nom, true, idPrefix + '_nom'));
+
+  const dateNaiss = makeInput('date');
+  formContent.appendChild(fieldGroup('Date de naissance', dateNaiss, false));
+
+  const dateExam = makeInput('date');
+  dateExam.valueAsDate = new Date();
+  formContent.appendChild(fieldGroup("Date de l'examen", dateExam, false));
+
+  const medecin = makeInput('text', 'Opérateur');
+  formContent.appendChild(fieldGroup('Médecin opérateur', medecin, true, idPrefix + '_medecin'));
+
+  const indic = makeInput('textarea', 'Ex : Dépistage familial, rectorragies, contrôle post-polypectomie…');
+  formContent.appendChild(fieldGroup('Indication', indic, true, idPrefix + '_indic'));
+
+  return { nom, dateNaiss, dateExam, medecin, indic };
+}
+
+function getAge(dateNaiss, dateExam) {
+  if (!dateNaiss.value) return '';
+  const d = new Date(dateExam.value || Date.now());
+  const n = new Date(dateNaiss.value);
+  let age = d.getFullYear() - n.getFullYear();
+  if (d.getMonth() < n.getMonth() || (d.getMonth() === n.getMonth() && d.getDate() < n.getDate())) age--;
+  return ` (${age} ans)`;
+}
+
+// ── COLOSCOPIE ────────────────────────────────────────────────
+function buildColo() {
+  const pat = buildPatientInfo('co');
+
+  // Prémédication
+  formContent.appendChild(sectionTitle('Prémédication / Anesthésie'));
+  const premed = fieldGroup('Anesthésie', makeSelect([
+    ['','— choisir —'],['sedation_cs','Sédation consciente (midazolam)'],
+    ['ag','Anesthésie générale (propofol)'],['aucune','Sans prémédication'],
+    ['autre','Autre'],
+  ]));
+  premed.querySelector('select').id = 'co_premed';
+  formContent.appendChild(premed);
+
+  const scope = makeSelect([
+    ['','— choisir —'],['olympus_q180','Olympus CF-Q180'],['olympus_hq190','Olympus CF-HQ190'],
+    ['fujinon_760','Fujinon EC-760'],['pentax_3490','Pentax EC-3490'],['autre','Autre'],
+  ]);
+  formContent.appendChild(fieldGroup('Vidéocolonoscope', scope));
+
+  // Préparation
+  formContent.appendChild(sectionTitle('Préparation colique'));
+  const prep = makeSelect([
+    ['','— choisir —'],['peg4','PEG 4L (Klean-Prep)'],['peg2','PEG 2L + ascorbate (Moviprep)'],
+    ['peg1','PEG 1L + bisacodyl (Eziclen)'],['pico','Picosulfate (Pico-Salax)'],['autre','Autre'],
+  ]);
+  formContent.appendChild(fieldGroup('Produit de préparation', prep));
+
+  const prepQual = optRow('prep_qual', ['Veille uniquement', 'Fractionnée (J-1/J0)', 'Matinale']);
+  const prepG = document.createElement('div');
+  prepG.className = 'field-group';
+  const prepLbl = document.createElement('label');
+  prepLbl.className = 'field-label';
+  prepLbl.textContent = 'Modalité';
+  prepG.appendChild(prepLbl);
+  prepG.appendChild(prepQual);
+  formContent.appendChild(prepG);
+
+  const bostonEl = bostonScore('co_boston');
+  formContent.appendChild(bostonEl);
+
+  // Examen
+  formContent.appendChild(sectionTitle('Déroulement de l\'examen'));
+  const intub = optRow('intub', ['Intubation caecale complète', 'Intubation iléale', 'Examen incomplet']);
+  const intubG = document.createElement('div');
+  intubG.className = 'field-group';
+  const intubLbl = document.createElement('label');
+  intubLbl.className = 'field-label';
+  intubLbl.textContent = 'Intubation';
+  intubG.appendChild(intubLbl);
+  intubG.appendChild(intub);
+  formContent.appendChild(intubG);
+
+  const retrait = makeInput('number', 'min');
+  retrait.min = 1; retrait.max = 60;
+  formContent.appendChild(fieldGroup('Temps de retrait (min)', retrait));
+
+  // Muqueuse
+  formContent.appendChild(sectionTitle('Muqueuse — Segments'));
+  const segs = ['Caecum / valvule de Bauhin', 'Côlon ascendant', 'Côlon transverse', 'Côlon descendant', 'Sigmoïde', 'Rectum'];
+  const segInputs = {};
+  segs.forEach((s, i) => {
+    const id = 'co_seg_' + i;
+    const inp = makeInput('textarea', 'Muqueuse normale, diverticules, lésions…');
+    segInputs[s] = inp;
+    formContent.appendChild(fieldGroup(s, inp, true, id));
+  });
+
+  // Polypes
+  formContent.appendChild(sectionTitle('Polypes / Lésions'));
+  const noPoly = optRow('no_poly', ['Pas de polype (coloscopie normale)']);
+  const noPolyG = document.createElement('div');
+  noPolyG.className = 'field-group';
+  const noPolyLbl = document.createElement('label');
+  noPolyLbl.className = 'field-label';
+  noPolyLbl.textContent = 'Résultat';
+  noPolyG.appendChild(noPolyLbl);
+  noPolyG.appendChild(noPoly);
+  formContent.appendChild(noPolyG);
+
+  const polypListEl = document.createElement('div');
+  polypListEl.className = 'polyp-list';
+  polypListEl.id = 'co_polyp_list';
+  const polypWrap = document.createElement('div');
+  polypWrap.className = 'field-group';
+  const polypLbl = document.createElement('label');
+  polypLbl.className = 'field-label';
+  polypLbl.textContent = 'Détail des lésions';
+  polypWrap.appendChild(polypLbl);
+  polypWrap.appendChild(polypListEl);
+  const btnAdd = document.createElement('button');
+  btnAdd.type = 'button';
+  btnAdd.className = 'btn-add';
+  btnAdd.textContent = '+ Ajouter un polype / lésion';
+  btnAdd.addEventListener('click', () => {
+    polypCount++;
+    polypListEl.appendChild(polypCard(polypCount));
+  });
+  polypWrap.appendChild(btnAdd);
+  formContent.appendChild(polypWrap);
+
+  // Complications
+  formContent.appendChild(sectionTitle('Complications / Incidents'));
+  const complic = optRow('complic', ['Aucune complication', 'Perforation', 'Saignement', 'Malaise vagal', 'Douleurs importantes'], true);
+  const complicG = document.createElement('div');
+  complicG.className = 'field-group';
+  const complicLbl = document.createElement('label');
+  complicLbl.className = 'field-label';
+  complicLbl.textContent = 'Incidents';
+  complicG.appendChild(complicLbl);
+  complicG.appendChild(complic);
+  formContent.appendChild(complicG);
+
+  // Conclusion
+  formContent.appendChild(sectionTitle('Conclusion'));
+  const concl = makeInput('textarea', 'Résumé des principaux résultats…');
+  formContent.appendChild(fieldGroup('Conclusion', concl, true, 'co_concl'));
+
+  const suivi = makeSelect([
+    ['','— choisir —'],
+    ['1an','Contrôle coloscopie à 1 an'],['3ans','Contrôle coloscopie à 3 ans'],
+    ['5ans','Contrôle coloscopie à 5 ans'],['10ans','Contrôle coloscopie à 10 ans'],
+    ['normal','Reprise du programme de dépistage (10 ans si normal)'],
+    ['chirurgie','Avis chirurgical recommandé'],['autre','Autre (préciser)'],
+  ]);
+  formContent.appendChild(fieldGroup('Recommandation de surveillance', suivi));
+
+  // Actions
+  appendActions(() => {
+    const bt = getBostonTotal(bostonEl);
+    const polyps = Array.from(document.querySelectorAll('#co_polyp_list .polyp-card'));
+    const polypsText = polyps.length === 0 ? '    Aucun polype identifié.' :
+      polyps.map((c, i) => {
+        const loc = c.querySelector('[name="loc"]').value;
+        const sz = c.querySelector('[type="number"]').value;
+        const paris = c.querySelector('[name="paris"]').value;
+        const resec = c.querySelector('[name="resection"]').value;
+        return `    Polype ${i+1} : ${loc || '?'}, ${sz ? sz + ' mm' : '?'}, ${paris || '?'}, résection : ${resec || '?'}`;
+      }).join('\n');
+
+    const segsText = Object.entries(segInputs).map(([s, inp]) =>
+      inp.value ? `    ${s} : ${inp.value}` : ''
+    ).filter(Boolean).join('\n');
+
+    return `COMPTE RENDU DE COLOSCOPIE
+══════════════════════════════════════════
+Patient  : ${$('co_nom')?.value || '—'}${getAge(pat.dateNaiss, pat.dateExam)}
+Date     : ${pat.dateExam.value || new Date().toLocaleDateString('fr-FR')}
+Opérateur: ${$('co_medecin')?.value || '—'}
+
+INDICATION
+  ${pat.indic.value || '—'}
+
+PRÉMÉDICATION / MATÉRIEL
+  Anesthésie : ${$('co_premed')?.options[$('co_premed')?.selectedIndex]?.text || '—'}
+  Endoscope  : ${scope.options[scope.selectedIndex]?.text || '—'}
+
+PRÉPARATION COLIQUE
+  Produit : ${prep.options[prep.selectedIndex]?.text || '—'}
+  Modalité : ${getOptRow(prepQual) || '—'}
+  Score de Boston : ${bt || '—'}
+
+DÉROULEMENT
+  ${getOptRow(intub) || '—'}
+  Temps de retrait : ${retrait.value ? retrait.value + ' min' : '—'}
+
+RÉSULTATS PAR SEGMENT
+${segsText || '    Non renseigné'}
+
+POLYPES / LÉSIONS
+${polypsText}
+
+COMPLICATIONS
+  ${getOptRow(complic) || '—'}
+
+CONCLUSION
+  ${concl.value || '—'}
+
+RECOMMANDATION
+  ${suivi.options[suivi.selectedIndex]?.text || '—'}
+══════════════════════════════════════════`;
+  });
+}
+
+// ── FOGD ──────────────────────────────────────────────────────
+function buildFogd() {
+  const pat = buildPatientInfo('fg');
+
+  formContent.appendChild(sectionTitle('Prémédication / Matériel'));
+  const premed = makeSelect([
+    ['','— choisir —'],['aucune','Sans prémédication'],
+    ['midazo','Midazolam IV'],['propofol','Propofol (AG)'],['spray','Spray pharyngé (Xylocaïne)'],
+  ]);
+  formContent.appendChild(fieldGroup('Anesthésie / Analgésie', premed));
+  const scope = makeSelect([
+    ['','— choisir —'],['olympus_gif180','Olympus GIF-H180'],['olympus_gif190','Olympus GIF-H190'],
+    ['fujinon_eg760','Fujinon EG-760'],['pentax_eg','Pentax EG-2990'],['autre','Autre'],
+  ]);
+  formContent.appendChild(fieldGroup('Vidéo-endoscope', scope));
+
+  formContent.appendChild(sectionTitle('Oropharynx / Oesophage'));
+  const oropharynx = makeInput('textarea', 'Aspect normal, anomalie…');
+  formContent.appendChild(fieldGroup('Oropharynx', oropharynx, true, 'fg_oro'));
+
+  const oe = makeInput('textarea', 'Muqueuse normale / oesophagite / métaplasie de Barrett…');
+  formContent.appendChild(fieldGroup('Oesophage', oe, true, 'fg_oe'));
+
+  const jog = optRow('jog', ['Jonction normale', 'Hernie hiatale par glissement', 'Hernie hiatale par roulement', 'Oesophage de Barrett court', 'Oesophage de Barrett long (≥3cm)']);
+  const jogG = document.createElement('div');
+  jogG.className = 'field-group';
+  jogG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Jonction oeso-gastrique' }));
+  jogG.appendChild(jog);
+  formContent.appendChild(jogG);
+
+  const logBreath = optRow('hp_test', ['CLO test positif', 'CLO test négatif', 'Non réalisé']);
+  const logBreathG = document.createElement('div');
+  logBreathG.className = 'field-group';
+  logBreathG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Test CLO (Helicobacter pylori)' }));
+  logBreathG.appendChild(logBreath);
+  formContent.appendChild(logBreathG);
+
+  formContent.appendChild(sectionTitle('Estomac'));
+  const fundus = makeInput('textarea', 'Muqueuse gastrique du fundus…');
+  formContent.appendChild(fieldGroup('Fundus / Grande courbure', fundus, true, 'fg_fundus'));
+
+  const corpAntre = makeInput('textarea', 'Corps gastrique, antre, pylore…');
+  formContent.appendChild(fieldGroup('Corps / Antre / Pylore', corpAntre, true, 'fg_corp'));
+
+  const biopsiesHp = optRow('biopsy_hp', ['Biopsies antrales HP (×2)', 'Biopsies fundiques HP (×2)', 'Biopsies corps gastrique', 'Biopsies sur lésion', 'Aucune biopsie'], true);
+  const biopsyG = document.createElement('div');
+  biopsyG.className = 'field-group';
+  biopsyG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Biopsies réalisées' }));
+  biopsyG.appendChild(biopsiesHp);
+  formContent.appendChild(biopsyG);
+
+  formContent.appendChild(sectionTitle('Duodénum'));
+  const duod = makeInput('textarea', 'D1, D2, muqueuse duodénale normale / villositaire…');
+  formContent.appendChild(fieldGroup('Duodénum', duod, true, 'fg_duod'));
+
+  formContent.appendChild(sectionTitle('Conclusion'));
+  const concl = makeInput('textarea', 'Résumé…');
+  formContent.appendChild(fieldGroup('Conclusion', concl, true, 'fg_concl'));
+  const suivi = makeSelect([
+    ['','— choisir —'],['3mois','Contrôle à 3 mois'],['6mois','Contrôle à 6 mois'],
+    ['1an','Contrôle à 1 an'],['3ans','Contrôle à 3 ans'],
+    ['normal','Aucune surveillance particulière'],['ipp','Traitement IPP + contrôle'],
+    ['tri_hp','Trithérapie anti-Helicobacter pylori'],
+  ]);
+  formContent.appendChild(fieldGroup('Recommandation', suivi));
+
+  appendActions(() =>
+    `COMPTE RENDU DE GASTROSCOPIE (FOGD)
+══════════════════════════════════════════
+Patient  : ${$('fg_nom')?.value || '—'}${getAge(pat.dateNaiss, pat.dateExam)}
+Date     : ${pat.dateExam.value || new Date().toLocaleDateString('fr-FR')}
+Opérateur: ${$('fg_medecin')?.value || '—'}
+
+INDICATION
+  ${pat.indic.value || '—'}
+
+PRÉMÉDICATION / MATÉRIEL
+  Anesthésie : ${premed.options[premed.selectedIndex]?.text || '—'}
+  Endoscope  : ${scope.options[scope.selectedIndex]?.text || '—'}
+
+RÉSULTATS
+  Oropharynx     : ${oropharynx.value || 'Normal'}
+  Oesophage      : ${oe.value || 'Normal'}
+  Jonction OG    : ${getOptRow(jog) || '—'}
+  Fundus         : ${fundus.value || 'Normal'}
+  Corps/Antre    : ${corpAntre.value || 'Normal'}
+  Duodénum       : ${duod.value || 'Normal'}
+  Test CLO HP    : ${getOptRow(logBreath) || '—'}
+  Biopsies       : ${getOptRow(biopsiesHp) || '—'}
+
+CONCLUSION
+  ${concl.value || '—'}
+
+RECOMMANDATION
+  ${suivi.options[suivi.selectedIndex]?.text || '—'}
+══════════════════════════════════════════`
+  );
+}
+
+// ── CPRE ──────────────────────────────────────────────────────
+function buildCpre() {
+  const pat = buildPatientInfo('cp');
+
+  formContent.appendChild(sectionTitle('Prémédication / Matériel'));
+  const premed = makeSelect([
+    ['','— choisir —'],['ag','Anesthésie générale (propofol)'],
+    ['seda','Sédation profonde (midazolam + fentanyl)'],['autre','Autre'],
+  ]);
+  formContent.appendChild(fieldGroup('Anesthésie', premed));
+  const scope = makeSelect([
+    ['','— choisir —'],['olympus_tj','Olympus TJF-Q180'],['fujinon_ed760','Fujinon ED-760'],
+    ['pentax_ed','Pentax ED-3490'],['autre','Autre (duodénoscope)'],
+  ]);
+  formContent.appendChild(fieldGroup('Duodénoscope', scope));
+
+  formContent.appendChild(sectionTitle('Cathétérisme biliaire'));
+  const papille = optRow('papille', ['Papille normale', 'Papille bombante', 'Papille infiltrée', 'Ampullome', 'Sphinctérotomie antérieure']);
+  const papilleG = document.createElement('div');
+  papilleG.className = 'field-group';
+  papilleG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Aspect de la papille' }));
+  papilleG.appendChild(papille);
+  formContent.appendChild(papilleG);
+
+  const cathet = optRow('cathet', ['Cathétérisme sélectif voie biliaire', 'Cathétérisme difficile', 'Prékoupé nécessaire', 'Voie pancréatique cannulée']);
+  const cathetG = document.createElement('div');
+  cathetG.className = 'field-group';
+  cathetG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Cathétérisme' }));
+  cathetG.appendChild(cathet);
+  formContent.appendChild(cathetG);
+
+  formContent.appendChild(sectionTitle('Voies biliaires'));
+  const cbp = makeInput('number', 'mm');
+  cbp.min = 1; cbp.max = 30;
+  formContent.appendChild(fieldGroup('Diamètre de la VBP (mm)', cbp));
+
+  const lithiase = optRow('lithiase', ['Pas de lithiase', 'Calcul unique', 'Calculs multiples', 'Calcul enclavé', 'Calculs extirpés', 'Calculs non extirpés (prothèse)']);
+  const lithG = document.createElement('div');
+  lithG.className = 'field-group';
+  lithG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Lithiase biliaire' }));
+  lithG.appendChild(lithiase);
+  formContent.appendChild(lithG);
+
+  const stricture = makeInput('textarea', 'Siège, longueur, aspect…');
+  formContent.appendChild(fieldGroup('Sténose / Stricture', stricture, true, 'cp_strict'));
+
+  formContent.appendChild(sectionTitle('Gestes thérapeutiques'));
+  const gestes = optRow('gestes', [
+    'Sphinctérotomie endoscopique', 'Dilatation au ballon',
+    'Extraction de calculs (ballon)', 'Extraction de calculs (panier)',
+    'Prothèse biliaire plastique', 'Prothèse métallique couverte',
+    'Prothèse métallique non couverte', 'Drainage naso-biliaire',
+    'Biopsies voies biliaires', 'Brossage cytologique',
+  ], true);
+  const gestesG = document.createElement('div');
+  gestesG.className = 'field-group';
+  gestesG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Gestes réalisés' }));
+  gestesG.appendChild(gestes);
+  formContent.appendChild(gestesG);
+
+  const wirsungOpt = optRow('wirsung', ['Wirsung non opacifié', 'Wirsung normal', 'Dilatation Wirsung', 'Sténose Wirsung', 'Lithiase Wirsung']);
+  const wirsungG = document.createElement('div');
+  wirsungG.className = 'field-group';
+  wirsungG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Canal de Wirsung' }));
+  wirsungG.appendChild(wirsungOpt);
+  formContent.appendChild(wirsungG);
+
+  formContent.appendChild(sectionTitle('Complications'));
+  const complic = optRow('co_comp', ['Aucune complication', 'Pancréatite post-CPRE', 'Saignement sphinctérotomie', 'Perforation', 'Cholangite'], true);
+  const complicG = document.createElement('div');
+  complicG.className = 'field-group';
+  complicG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Complications' }));
+  complicG.appendChild(complic);
+  formContent.appendChild(complicG);
+
+  formContent.appendChild(sectionTitle('Conclusion'));
+  const concl = makeInput('textarea', 'Résumé…');
+  formContent.appendChild(fieldGroup('Conclusion', concl, true, 'cp_concl'));
+
+  appendActions(() =>
+    `COMPTE RENDU DE CPRE
+══════════════════════════════════════════
+Patient  : ${$('cp_nom')?.value || '—'}${getAge(pat.dateNaiss, pat.dateExam)}
+Date     : ${pat.dateExam.value || new Date().toLocaleDateString('fr-FR')}
+Opérateur: ${$('cp_medecin')?.value || '—'}
+
+INDICATION
+  ${pat.indic.value || '—'}
+
+PRÉMÉDICATION / MATÉRIEL
+  Anesthésie : ${premed.options[premed.selectedIndex]?.text || '—'}
+  Endoscope  : ${scope.options[scope.selectedIndex]?.text || '—'}
+
+RÉSULTATS
+  Papille         : ${getOptRow(papille) || '—'}
+  Cathétérisme    : ${getOptRow(cathet) || '—'}
+  VBP diamètre    : ${cbp.value ? cbp.value + ' mm' : '—'}
+  Lithiase        : ${getOptRow(lithiase) || '—'}
+  Sténose         : ${stricture.value || 'Aucune'}
+  Wirsung         : ${getOptRow(wirsungOpt) || '—'}
+
+GESTES RÉALISÉS
+  ${getOptRow(gestes) || '—'}
+
+COMPLICATIONS
+  ${getOptRow(complic) || '—'}
+
+CONCLUSION
+  ${concl.value || '—'}
+══════════════════════════════════════════`
+  );
+}
+
+// ── VIDÉOCAPSULE ──────────────────────────────────────────────
+function buildCapsule() {
+  const pat = buildPatientInfo('vc');
+
+  formContent.appendChild(sectionTitle('Type de capsule'));
+  const typeCap = optRow('type_cap', ['Capsule intestin grêle (Pillcam SB)', 'Capsule colique (Pillcam Colon)', 'Capsule oesophage (Pillcam ESO)', 'Given Endocapsule', 'MiroCam', 'OMOM']);
+  const typeCapG = document.createElement('div');
+  typeCapG.className = 'field-group';
+  typeCapG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Système utilisé' }));
+  typeCapG.appendChild(typeCap);
+  formContent.appendChild(typeCapG);
+
+  formContent.appendChild(sectionTitle('Préparation'));
+  const prepCap = optRow('prep_cap', ['PEG 2L', 'PEG 4L', 'Jeûne seul', 'Simethicone + prokinétique']);
+  const prepCapG = document.createElement('div');
+  prepCapG.className = 'field-group';
+  prepCapG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Préparation' }));
+  prepCapG.appendChild(prepCap);
+  formContent.appendChild(prepCapG);
+
+  const qualVis = optRow('qual_vis', ['Excellente', 'Bonne', 'Satisfaisante', 'Insuffisante']);
+  const qualVisG = document.createElement('div');
+  qualVisG.className = 'field-group';
+  qualVisG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Qualité de visualisation' }));
+  qualVisG.appendChild(qualVis);
+  formContent.appendChild(qualVisG);
+
+  formContent.appendChild(sectionTitle('Transit'));
+  const tGastrique = makeInput('number', 'min');
+  formContent.appendChild(fieldGroup('Temps de transit gastrique (min)', tGastrique));
+  const tGrele = makeInput('number', 'min');
+  formContent.appendChild(fieldGroup('Temps de transit intestin grêle (min)', tGrele));
+  const excretion = optRow('excret', ['Excrétion dans les délais', 'Capsule non excrétée dans le délai', 'Rétention capsule']);
+  const excretG = document.createElement('div');
+  excretG.className = 'field-group';
+  excretG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Excrétion' }));
+  excretG.appendChild(excretion);
+  formContent.appendChild(excretG);
+
+  formContent.appendChild(sectionTitle('Résultats'));
+  const oe = makeInput('textarea', 'Oesophage : aspect…');
+  formContent.appendChild(fieldGroup('Oesophage', oe, true, 'vc_oe'));
+  const estomac = makeInput('textarea', 'Estomac : aspect…');
+  formContent.appendChild(fieldGroup('Estomac', estomac, true, 'vc_estomac'));
+
+  const lesions = optRow('vc_lesions', [
+    'Aucune lésion identifiée', 'Saignement actif', 'Angiectasies (angioectasies)',
+    'Ulcérations', 'Érosions', 'Polype / tumeur', 'Diverticule de Meckel',
+    'Maladie de Crohn (ulcérations aphtoïdes)', 'AINS-entéropathie', 'Lymphangiectasies',
+  ], true);
+  const lesionsG = document.createElement('div');
+  lesionsG.className = 'field-group';
+  lesionsG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Lésions identifiées' }));
+  lesionsG.appendChild(lesions);
+  formContent.appendChild(lesionsG);
+
+  const localLesion = makeInput('textarea', 'Localisation, taille, aspect…');
+  formContent.appendChild(fieldGroup('Détail des lésions', localLesion, true, 'vc_detail'));
+
+  formContent.appendChild(sectionTitle('Scores'));
+  const scoreType = optRow('score_type', ['Score de Lewis', 'CECDAI', 'Non calculé']);
+  const scoreTypeG = document.createElement('div');
+  scoreTypeG.className = 'field-group';
+  scoreTypeG.appendChild(Object.assign(document.createElement('label'), { className: 'field-label', textContent: 'Score activité' }));
+  scoreTypeG.appendChild(scoreType);
+  formContent.appendChild(scoreTypeG);
+
+  const scoreVal = makeInput('number', 'Valeur numérique');
+  formContent.appendChild(fieldGroup('Valeur du score', scoreVal));
+
+  formContent.appendChild(sectionTitle('Conclusion'));
+  const concl = makeInput('textarea', 'Résumé…');
+  formContent.appendChild(fieldGroup('Conclusion', concl, true, 'vc_concl'));
+
+  appendActions(() =>
+    `COMPTE RENDU DE VIDÉOCAPSULE ENDOSCOPIQUE
+══════════════════════════════════════════
+Patient  : ${$('vc_nom')?.value || '—'}${getAge(pat.dateNaiss, pat.dateExam)}
+Date     : ${pat.dateExam.value || new Date().toLocaleDateString('fr-FR')}
+Opérateur: ${$('vc_medecin')?.value || '—'}
+
+INDICATION
+  ${pat.indic.value || '—'}
+
+TYPE DE CAPSULE
+  ${getOptRow(typeCap) || '—'}
+
+PRÉPARATION
+  ${getOptRow(prepCap) || '—'}
+  Qualité de visualisation : ${getOptRow(qualVis) || '—'}
+
+TRANSIT
+  Temps gastrique       : ${tGastrique.value ? tGastrique.value + ' min' : '—'}
+  Temps intestin grêle  : ${tGrele.value ? tGrele.value + ' min' : '—'}
+  Excrétion             : ${getOptRow(excretion) || '—'}
+
+RÉSULTATS
+  Oesophage  : ${oe.value || 'Normal'}
+  Estomac    : ${estomac.value || 'Normal'}
+  Lésions    : ${getOptRow(lesions) || '—'}
+  Détail     : ${localLesion.value || '—'}
+
+SCORE D'ACTIVITÉ
+  ${getOptRow(scoreType) || '—'}${scoreVal.value ? ' : ' + scoreVal.value : ''}
+
+CONCLUSION
+  ${concl.value || '—'}
+══════════════════════════════════════════`
+  );
+}
+
+// ── Actions bar ───────────────────────────────────────────────
+function appendActions(generateFn) {
+  const div = document.createElement('div');
+  div.className = 'actions';
+
+  const btnGen = document.createElement('button');
+  btnGen.type = 'button';
+  btnGen.className = 'btn-primary';
+  btnGen.innerHTML = '📄 Générer';
+  btnGen.addEventListener('click', () => {
+    const text = generateFn();
+    reportOut.textContent = text;
+    reportOut.classList.add('visible');
+    reportOut.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  const btnCopy = document.createElement('button');
+  btnCopy.type = 'button';
+  btnCopy.className = 'btn-secondary';
+  btnCopy.innerHTML = '📋 Copier';
+  btnCopy.addEventListener('click', () => {
+    if (!reportOut.textContent) { const t = generateFn(); reportOut.textContent = t; reportOut.classList.add('visible'); }
+    navigator.clipboard.writeText(reportOut.textContent).then(() => showToast('Copié dans le presse-papiers ✓'));
+  });
+
+  div.appendChild(btnGen);
+  div.appendChild(btnCopy);
+  formContent.appendChild(div);
+
+  const btnShare = document.createElement('button');
+  btnShare.type = 'button';
+  btnShare.style.cssText = 'width:100%;padding:12px;margin-bottom:8px;border-radius:10px;border:none;background:#fff;color:var(--blue-dark);border:2px solid var(--blue-pale);font-size:0.9rem;font-weight:600;cursor:pointer;';
+  btnShare.innerHTML = '📤 Partager (SMS / Email / Notes)';
+  btnShare.addEventListener('click', () => {
+    const text = reportOut.textContent || generateFn();
+    if (!reportOut.textContent) { reportOut.textContent = text; reportOut.classList.add('visible'); }
+    if (navigator.share) {
+      navigator.share({ title: 'Compte rendu endoscopie', text }).catch(() => {});
+    } else {
+      showToast('Partage non disponible — utilisez Copier');
+    }
+  });
+  formContent.appendChild(btnShare);
+}
+
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+// ── Builders map ──────────────────────────────────────────────
+const builders = { colo: buildColo, fogd: buildFogd, cpre: buildCpre, capsule: buildCapsule };
+
+// ── Init ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  initSpeech();
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  }
+});
+
+</script>
+</body>
+</html>
