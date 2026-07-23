@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Endoscopie">
@@ -23,26 +22,45 @@
   </div>
 </header>
 
-<!-- Home -->
 <div id="home">
   <div class="home">
     <div class="home-title">Choisir une procédure</div>
-    <div class="home-sub">Appuyez sur 🎙️ à côté d'un champ pour le dicter</div>
+    <div class="home-sub">Appuyez sur 🎙️ à côté d'un champ pour dicter</div>
     <div class="proc-grid">
+      <div class="proc-card" data-proc="fogd">
+        <div class="icon">🔴</div>
+        <div class="name">Fibroscopie</div>
+        <div class="abbr">FOGD</div>
+      </div>
       <div class="proc-card" data-proc="colo">
         <div class="icon">🔵</div>
         <div class="name">Coloscopie</div>
         <div class="abbr">Colonoscopie totale</div>
       </div>
-      <div class="proc-card" data-proc="fogd">
-        <div class="icon">🔴</div>
-        <div class="name">Gastroscopie</div>
-        <div class="abbr">FOGD</div>
+      <div class="proc-card" data-proc="procto">
+        <div class="icon">🟣</div>
+        <div class="name">Proctologie</div>
+        <div class="abbr">Rectoscopie</div>
+      </div>
+      <div class="proc-card" data-proc="duodeno">
+        <div class="icon">🟠</div>
+        <div class="name">Duodénoscopie</div>
+        <div class="abbr">Exploration duodénale</div>
       </div>
       <div class="proc-card" data-proc="cpre">
         <div class="icon">🟡</div>
         <div class="name">CPRE</div>
         <div class="abbr">Voies biliaires</div>
+      </div>
+      <div class="proc-card" data-proc="echo">
+        <div class="icon">🔷</div>
+        <div class="name">Échoendoscopie</div>
+        <div class="abbr">EUS</div>
+      </div>
+      <div class="proc-card" data-proc="entero">
+        <div class="icon">🟤</div>
+        <div class="name">Entéroscopie</div>
+        <div class="abbr">DBE / SBE</div>
       </div>
       <div class="proc-card" data-proc="capsule">
         <div class="icon">🟢</div>
@@ -50,33 +68,20 @@
         <div class="abbr">Intestin grêle</div>
       </div>
     </div>
-
-    <div style="margin-top:32px;padding:16px;background:#fff;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);">
-      <div style="font-size:0.78rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px;">📱 Installer sur iPhone</div>
-      <ol style="font-size:0.78rem;color:var(--text-muted);line-height:2;padding-left:18px;">
-        <li>Ouvrir dans <strong>Safari</strong></li>
-        <li>Appuyer sur <strong>Partager</strong> (icône ↑)</li>
-        <li>« <strong>Sur l'écran d'accueil</strong> »</li>
-      </ol>
-    </div>
   </div>
 </div>
 
-<!-- Form page -->
 <div id="form-page" style="display:none">
   <div id="form-content"></div>
-  <div class="form-page active" style="padding-top:0;">
+  <div style="padding:0 16px 16px;">
     <pre class="report-preview" id="report-output"></pre>
   </div>
 </div>
 
-<!-- Listening badge -->
 <div class="listening-badge" id="listening-badge">
   <div class="mic-dot"></div>
   Dictée en cours… Parlez maintenant
 </div>
-
-<!-- Toast -->
 <div class="toast" id="toast"></div>
 
 <script src="./app.js"></script>
