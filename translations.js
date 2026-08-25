@@ -36,7 +36,7 @@ const TRANSLATIONS = {
   'consult.steps.s3.desc':  { fr: 'Endoscopie, traitement ou suivi au CHU ou en clinique privée', en: 'Endoscopy, treatment or follow-up at CHU or private clinic', ar: 'تنظير أو علاج أو متابعة بالمستشفى الجامعي أو بعيادة خاصة' },
 
   /* ── HERO ── */
-  'hero.label':      { fr: 'Professeur · Gastro-Entérologue',       en: 'Professor · Gastroenterologist',            ar: 'أستاذ · أخصائي أمراض الجهاز الهضمي' },
+  'hero.label':      { fr: 'Gastro-Entérologue à Marrakech · Professeur Universitaire', en: 'Gastroenterologist in Marrakech · University Professor', ar: 'أستاذ جامعي · طبيب أمراض الجهاز الهضمي بمراكش' },
   'hero.name':       { fr: 'Pr. Adil Ait Errami',                   en: 'Pr. Adil Ait Errami',                       ar: 'الأستاذ عادل أيت الرامي' },
   'hero.tagline':    { fr: 'Endoscopie Interventionnelle · Hépatologie · Oncologie Digestive', en: 'Interventional Endoscopy · Hepatology · Digestive Oncology', ar: 'التنظير التداخلي · أمراض الكبد · الأورام الهضمية' },
   'hero.badge.chu':  { fr: 'CHU Mohammed VI',     en: 'CHU Mohammed VI',      ar: 'المستشفى الجامعي محمد السادس' },

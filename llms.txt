@@ -19,14 +19,24 @@ Le Pr. Adil Ait Errami est professeur universitaire en gastro-entérologie à la
 - Coloscopie diagnostique et thérapeutique
 - Gastroscopie / fibroscopie digestive haute
 - Polypectomie endoscopique et résection muqueuse endoscopique (EMR)
+- Élastographie hépatique (FibroScan®) — mesure non invasive de la fibrose hépatique
+- Vidéocapsule endoscopique — exploration de l'intestin grêle
 - Hépatologie (hépatites, cirrhose, stéatose hépatique NASH/NAFLD, hypertension portale)
 - Oncologie digestive (cancer colorectal, cancer du pancréas, cancer de l'estomac)
 - Maladies inflammatoires chroniques de l'intestin (MICI : Crohn, rectocolite hémorragique)
 - Lithiase biliaire
 
+## Vidéos de procédures
+
+Le site www.draiterrami.com publie des vidéos authentiques de procédures endoscopiques réalisées par le Pr. Ait Errami :
+- CPRE en action (13 s) : https://www.draiterrami.com/videos/cpre.mp4
+- Écho-endoscopie thérapeutique EUS (10 s) : https://www.draiterrami.com/videos/echoendoscopie.mp4
+- Élastographie hépatique FibroScan® (9 s) : https://www.draiterrami.com/videos/fibroscan.mp4
+- Vidéocapsule endoscopique (25 s) : https://www.draiterrami.com/videos/videocapsule.mp4
+
 ## Pages
 
-- [Site officiel](https://www.draiterrami.com/) : présentation, parcours, lieux de consultation, expérience, formation, vidéos, publications, galerie, FAQ et contact (page unique, contenu disponible en français, anglais et arabe).
+- [Site officiel](https://www.draiterrami.com/) : présentation, parcours, lieux de consultation, expérience, formation, vidéos de procédures, publications, galerie, FAQ et contact (page unique, contenu disponible en français, anglais et arabe).
 - [Plan du site](https://www.draiterrami.com/sitemap.xml)
 
 ## FAQ (extrait)
