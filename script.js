@@ -169,16 +169,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// VIDÉOS — placeholder click (à remplacer par vraies vidéos)
-// ============================================
-document.querySelectorAll('.video-placeholder').forEach(card => {
-  card.addEventListener('click', () => {
-    const title = card.querySelector('h4')?.textContent || 'Vidéo';
-    alert(`La vidéo "${title}" sera disponible prochainement.`);
-  });
-});
-
-// ============================================
 // GALERIE — Filtres + Lightbox
 // ============================================
 (function () {
