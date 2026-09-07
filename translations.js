@@ -50,9 +50,9 @@ const TRANSLATIONS = {
   'about.title':    { fr: 'À propos',       en: 'About',      ar: 'نبذة عني' },
   'about.linkedin': { fr: 'Profil LinkedIn', en: 'LinkedIn Profile', ar: 'ملف لينكدإن' },
   'about.lead':     {
-    fr: 'Gastro-entérologue spécialisé en <strong>endoscopie interventionnelle</strong>, <strong>hépatologie</strong> et <strong>oncologie digestive</strong>.',
-    en: 'Gastroenterologist specializing in <strong>interventional endoscopy</strong>, <strong>hepatology</strong> and <strong>digestive oncology</strong>.',
-    ar: 'أخصائي أمراض الجهاز الهضمي متخصص في <strong>التنظير التداخلي</strong> و<strong>أمراض الكبد</strong> و<strong>الأورام الهضمية</strong>.'
+    fr: 'Gastro-entérologue à <strong>Marrakech</strong>, spécialisé en <strong>endoscopie interventionnelle</strong>, <strong>hépatologie</strong> et <strong>oncologie digestive</strong>.',
+    en: 'Gastroenterologist in <strong>Marrakech</strong>, specializing in <strong>interventional endoscopy</strong>, <strong>hepatology</strong> and <strong>digestive oncology</strong>.',
+    ar: 'أخصائي أمراض الجهاز الهضمي في <strong>مراكش</strong>، متخصص في <strong>التنظير التداخلي</strong> و<strong>أمراض الكبد</strong> و<strong>الأورام الهضمية</strong>.'
   },
   'about.bio1': {
     fr: 'Parcours clinique, pédagogique et de recherche reconnu à l\'échelle nationale et internationale. Formation avancée effectuée en Europe, en Turquie, en Égypte et en Inde. Passionné par l\'enseignement basé sur la simulation médicale.',
