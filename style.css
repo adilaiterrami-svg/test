@@ -1914,3 +1914,28 @@ html[lang="ar"] .whatsapp-tooltip { right: auto; left: 72px; }
   box-shadow: var(--shadow-sm);
 }
 .map-wrap iframe { display: block; }
+.map-link-bar {
+  padding: 10px 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+}
+.map-gmaps-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+.map-gmaps-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+html[lang="ar"] .map-link-bar { justify-content: flex-start; }

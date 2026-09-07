@@ -247,6 +247,7 @@ const TRANSLATIONS = {
   'form.message.label':    { fr: 'Message',             en: 'Message',          ar: 'الرسالة' },
   'form.message.placeholder': { fr: 'Votre message...', en: 'Your message...',  ar: 'رسالتك...' },
   'form.submit':           { fr: 'Envoyer le message',  en: 'Send message',     ar: 'إرسال الرسالة' },
+  'map.open':              { fr: 'Ouvrir dans Google Maps', en: 'Open in Google Maps', ar: 'فتح في خرائط Google' },
   'form.success.title':    { fr: 'Message envoyé !',    en: 'Message sent!',    ar: 'تم إرسال الرسالة!' },
   'form.success.desc':     { fr: 'Merci pour votre message. Le Pr. Ait Errami vous répondra dans les plus brefs délais.', en: 'Thank you for your message. Prof. Ait Errami will reply as soon as possible.', ar: 'شكراً على رسالتك. سيرد الأستاذ أيت الرامي في أقرب وقت ممكن.' },
 
