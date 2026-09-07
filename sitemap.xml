@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
     <loc>https://www.draiterrami.com/</loc>
@@ -12,6 +13,8 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.draiterrami.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.draiterrami.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.draiterrami.com/"/>
+
+    <!-- Images -->
     <image:image>
       <image:loc>https://www.draiterrami.com/photo.jpg</image:loc>
       <image:title>Pr. Adil Ait Errami, Gastro-Entérologue à Marrakech</image:title>
@@ -40,6 +43,69 @@
       <image:loc>https://www.draiterrami.com/gallery/lehealthf-casablanca-2025.jpg</image:loc>
       <image:title>Pr. Adil Ait Errami - leHEALTHF 2025 Casablanca</image:title>
     </image:image>
+
+    <!-- Vidéos de procédures -->
+    <video:video>
+      <video:thumbnail_loc>https://www.draiterrami.com/photo.jpg</video:thumbnail_loc>
+      <video:title>CPRE – Cholangiopancréatographie Rétrograde Endoscopique à Marrakech</video:title>
+      <video:description>Procédure de CPRE réalisée par le Pr. Adil Ait Errami, gastroentérologue à Marrakech. Traitement endoscopique des calculs biliaires et des maladies des voies biliaires sans chirurgie.</video:description>
+      <video:content_loc>https://www.draiterrami.com/videos/cpre.mp4</video:content_loc>
+      <video:player_loc>https://www.draiterrami.com/#videos</video:player_loc>
+      <video:duration>13</video:duration>
+      <video:publication_date>2026-08-25T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+      <video:tag>CPRE</video:tag>
+      <video:tag>ERCP</video:tag>
+      <video:tag>endoscopie Marrakech</video:tag>
+      <video:tag>gastroentérologue Marrakech</video:tag>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://www.draiterrami.com/photo.jpg</video:thumbnail_loc>
+      <video:title>Écho-endoscopie Thérapeutique EUS – Pr. Adil Ait Errami Marrakech</video:title>
+      <video:description>Écho-endoscopie interventionnelle réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech. Bilan tumoral du pancréas et des voies biliaires.</video:description>
+      <video:content_loc>https://www.draiterrami.com/videos/echoendoscopie.mp4</video:content_loc>
+      <video:player_loc>https://www.draiterrami.com/#videos</video:player_loc>
+      <video:duration>10</video:duration>
+      <video:publication_date>2026-08-25T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+      <video:tag>écho-endoscopie</video:tag>
+      <video:tag>EUS</video:tag>
+      <video:tag>endoscopie Marrakech</video:tag>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://www.draiterrami.com/photo.jpg</video:thumbnail_loc>
+      <video:title>Élastographie hépatique FibroScan® – Marrakech</video:title>
+      <video:description>FibroScan® (élastographie hépatique) réalisé par le Pr. Adil Ait Errami à Marrakech. Mesure non invasive de la fibrose hépatique pour les hépatites, cirrhose et NASH.</video:description>
+      <video:content_loc>https://www.draiterrami.com/videos/fibroscan.mp4</video:content_loc>
+      <video:player_loc>https://www.draiterrami.com/#videos</video:player_loc>
+      <video:duration>9</video:duration>
+      <video:publication_date>2026-08-25T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+      <video:tag>FibroScan</video:tag>
+      <video:tag>élastographie hépatique</video:tag>
+      <video:tag>hépatologie Marrakech</video:tag>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://www.draiterrami.com/photo.jpg</video:thumbnail_loc>
+      <video:title>Vidéocapsule endoscopique – Exploration grêle Marrakech</video:title>
+      <video:description>Vidéocapsule endoscopique réalisée par le Pr. Adil Ait Errami à Marrakech. Exploration de l'intestin grêle par microcaméra ingérée. Indiquée pour saignements obscurs et maladie de Crohn.</video:description>
+      <video:content_loc>https://www.draiterrami.com/videos/videocapsule.mp4</video:content_loc>
+      <video:player_loc>https://www.draiterrami.com/#videos</video:player_loc>
+      <video:duration>25</video:duration>
+      <video:publication_date>2026-08-25T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+      <video:tag>vidéocapsule endoscopique</video:tag>
+      <video:tag>exploration grêle</video:tag>
+      <video:tag>gastroentérologue Marrakech</video:tag>
+    </video:video>
+
   </url>
 
 </urlset>

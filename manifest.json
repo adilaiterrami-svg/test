@@ -1,0 +1,45 @@
+{
+  "name": "Pr. Adil Ait Errami – Gastroentérologue Marrakech",
+  "short_name": "Pr. Ait Errami",
+  "description": "Gastroentérologue professeur universitaire à Marrakech. CPRE, écho-endoscopie, FibroScan, hépatologie. CHU Mohammed VI & Clinique Privée.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0d3b7a",
+  "background_color": "#f8fafd",
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["medical", "health"],
+  "icons": [
+    {
+      "src": "photo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Appeler",
+      "short_name": "Appel",
+      "description": "Appeler le Pr. Adil Ait Errami",
+      "url": "tel:+212663627258",
+      "icons": [{ "src": "photo.jpg", "sizes": "any" }]
+    },
+    {
+      "name": "WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Contacter par WhatsApp",
+      "url": "https://wa.me/212663627258",
+      "icons": [{ "src": "photo.jpg", "sizes": "any" }]
+    },
+    {
+      "name": "FAQ",
+      "short_name": "FAQ",
+      "description": "Questions fréquentes",
+      "url": "/#faq",
+      "icons": [{ "src": "photo.jpg", "sizes": "any" }]
+    }
+  ]
+}
