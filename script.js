@@ -126,6 +126,42 @@ if (contactForm) {
       _captcha: 'false'
     };
 
+    const openWhatsApp = () => {
+      const text = encodeURIComponent(
+        `Bonjour Pr. Ait Errami,\n\nNom : ${payload.name}\nEmail : ${payload.email}\nTél : ${payload.phone}\nObjet : ${payload.objet}\n\n${payload.message}`
+      );
+      window.open(`https://wa.me/212663627258?text=${text}`, '_blank');
+    };
+
+    const showSuccess = () => {
+      contactForm.innerHTML = `
+        <div style="text-align:center;padding:40px 20px">
+          <i class="fas fa-check-circle" style="font-size:3.5rem;color:var(--blue-mid);display:block;margin-bottom:16px"></i>
+          <h3 style="font-family:'Playfair Display',serif;color:var(--text);margin-bottom:8px">Message envoyé !</h3>
+          <p style="color:var(--text-muted);font-size:0.95rem">Merci pour votre message. Le Pr. Ait Errami vous répondra dans les plus brefs délais.</p>
+        </div>`;
+    };
+
+    const showFallback = () => {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
+      contactForm.insertAdjacentHTML('afterbegin', `
+        <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:0.9rem">
+          <strong>Envoi par email temporairement indisponible.</strong><br>
+          Contactez directement via WhatsApp ou téléphone ci-dessous.
+          <br><br>
+          <a href="https://wa.me/212663627258" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:6px;background:#25d366;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:600">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          &nbsp;
+          <a href="tel:+212663627258"
+             style="display:inline-flex;align-items:center;gap:6px;background:#0d3b7a;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:600">
+            <i class="fas fa-phone-alt"></i> Appeler
+          </a>
+        </div>`);
+    };
+
     try {
       const res = await fetch('https://formsubmit.co/ajax/adil.ait.errami@gmail.com', {
         method: 'POST',
@@ -134,21 +170,14 @@ if (contactForm) {
       });
       const json = await res.json();
       if (json.success === 'true' || json.success === true) {
-        contactForm.innerHTML = `
-          <div style="text-align:center;padding:40px 20px">
-            <i class="fas fa-check-circle" style="font-size:3.5rem;color:var(--blue-mid);display:block;margin-bottom:16px"></i>
-            <h3 style="font-family:'Playfair Display',serif;color:var(--text);margin-bottom:8px">Message envoyé !</h3>
-            <p style="color:var(--text-muted);font-size:0.95rem">Merci pour votre message. Le Pr. Ait Errami vous répondra dans les plus brefs délais.</p>
-          </div>`;
+        showSuccess();
       } else {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
-        alert("Une erreur s'est produite. Veuillez réessayer ou nous contacter par téléphone.");
+        openWhatsApp();
+        showFallback();
       }
     } catch {
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
-      alert("Impossible d'envoyer le message. Vérifiez votre connexion internet.");
+      openWhatsApp();
+      showFallback();
     }
   });
 }
