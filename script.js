@@ -127,7 +127,7 @@ if (contactForm) {
     };
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/adaiterrami@yahoo.com', {
+      const res = await fetch('https://formsubmit.co/ajax/adil.ait.errami@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
