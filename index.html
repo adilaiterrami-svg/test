@@ -597,6 +597,16 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cairo:wght@400;600;700&display=swap" /></noscript>
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+
+  <!-- ===== GOOGLE ANALYTICS GA4 ===== -->
+  <!-- REMPLACER G-XXXXXXXXXX par votre Measurement ID depuis analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
 </head>
 <body>
 
@@ -1099,8 +1109,8 @@
 
         <div class="video-card">
           <div class="video-thumb">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/cpre.mp4#t=0.001" type="video/mp4">
+            <video controls preload="none" playsinline poster="photo.jpg">
+              <source src="videos/cpre.mp4" type="video/mp4">
             </video>
             <span class="video-tag">ERCP</span>
           </div>
@@ -1111,8 +1121,8 @@
 
         <div class="video-card">
           <div class="video-thumb">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/echoendoscopie.mp4#t=0.001" type="video/mp4">
+            <video controls preload="none" playsinline poster="photo.jpg">
+              <source src="videos/echoendoscopie.mp4" type="video/mp4">
             </video>
             <span class="video-tag">EUS</span>
           </div>
@@ -1123,8 +1133,8 @@
 
         <div class="video-card">
           <div class="video-thumb">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/fibroscan.mp4#t=0.001" type="video/mp4">
+            <video controls preload="none" playsinline poster="photo.jpg">
+              <source src="videos/fibroscan.mp4" type="video/mp4">
             </video>
             <span class="video-tag">FibroScan</span>
           </div>
@@ -1135,8 +1145,8 @@
 
         <div class="video-card">
           <div class="video-thumb">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/videocapsule.mp4#t=0.001" type="video/mp4">
+            <video controls preload="none" playsinline poster="photo.jpg">
+              <source src="videos/videocapsule.mp4" type="video/mp4">
             </video>
             <span class="video-tag">Vidéocapsule</span>
           </div>
