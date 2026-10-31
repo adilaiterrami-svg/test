@@ -6,7 +6,7 @@
 
   <url>
     <loc>https://www.draiterrami.com/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/"/>
@@ -106,6 +106,34 @@
       <video:tag>gastroentérologue Marrakech</video:tag>
     </video:video>
 
+  </url>
+
+  <url>
+    <loc>https://www.draiterrami.com/cpre</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.draiterrami.com/colonoscopie</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.draiterrami.com/fibroscan</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.draiterrami.com/echo-endoscopie</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

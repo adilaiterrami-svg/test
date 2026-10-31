@@ -1939,3 +1939,46 @@ html[lang="ar"] .whatsapp-tooltip { right: auto; left: 72px; }
   color: #fff;
 }
 html[lang="ar"] .map-link-bar { justify-content: flex-start; }
+
+/* ============================================
+   PROCEDURE LINKS (consultation section)
+   ============================================ */
+.procedure-links {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.procedure-links-title {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.procedure-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+.procedure-link-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.procedure-link-card i { font-size: 1rem; color: var(--blue-mid); flex-shrink: 0; }
+.procedure-link-card:hover {
+  background: #eef4ff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  text-decoration: none;
+}

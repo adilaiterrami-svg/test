@@ -1,0 +1,89 @@
+/* Shared CSS for procedure pages */
+:root {
+  --primary: #0d3b7a;
+  --primary-light: #1a5ca8;
+  --accent: #c8a96e;
+  --bg: #f8fafd;
+  --surface: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #5a6375;
+  --border: #e0e8f4;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(13,59,122,.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+img { max-width: 100%; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* TOPBAR */
+.topbar { background: var(--primary); color: #fff; padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar-brand { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: #fff; }
+.topbar-brand span { color: var(--accent); }
+.topbar-right { display: flex; gap: 16px; align-items: center; font-size: 0.88rem; }
+.topbar-right a { color: #fff; display: flex; align-items: center; gap: 6px; }
+.topbar-right a:hover { color: var(--accent); text-decoration: none; }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #0d3b7a 0%, #1a5ca8 100%); color: #fff; padding: 64px 24px 56px; text-align: center; }
+.hero .tag { display: inline-block; background: rgba(200,169,110,.25); color: var(--accent); font-size: 0.82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.25; max-width: 780px; margin: 0 auto 16px; }
+.hero p { font-size: 1.05rem; opacity: .85; max-width: 640px; margin: 0 auto; }
+
+/* CONTAINER */
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+/* SECTION */
+.section { padding: 56px 24px; }
+.section-alt { background: var(--surface); }
+.section h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--primary); margin-bottom: 20px; }
+.section h3 { font-size: 1.1rem; font-weight: 700; color: var(--primary-light); margin: 28px 0 12px; }
+.section p { margin-bottom: 16px; color: #2d3748; }
+.section ul { padding-left: 20px; margin-bottom: 16px; }
+.section ul li { margin-bottom: 8px; color: #2d3748; }
+
+/* HIGHLIGHT BOX */
+.highlight { background: #eef4ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+.highlight strong { color: var(--primary); }
+
+/* DOCTOR CARD */
+.doc-card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px 32px; display: flex; gap: 24px; align-items: center; margin: 32px 0; border: 1px solid var(--border); }
+.doc-card img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); flex-shrink: 0; }
+.doc-card .doc-info h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--primary); margin-bottom: 4px; }
+.doc-card .doc-info p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+
+/* CTA */
+.cta-section { background: var(--primary); color: #fff; text-align: center; padding: 56px 24px; }
+.cta-section h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 12px; }
+.cta-section p { opacity: .85; margin-bottom: 32px; }
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; transition: transform .2s, box-shadow .2s; text-decoration: none; }
+.btn:hover { transform: translateY(-2px); text-decoration: none; }
+.btn-white { background: #fff; color: var(--primary); }
+.btn-white:hover { box-shadow: 0 6px 20px rgba(0,0,0,.15); color: var(--primary); }
+.btn-wa { background: #25d366; color: #fff; }
+.btn-wa:hover { background: #1ebe5a; color: #fff; }
+
+/* BREADCRUMB */
+.breadcrumb { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 0.85rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary-light); }
+.breadcrumb span { margin: 0 6px; }
+
+/* FOOTER */
+.footer { background: #0a2d5e; color: rgba(255,255,255,.75); text-align: center; padding: 28px 24px; font-size: 0.88rem; }
+.footer a { color: var(--accent); }
+.footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; font-size: 0.82rem; }
+
+/* RELATED */
+.related { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+.related-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: box-shadow .2s; }
+.related-card:hover { box-shadow: var(--shadow); text-decoration: none; }
+.related-card .tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: 8px; display: block; }
+.related-card h4 { font-size: 0.95rem; color: var(--primary); font-weight: 700; }
+
+@media (max-width: 600px) {
+  .doc-card { flex-direction: column; text-align: center; }
+  .topbar { justify-content: center; }
+}
