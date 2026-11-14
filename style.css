@@ -236,6 +236,8 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   color: #fff;
   transition: color var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 #navbar.scrolled .nav-logo { color: var(--blue-dark); }
 
@@ -1753,25 +1755,24 @@ html[lang="ar"] .faq-question { text-align: right; }
 .lang-btn {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   background: transparent;
   border: 1.5px solid rgba(255,255,255,0.35);
-  padding: 4px 8px;
+  padding: 3px 6px;
   border-radius: 6px;
   cursor: pointer;
   transition: all var(--transition);
   line-height: 1;
-  font-size: 0.75rem;
   font-weight: 700;
   color: rgba(255,255,255,0.85);
   letter-spacing: .03em;
 }
 .lang-btn .lang-flag {
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1;
 }
 .lang-btn .lang-label {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 .lang-btn:hover {
