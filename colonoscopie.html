@@ -3,78 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coloscopie à Marrakech – Pr. Adil Ait Errami | Coloscopie diagnostique et thérapeutique</title>
-  <meta name="description" content="Coloscopie diagnostique et thérapeutique à Marrakech réalisée par le Pr. Adil Ait Errami, gastroentérologue au CHU Mohammed VI. Dépistage cancer colorectal, polypectomie, colite. Rdv : +212 663 627 258." />
-  <meta name="robots" content="index, follow" />
+  <title>Coloscopie à Marrakech – Pr. Adil Ait Errami | Dépistage Cancer Colorectal, Polypectomie</title>
+  <meta name="description" content="Coloscopie diagnostique et thérapeutique à Marrakech par le Pr. Adil Ait Errami, gastroentérologue au CHU Mohammed VI. Dépistage cancer colorectal, polypectomie EMR/ESD, MICI. Rdv : +212 663 627 258." />
+  <meta name="keywords" content="coloscopie Marrakech, coloscopie Maroc, dépistage cancer colorectal Marrakech, polypectomie Marrakech, coloscopie thérapeutique Marrakech, polype côlon Marrakech, MICI Marrakech, rectocolite hémorragique Marrakech, maladie Crohn Marrakech, coloscopie CHU Mohammed VI, Pr Ait Errami coloscopie, gastroentérologue coloscopie Marrakech, EMR ESD Marrakech, mucosectomie Marrakech" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://www.draiterrami.com/colonoscopie" />
+  <link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/colonoscopie" />
+  <link rel="alternate" hreflang="x-default" href="https://www.draiterrami.com/colonoscopie" />
   <meta property="og:title" content="Coloscopie à Marrakech – Pr. Adil Ait Errami" />
-  <meta property="og:description" content="Coloscopie diagnostique et thérapeutique par le Pr. Adil Ait Errami, gastroentérologue expert à Marrakech. Dépistage cancer colorectal, polypectomie." />
+  <meta property="og:description" content="Coloscopie diagnostique et thérapeutique par le Pr. Adil Ait Errami, gastroentérologue expert à Marrakech. Dépistage cancer colorectal, polypectomie EMR/ESD, MICI." />
   <meta property="og:url" content="https://www.draiterrami.com/colonoscopie" />
   <meta property="og:image" content="https://www.draiterrami.com/photo.jpg" />
   <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pr. Adil Ait Errami – Gastroentérologue Marrakech" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="procedure.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Coloscopie diagnostique et thérapeutique",
-    "description": "Exploration endoscopique complète du côlon permettant le diagnostic et le traitement des lésions coliques, incluant la polypectomie et le dépistage du cancer colorectal.",
-    "procedureType": "https://schema.org/DiagnosticProcedure",
-    "bodyLocation": "Côlon, Rectum, Iléon terminal",
-    "performer": {
-      "@type": "Physician",
-      "name": "Pr. Adil Ait Errami",
-      "url": "https://www.draiterrami.com/",
-      "telephone": "+212663627258",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "CHU Mohammed VI",
-        "addressLocality": "Marrakech",
-        "addressCountry": "MA"
-      }
+  <style>
+    /* Indication cards */
+    .indic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
+    .indic-card { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 18px; }
+    .indic-icon { width: 40px; height: 40px; background: #eef4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    .indic-icon i { color: var(--primary); font-size: 1.1rem; }
+    .indic-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .indic-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+    /* Steps grid */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 20px; }
+    .step-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; display: flex; gap: 14px; align-items: flex-start; }
+    .step-card .step-num { background: var(--primary); color: #fff; border-radius: 50%; width: 32px; height: 32px; min-width: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .step-card strong { color: var(--primary); display: block; margin-bottom: 4px; font-size: 0.95rem; }
+    .step-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+    /* Checklist */
+    .checklist-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; }
+    .checklist-box h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin: 20px 0 10px; display: flex; align-items: center; gap: 8px; }
+    .checklist-box h3:first-child { margin-top: 0; }
+    .checklist-box h3 i { color: var(--accent); }
+    .checklist { list-style: none; padding: 0; margin: 0 0 8px; }
+    .checklist li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; color: #2d3748; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li i { color: #22c55e; margin-top: 3px; flex-shrink: 0; }
+    @media (max-width: 600px) {
+      .indic-grid, .steps-grid { grid-template-columns: 1fr; }
     }
-  }
-  </script>
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "À partir de quel âge faut-il faire une coloscopie ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le dépistage du cancer colorectal par coloscopie est recommandé à partir de 50 ans pour les personnes sans facteur de risque particulier. En cas d'antécédent familial de cancer colorectal ou de polypes, la coloscopie est recommandée dès 40 ans ou 10 ans avant l'âge du diagnostic familial. Votre gastroentérologue évalue votre situation personnelle."
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.draiterrami.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Spécialités", "item": "https://www.draiterrami.com/#consultation" },
+          { "@type": "ListItem", "position": 3, "name": "Coloscopie", "item": "https://www.draiterrami.com/colonoscopie" }
+        ]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": "https://www.draiterrami.com/colonoscopie#procedure",
+        "name": "Coloscopie diagnostique et thérapeutique",
+        "alternateName": ["Colonoscopie", "Coloscopy"],
+        "description": "Exploration endoscopique complète du côlon permettant le diagnostic et le traitement des lésions coliques — dépistage cancer colorectal, polypectomie EMR/ESD, biopsies, traitement MICI — au CHU Mohammed VI de Marrakech.",
+        "procedureType": "https://schema.org/DiagnosticProcedure",
+        "bodyLocation": "Côlon, Rectum, Iléon terminal",
+        "indication": "Dépistage cancer colorectal, rectorragies, MICI, polypes, troubles du transit, anémie ferriprive inexpliquée",
+        "preparation": "Régime sans résidus 2-3 jours, laxatif la veille, jeûne strict, arrêt anticoagulants si nécessaire",
+        "followup": "Résultats des biopsies dans 10-15 jours. Surveillance selon résultats (3 à 10 ans selon risque). Reprise d'activité normale dès le lendemain.",
+        "howPerformed": "Sous sédation consciente profonde ou anesthésie générale légère. Introduction du coloscope par voie anale jusqu'à l'iléon terminal, examen de la muqueuse au retrait. Durée 20-45 minutes.",
+        "performer": {
+          "@type": "Physician",
+          "name": "Pr. Adil Ait Errami",
+          "url": "https://www.draiterrami.com/",
+          "telephone": "+212663627258",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "CHU Mohammed VI",
+            "addressLocality": "Marrakech",
+            "addressCountry": "MA"
+          }
         }
       },
       {
-        "@type": "Question",
-        "name": "La coloscopie est-elle douloureuse ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La coloscopie est réalisée sous sédation consciente ou anesthésie générale, selon le cas. Elle est donc indolore pendant l'examen. Une légère distension abdominale peut être ressentie après la procédure et disparaît en quelques heures. Le Pr. Adil Ait Errami adapte la sédation à chaque patient pour un maximum de confort."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Peut-on enlever les polypes pendant la coloscopie ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. La coloscopie thérapeutique permet d'enlever (exérèse) les polypes découverts lors de l'examen, dans le même temps. Cette procédure s'appelle la polypectomie. Pour les polypes plus complexes, la technique EMR (mucosectomie) ou ESD est utilisée. Cela évite une chirurgie abdominale."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Comment se préparer à une coloscopie à Marrakech ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La préparation à la coloscopie comprend un régime sans résidus pendant 3 jours avant l'examen, puis l'ingestion d'une solution laxative la veille ou le matin de l'examen. Cette préparation est indispensable pour nettoyer le côlon et permettre une exploration complète. Le Pr. Adil Ait Errami vous remettra des instructions détaillées lors de la consultation."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "À partir de quel âge faut-il faire une coloscopie à Marrakech ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le dépistage du cancer colorectal par coloscopie est recommandé à partir de 50 ans pour les personnes sans facteur de risque. En cas d'antécédent familial de cancer colorectal ou de polypes, la coloscopie est recommandée dès 40 ans ou 10 ans avant l'âge du diagnostic familial. Pour les porteurs de mutations génétiques (HNPCC, PAF), la surveillance débute encore plus tôt. Le Pr. Adil Ait Errami évalue votre situation personnelle lors d'une consultation au CHU Mohammed VI."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "La coloscopie est-elle douloureuse ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La coloscopie est réalisée sous sédation consciente profonde ou anesthésie générale légère, elle est donc indolore pendant l'examen. Après la procédure, une légère distension abdominale peut être ressentie et disparaît en quelques heures. Le Pr. Adil Ait Errami adapte la sédation à chaque patient pour un maximum de confort et de sécurité."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on enlever les polypes pendant la coloscopie ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. La coloscopie thérapeutique permet d'enlever (exérèse) les polypes découverts lors de l'examen dans le même temps opératoire — c'est la polypectomie. Pour les polypes plans ou larges, la résection endoscopique de la muqueuse (EMR) est utilisée. Pour les lésions superficielles étendues, la dissection sous-muqueuse endoscopique (ESD) est réalisée. Ces techniques évitent une chirurgie abdominale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment se préparer à une coloscopie ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La préparation comprend : un régime alimentaire pauvre en résidus (sans légumes, fruits, grains entiers) pendant 2-3 jours ; l'ingestion d'une solution laxative (polyéthylène glycol) la veille au soir et/ou le matin de l'examen ; un jeûne strict à partir de minuit ; l'arrêt de l'aspirine et des anticoagulants selon les instructions du médecin. Un accompagnant est obligatoire pour le retour à domicile. Des instructions écrites détaillées sont remises lors de la consultation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps dure une coloscopie ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'examen proprement dit dure entre 20 et 45 minutes selon la complexité et les gestes réalisés. En comptant la sédation et la surveillance post-procédure, prévoyez environ 2 à 3 heures au total. En cas de polypectomie complexe (EMR, ESD), la durée peut être plus longue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quels sont les risques de la coloscopie ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La coloscopie est une procédure sûre. Les complications sont rares : perforation colique (moins de 0,1 % des cas), saignement post-polypectomie (1-2 %), réactions à la sédation. Ces risques sont minimisés par l'expérience du Pr. Adil Ait Errami et le plateau technique du CHU Mohammed VI. Un bilan pré-procédure est réalisé pour chaque patient."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "La coloscopie est-elle remboursée au Maroc ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La coloscopie réalisée au CHU Mohammed VI est prise en charge dans le cadre du RAMED et de l'AMO (Assurance Maladie Obligatoire). En clinique privée, la prise en charge dépend de votre assurance. Renseignez-vous auprès de votre organisme d'assurance. Des facilités de paiement peuvent être discutées lors de la consultation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre coloscopie virtuelle et coloscopie classique ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La coloscopie virtuelle (coloscanner) est une imagerie par scanner qui reconstruit le côlon en 3D — elle ne nécessite pas de sédation mais ne permet pas de biopsie ni de polypectomie. La coloscopie classique à l'endoscope est l'examen de référence : elle permet de voir directement la muqueuse, de prélever des biopsies et d'enlever les polypes dans le même temps. En cas d'anomalie au coloscanner, une coloscopie classique est indispensable."
+            }
+          }
+        ]
       }
     ]
   }
@@ -99,55 +178,178 @@
 <section class="hero">
   <div class="tag">Endoscopie digestive basse</div>
   <h1>Coloscopie à Marrakech</h1>
-  <p>Exploration endoscopique complète du côlon pour le diagnostic et le traitement des maladies colorectales — dépistage du cancer, polypectomie, colites — au CHU Mohammed VI de Marrakech.</p>
+  <p>Exploration endoscopique complète du côlon pour le diagnostic et le traitement des maladies colorectales — dépistage du cancer colorectal, polypectomie EMR/ESD, MICI — au CHU Mohammed VI de Marrakech par le Pr. Adil Ait Errami.</p>
 </section>
 
 <main>
+
+  <!-- ===== QU'EST-CE QUE LA COLOSCOPIE ===== -->
   <section class="section container">
     <h2>Qu'est-ce que la coloscopie ?</h2>
-    <p>La <strong>coloscopie</strong> est l'examen de référence pour explorer l'intérieur du côlon (gros intestin) et du rectum. Elle est réalisée à l'aide d'un <strong>coloscope</strong>, un tube flexible souple muni d'une caméra miniaturisée et d'une source lumineuse, introduit par voie anale.</p>
-    <p>Cet examen permet au médecin de visualiser directement la muqueuse colique sur un écran, de prélever des biopsies et d'effectuer des gestes thérapeutiques comme l'ablation de polypes (polypectomie) pendant la même séance.</p>
-
+    <p>La <strong>coloscopie</strong> est l'examen de référence pour explorer l'intérieur du <strong>côlon (gros intestin) et du rectum</strong>. Elle est réalisée à l'aide d'un <em>coloscope</em> — un tube flexible souple muni d'une caméra haute définition et d'une source lumineuse — introduit par voie anale.</p>
+    <p>Cet examen permet de visualiser directement la muqueuse colique sur un écran, de prélever des biopsies et d'effectuer des gestes thérapeutiques comme l'ablation de polypes (<strong>polypectomie</strong>) pendant la même séance.</p>
     <div class="highlight">
-      <strong>Examen de référence :</strong> La coloscopie est le meilleur outil disponible pour le dépistage du <strong>cancer colorectal</strong>, 3ème cancer le plus fréquent au monde. Elle permet de détecter et d'enlever les polypes <em>avant</em> qu'ils ne deviennent cancéreux.
+      <strong><i class="fas fa-shield-alt" style="color:var(--primary)"></i> Examen de référence :</strong> La coloscopie est le meilleur outil disponible pour le dépistage du <strong>cancer colorectal</strong>, 2ème cancer le plus fréquent au Maroc. Elle permet de détecter et d'enlever les polypes <em>avant</em> qu'ils ne deviennent cancéreux.
     </div>
-
-    <h3>Indications de la coloscopie</h3>
-    <ul>
-      <li><strong>Dépistage du cancer colorectal</strong> — à partir de 50 ans, ou plus tôt en cas d'antécédents familiaux</li>
-      <li><strong>Rectorragies</strong> — saignements rectaux ou sang dans les selles</li>
-      <li><strong>Troubles du transit persistants</strong> — diarrhée chronique, constipation récente inexpliquée, alternance diarrhée-constipation</li>
-      <li><strong>Douleurs abdominales chroniques</strong> — suspicion de maladie inflammatoire du côlon</li>
-      <li><strong>Maladies inflammatoires chroniques de l'intestin (MICI)</strong> — maladie de Crohn, rectocolite hémorragique (diagnostic et bilan d'extension)</li>
-      <li><strong>Polypes connus</strong> — surveillance après polypectomie</li>
-      <li><strong>Anémie ferriprive inexpliquée</strong> — recherche d'une cause digestive basse</li>
-      <li><strong>Anomalie au scanner ou à l'IRM</strong> — confirmation histologique</li>
-    </ul>
-
-    <h3>La coloscopie thérapeutique</h3>
-    <p>Lors de la coloscopie, le Pr. Ait Errami peut réaliser simultanément des gestes thérapeutiques :</p>
-    <ul>
-      <li><strong>Polypectomie</strong> — ablation de polypes bénins à risque de transformation cancéreuse</li>
-      <li><strong>Résection endoscopique de la muqueuse (EMR)</strong> — pour les polypes plans ou larges</li>
-      <li><strong>Dissection sous-muqueuse endoscopique (ESD)</strong> — pour les lésions superficielles étendues</li>
-      <li><strong>Hémostase</strong> — traitement des saignements coliques (coagulation, clips)</li>
-      <li><strong>Dilatation de sténoses</strong> — rétrécissements anastomotiques post-chirurgicaux</li>
-    </ul>
-
-    <h3>Préparation à la coloscopie</h3>
-    <p>Une préparation colique rigoureuse est indispensable pour obtenir une exploration de qualité :</p>
-    <ul>
-      <li>Régime alimentaire pauvre en résidus 2-3 jours avant</li>
-      <li>Prise d'un laxatif de préparation colique (préparation polyéthylène glycol) la veille et le matin</li>
-      <li>Jeûne strict à partir de minuit le jour de l'examen</li>
-      <li>Arrêt de l'aspirine et des anticoagulants selon les instructions du médecin</li>
-      <li>Présence d'un accompagnant obligatoire (sédation)</li>
-    </ul>
-
-    <h3>Déroulement de l'examen</h3>
-    <p>La coloscopie est réalisée sous <strong>sédation consciente profonde</strong> ou <strong>anesthésie générale légère</strong>, ce qui rend l'examen indolore et confortable. Le patient est installé sur le côté gauche. L'endoscope est introduit progressivement jusqu'à l'iléon terminal, puis retiré lentement pour examiner la muqueuse. La durée est de <strong>20 à 45 minutes</strong> selon la complexité.</p>
   </section>
 
+  <!-- ===== INDICATIONS ===== -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Indications de la coloscopie</h2>
+      <p style="margin-bottom:1.5rem;color:#555;">Le Pr. Adil Ait Errami prescrit et réalise une coloscopie dans les situations suivantes :</p>
+      <div class="indic-grid">
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-dna"></i></div>
+          <h4>Dépistage cancer colorectal</h4>
+          <p>À partir de 50 ans, ou dès 40 ans en cas d'antécédents familiaux. Examen de choix pour détecter polypes et lésions précoces.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-tint"></i></div>
+          <h4>Rectorragies</h4>
+          <p>Sang dans les selles ou saignements rectaux — exploration systématique pour identifier l'origine (hémorroïdes, polype, cancer, colite).</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-sync-alt"></i></div>
+          <h4>Troubles du transit</h4>
+          <p>Diarrhée chronique, constipation récente inexpliquée, alternance diarrhée-constipation, modification du calibre des selles.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-fire"></i></div>
+          <h4>MICI (Crohn, RCH)</h4>
+          <p>Diagnostic, bilan d'extension et surveillance de la maladie de Crohn et de la rectocolite hémorragique (RCH).</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-circle"></i></div>
+          <h4>Polypes connus</h4>
+          <p>Surveillance après polypectomie selon les délais recommandés (1, 3 ou 5 ans selon le risque histologique).</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-vial"></i></div>
+          <h4>Anémie ferriprive inexpliquée</h4>
+          <p>Recherche d'une cause digestive basse — saignement occulte lié à un polype, cancer ou angiodysplasie colique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLOSCOPIE THÉRAPEUTIQUE ===== -->
+  <section class="section container">
+    <h2>Coloscopie thérapeutique : gestes réalisés</h2>
+    <p>Lors de la coloscopie, le Pr. Ait Errami peut réaliser simultanément des gestes thérapeutiques avancés, évitant une chirurgie abdominale :</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Polypectomie simple</strong>
+          <p>Ablation de polypes pédonculés à l'anse diathermique — geste rapide, réalisé en ambulatoire.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Mucosectomie (EMR)</strong>
+          <p>Résection endoscopique de la muqueuse pour polypes plans ou larges (> 10 mm) — injection sous-muqueuse pour soulever la lésion.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Dissection sous-muqueuse (ESD)</strong>
+          <p>Exérèse en bloc de lésions superficielles étendues — technique avancée permettant d'éviter la chirurgie pour des tumeurs superficielles.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Hémostase endoscopique</strong>
+          <p>Traitement des saignements coliques par coagulation, clips ou injection — arrêt hémorragique immédiat.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div>
+          <strong>Biopsies dirigées</strong>
+          <p>Prélèvements histologiques ciblés — diagnostic de colite, dysplasie, infection ou cancer.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">6</div>
+        <div>
+          <strong>Dilatation de sténoses</strong>
+          <p>Traitement des rétrécissements anastomotiques post-chirurgicaux ou inflammatoires par ballonnet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRÉPARATION ===== -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Comment se préparer à une coloscopie ?</h2>
+      <p style="margin-bottom:1.4rem;">Une préparation colique rigoureuse est indispensable pour un examen de qualité. Des instructions détaillées vous sont remises lors de la consultation.</p>
+      <div class="checklist-box">
+        <h3><i class="fas fa-calendar-alt"></i> J-3 à J-2 avant l'examen</h3>
+        <ul class="checklist">
+          <li><i class="fas fa-check-circle"></i> Régime alimentaire pauvre en résidus : viandes blanches, poissons, œufs, pâtes blanches, riz blanc, fromages à pâte cuite — éviter légumes, fruits, légumineuses, céréales complètes</li>
+          <li><i class="fas fa-check-circle"></i> Arrêt de l'aspirine et des AINS si polypectomie prévue (sur avis médical)</li>
+          <li><i class="fas fa-check-circle"></i> Arrêt des anticoagulants / antiagrégants selon le protocole remis</li>
+          <li><i class="fas fa-check-circle"></i> Maintien des traitements habituels avec une gorgée d'eau (sauf avis contraire)</li>
+        </ul>
+        <h3><i class="fas fa-moon"></i> La veille</h3>
+        <ul class="checklist">
+          <li><i class="fas fa-check-circle"></i> Repas léger avant 12h (midi)</li>
+          <li><i class="fas fa-check-circle"></i> Prise du laxatif de préparation (polyéthylène glycol 2L) à partir de 17h — boire lentement 1 verre toutes les 15 min</li>
+          <li><i class="fas fa-check-circle"></i> Rester proche des toilettes pendant 3-4 heures</li>
+          <li><i class="fas fa-check-circle"></i> Hydratation abondante (eau, bouillons clairs, thé sans lait)</li>
+        </ul>
+        <h3><i class="fas fa-sun"></i> Le jour de l'examen</h3>
+        <ul class="checklist">
+          <li><i class="fas fa-check-circle"></i> 2ème prise du laxatif (1L) dès le matin, 4-5 heures avant l'examen</li>
+          <li><i class="fas fa-check-circle"></i> Jeûne strict (ni eau, ni médicament par voie orale) dans les 2 heures précédant</li>
+          <li><i class="fas fa-check-circle"></i> Venir accompagné — vous ne pouvez pas conduire après la sédation</li>
+          <li><i class="fas fa-check-circle"></i> Apporter votre ordonnance, les résultats de bilan, et vos traitements</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DÉROULEMENT ===== -->
+  <section class="section container">
+    <h2>Déroulement de l'examen</h2>
+    <p>La coloscopie est réalisée sous <strong>sédation consciente profonde</strong> ou <strong>anesthésie générale légère</strong>, ce qui rend l'examen totalement indolore et confortable. Voici les étapes :</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div><strong>Accueil et installation</strong><p>Vérification de l'identité et du dossier médical. Installation confortablement sur le côté gauche. Pose d'une voie veineuse.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div><strong>Sédation</strong><p>Administration du sédatif par voie intraveineuse. Vous vous endormez en quelques secondes. Monitoring continu de la saturation et de la fréquence cardiaque.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div><strong>Exploration colique</strong><p>Introduction progressive du coloscope jusqu'à l'iléon terminal, puis retrait lent en examinant toute la muqueuse colique sur 360°.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div><strong>Gestes thérapeutiques</strong><p>Si des polypes ou lésions sont découverts : polypectomie, biopsies ou hémostase dans le même temps, sans anesthésie complémentaire.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div><strong>Réveil et surveillance</strong><p>Réveil progressif en salle de récupération. Surveillance de 30 à 60 minutes. Un collation légère vous est proposée avant le départ.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">6</div>
+        <div><strong>Compte-rendu médical</strong><p>Remise du compte-rendu d'endoscopie à la sortie. Résultats des biopsies dans 10-15 jours. Consultation de suivi programmée.</p></div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:1.5rem;">
+      <strong>Durée totale :</strong> 20 à 45 minutes pour l'examen · 2 à 3 heures au total avec la sédation et la surveillance · Reprise des activités normales dès le lendemain.
+    </div>
+  </section>
+
+  <!-- ===== MÉDECIN ===== -->
   <section class="section-alt">
     <div class="container">
       <h2>Gastroentérologue expert en coloscopie à Marrakech</h2>
@@ -160,13 +362,14 @@
           CHU Mohammed VI de Marrakech</p>
         </div>
       </div>
-      <p>Le Pr. Adil Ait Errami réalise des coloscopies diagnostiques et thérapeutiques au <strong>CHU Mohammed VI de Marrakech</strong> et en clinique privée. Son expertise inclut la polypectomie complexe (EMR, ESD) et le diagnostic des MICI. Formé en France, Turquie, Égypte et Inde, il applique les standards internationaux les plus récents.</p>
-      <p>Il est membre de la <strong>Société Marocaine d'Endoscopie Digestive (SMED)</strong> et du groupe des <strong>Jeunes Endoscopistes de l'Association Européenne de Gastroentérologie (EAGE)</strong>.</p>
+      <p>Le Pr. Adil Ait Errami réalise des coloscopies diagnostiques et thérapeutiques au <strong>CHU Mohammed VI de Marrakech</strong> et en clinique privée. Son expertise inclut la <strong>polypectomie complexe (EMR, ESD)</strong> et le diagnostic-suivi des MICI. Formé en France, Turquie, Égypte et Inde, il applique les standards endoscopiques internationaux les plus récents.</p>
+      <p>Membre de la <strong>Société Marocaine d'Endoscopie Digestive (SMED)</strong> et du groupe des <strong>Jeunes Endoscopistes de l'Association Européenne de Gastroentérologie (EAGE)</strong>, il assure également la formation des internes et résidents en gastroentérologie.</p>
     </div>
   </section>
 
+  <!-- ===== AUTRES SPÉCIALITÉS ===== -->
   <section class="section container">
-    <h2>Autres spécialités</h2>
+    <h2>Autres spécialités du Pr. Ait Errami</h2>
     <div class="related">
       <a href="/cpre" class="related-card">
         <span class="tag">ERCP</span>
@@ -180,43 +383,58 @@
         <span class="tag">Hépatologie</span>
         <h4>FibroScan® – Fibrose hépatique</h4>
       </a>
-      <a href="/" class="related-card">
-        <span class="tag">Site complet</span>
-        <h4>Toutes les spécialités du Pr. Ait Errami</h4>
+      <a href="/gastroenterologue-marrakech" class="related-card">
+        <span class="tag">Profil</span>
+        <h4>Gastroentérologue Marrakech – Pr. Adil Ait Errami</h4>
       </a>
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
   <section class="section container">
     <div class="proc-faq">
-      <h2>Questions fréquentes sur la coloscopie</h2>
+      <h2>Questions fréquentes sur la coloscopie à Marrakech</h2>
+
       <div class="proc-faq-item">
         <button class="proc-faq-q">À partir de quel âge faut-il faire une coloscopie ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">Le dépistage du cancer colorectal par coloscopie est recommandé à partir de 50 ans pour les personnes sans facteur de risque particulier. En cas d'antécédent familial, la coloscopie est recommandée dès 40 ans ou 10 ans avant l'âge du diagnostic familial.</div>
+        <div class="proc-faq-a">Le dépistage du cancer colorectal est recommandé à partir de <strong>50 ans</strong> pour les personnes sans facteur de risque. En cas d'antécédent familial de cancer colorectal ou de polypes, à partir de <strong>40 ans</strong> ou 10 ans avant l'âge du diagnostic familial. Pour les porteurs de mutations génétiques (HNPCC, PAF), la surveillance débute encore plus tôt. Le Pr. Adil Ait Errami évalue votre situation lors d'une consultation au CHU Mohammed VI de Marrakech.</div>
       </div>
       <div class="proc-faq-item">
         <button class="proc-faq-q">La coloscopie est-elle douloureuse ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">La coloscopie est réalisée sous sédation consciente ou anesthésie générale, elle est donc indolore pendant l'examen. Une légère distension abdominale peut être ressentie après la procédure et disparaît en quelques heures.</div>
+        <div class="proc-faq-a">Non. La coloscopie est réalisée sous <strong>sédation consciente profonde ou anesthésie générale légère</strong> — l'examen est totalement indolore. Après la procédure, une légère distension abdominale peut être ressentie et disparaît en quelques heures. Le Pr. Adil Ait Errami adapte la sédation à chaque patient pour un maximum de confort.</div>
       </div>
       <div class="proc-faq-item">
         <button class="proc-faq-q">Peut-on enlever les polypes pendant la coloscopie ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">Oui. La coloscopie thérapeutique permet d'enlever les polypes découverts lors de l'examen dans le même temps (polypectomie). Pour les polypes complexes, la technique EMR (mucosectomie) est utilisée. Cela évite une chirurgie abdominale.</div>
+        <div class="proc-faq-a">Oui. La <strong>polypectomie</strong> permet d'enlever les polypes découverts lors du même examen. Pour les polypes plans ou larges, la résection endoscopique de la muqueuse <strong>(EMR)</strong> est utilisée. Pour les lésions superficielles étendues, la <strong>dissection sous-muqueuse (ESD)</strong> est réalisée — ces techniques évitent une chirurgie abdominale.</div>
       </div>
       <div class="proc-faq-item">
         <button class="proc-faq-q">Comment se préparer à une coloscopie à Marrakech ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">La préparation comprend un régime sans résidus pendant 3 jours, puis l'ingestion d'une solution laxative la veille ou le matin de l'examen. Le Pr. Adil Ait Errami vous remettra des instructions détaillées lors de la consultation.</div>
+        <div class="proc-faq-a">La préparation comprend : <strong>régime sans résidus</strong> pendant 2-3 jours ; <strong>prise d'un laxatif</strong> (polyéthylène glycol) la veille au soir et le matin de l'examen ; <strong>jeûne strict</strong> à partir de minuit ; arrêt de l'aspirine et des anticoagulants si nécessaire. Un accompagnant est obligatoire pour le retour (sédation). Des instructions écrites vous seront remises lors de la consultation.</div>
       </div>
-      <div class="share-bar">
-        <span>Partager cette page :</span>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Fcoloscopie" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://wa.me/?text=Coloscopie%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Fcoloscopie" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Combien de temps dure une coloscopie ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">L'examen proprement dit dure <strong>20 à 45 minutes</strong> selon la complexité et les gestes réalisés. En comptant la sédation et la surveillance post-procédure, prévoyez <strong>2 à 3 heures au total</strong>. En cas de polypectomie complexe (EMR, ESD), la durée peut être plus longue.</div>
       </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Quels sont les risques de la coloscopie ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La coloscopie est une procédure sûre. Les complications sont rares : <strong>perforation colique</strong> (moins de 0,1 %), <strong>saignement post-polypectomie</strong> (1-2 %), réactions à la sédation. Ces risques sont minimisés par l'expérience du Pr. Adil Ait Errami et le plateau technique du CHU Mohammed VI. Un bilan pré-procédure est réalisé pour chaque patient.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">La coloscopie est-elle prise en charge au Maroc ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La coloscopie réalisée au <strong>CHU Mohammed VI</strong> est prise en charge dans le cadre du <strong>RAMED et de l'AMO</strong>. En clinique privée, la prise en charge dépend de votre assurance. Renseignez-vous auprès de votre organisme d'assurance. Des facilités de paiement peuvent être discutées lors de la consultation.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Quelle différence entre coloscopie virtuelle et coloscopie classique ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La <strong>coloscopie virtuelle</strong> (coloscanner) est un examen radiologique qui ne nécessite pas de sédation mais ne permet ni biopsie ni polypectomie. La <strong>coloscopie classique</strong> est l'examen de référence : elle permet de visualiser directement la muqueuse, de prélever des biopsies et d'enlever les polypes dans le même temps. En cas d'anomalie au coloscanner, une coloscopie classique est indispensable.</div>
+      </div>
+
     </div>
   </section>
+
 </main>
 
 <section class="cta-section">
-  <h2>Prendre rendez-vous pour une coloscopie</h2>
+  <h2>Prendre rendez-vous pour une coloscopie à Marrakech</h2>
   <p>CHU Mohammed VI de Marrakech · Clinique Privée · Tél. +212 663 627 258</p>
   <div class="cta-btns">
     <a href="tel:+212663627258" class="btn btn-white"><i class="fas fa-phone-alt"></i> Appeler maintenant</a>
@@ -229,6 +447,7 @@
   <div class="footer-links">
     <a href="/">Accueil</a>
     <a href="/cpre">CPRE</a>
+    <a href="/colonoscopie">Coloscopie</a>
     <a href="/fibroscan">FibroScan</a>
     <a href="/echo-endoscopie">Écho-endoscopie</a>
     <a href="/#contact">Contact</a>

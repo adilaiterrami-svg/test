@@ -3,79 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FibroScan à Marrakech – Pr. Adil Ait Errami | Élastographie hépatique non invasive</title>
-  <meta name="description" content="FibroScan (élastographie hépatique) à Marrakech par le Pr. Adil Ait Errami. Mesure non invasive de la fibrose du foie pour l'hépatite B, hépatite C, NASH et cirrhose. CHU Mohammed VI. Rdv : +212 663 627 258." />
-  <meta name="robots" content="index, follow" />
+  <title>FibroScan à Marrakech – Pr. Adil Ait Errami | Élastographie hépatique, Fibrose du Foie</title>
+  <meta name="description" content="FibroScan® (élastographie hépatique) à Marrakech par le Pr. Adil Ait Errami. Mesure non invasive de la fibrose du foie pour hépatite B/C, NASH, cirrhose. CHU Mohammed VI. Rdv : +212 663 627 258." />
+  <meta name="keywords" content="FibroScan Marrakech, élastographie hépatique Marrakech, fibrose du foie Marrakech, FibroScan Maroc, biopsie du foie alternative Marrakech, hépatite B fibrose Marrakech, hépatite C fibrose Marrakech, NASH foie gras Marrakech, cirrhose Marrakech, hépatologue Marrakech, Pr Ait Errami FibroScan, CHU Mohammed VI FibroScan" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://www.draiterrami.com/fibroscan" />
-  <meta property="og:title" content="FibroScan à Marrakech – Pr. Adil Ait Errami" />
-  <meta property="og:description" content="Élastographie hépatique FibroScan® à Marrakech. Mesure non invasive de la fibrose du foie par le Pr. Adil Ait Errami, gastroentérologue au CHU Mohammed VI." />
+  <link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/fibroscan" />
+  <link rel="alternate" hreflang="x-default" href="https://www.draiterrami.com/fibroscan" />
+  <meta property="og:title" content="FibroScan® à Marrakech – Élastographie hépatique | Pr. Adil Ait Errami" />
+  <meta property="og:description" content="Élastographie hépatique FibroScan® à Marrakech. Mesure non invasive de la fibrose du foie par le Pr. Adil Ait Errami, gastroentérologue au CHU Mohammed VI. Alternative à la biopsie, résultat immédiat." />
   <meta property="og:url" content="https://www.draiterrami.com/fibroscan" />
   <meta property="og:image" content="https://www.draiterrami.com/photo.jpg" />
   <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pr. Adil Ait Errami – Gastroentérologue Marrakech" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="procedure.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "FibroScan® – Élastographie hépatique transitoire",
-    "alternateName": "Fibroscan, Elastographie hépatique, FibroScan Marrakech",
-    "description": "Examen non invasif mesurant la rigidité du foie par ondes élastiques pour évaluer la fibrose hépatique, sans biopsie.",
-    "procedureType": "https://schema.org/DiagnosticProcedure",
-    "bodyLocation": "Foie",
-    "performer": {
-      "@type": "Physician",
-      "name": "Pr. Adil Ait Errami",
-      "url": "https://www.draiterrami.com/",
-      "telephone": "+212663627258",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "CHU Mohammed VI",
-        "addressLocality": "Marrakech",
-        "addressCountry": "MA"
-      }
+  <style>
+    .indic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
+    .indic-card { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 18px; }
+    .indic-icon { width: 40px; height: 40px; background: #eef4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    .indic-icon i { color: var(--primary); font-size: 1.1rem; }
+    .indic-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .indic-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+    .fibro-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+    .fibro-table th { background: var(--primary); color: #fff; padding: 10px 14px; text-align: left; }
+    .fibro-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .fibro-table tr:nth-child(even) td { background: #f5f8ff; }
+    .fibro-table .stage { font-weight: 700; color: var(--primary); }
+    .fibro-table .f4 { color: #c0392b; font-weight: 700; }
+    .fibro-table .f3 { color: #e67e22; font-weight: 700; }
+    .fibro-table .f2 { color: #e6a817; font-weight: 700; }
+    .fibro-table .f0f1 { color: #27ae60; font-weight: 700; }
+    @media (max-width: 600px) {
+      .indic-grid { grid-template-columns: 1fr; }
+      .fibro-table, .fibro-table thead, .fibro-table tbody, .fibro-table th, .fibro-table td, .fibro-table tr { display: block; }
+      .fibro-table th:not(:first-child) { display: none; }
+      .fibro-table td { padding: 6px 12px; }
     }
-  }
-  </script>
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Le FibroScan remplace-t-il la biopsie du foie ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dans la majorité des cas, oui. Le FibroScan permet d'évaluer la fibrose hépatique de manière non invasive et remplace la biopsie hépatique pour le suivi des hépatites B et C, de la NASH et de la cirrhose. La biopsie peut rester nécessaire dans certains cas complexes ou lorsque le FibroScan donne des résultats non interprétables."
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.draiterrami.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Spécialités", "item": "https://www.draiterrami.com/#consultation" },
+          { "@type": "ListItem", "position": 3, "name": "FibroScan", "item": "https://www.draiterrami.com/fibroscan" }
+        ]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": "https://www.draiterrami.com/fibroscan#procedure",
+        "name": "FibroScan® – Élastographie hépatique transitoire",
+        "alternateName": ["Fibroscan", "Elastographie hépatique", "FibroScan Marrakech", "Élastographie hépatique transitoire"],
+        "description": "Examen non invasif mesurant la rigidité du foie par ondes élastiques pour évaluer la fibrose hépatique sans biopsie. Résultat immédiat en kPa (fibrose) et score CAP (stéatose).",
+        "procedureType": "https://schema.org/DiagnosticProcedure",
+        "bodyLocation": "Foie",
+        "indication": "Hépatite B chronique, Hépatite C chronique, NASH/NAFLD, Cirrhose suspectée, Consommation chronique d'alcool, Maladies cholestatiques, Transaminases élevées inexpliquées",
+        "preparation": "Jeûne de 2 heures minimum. Pas de sport intense la veille. Aucune préparation médicamenteuse.",
+        "howPerformed": "Sonde posée sur la peau entre les côtes. 10 mesures successives par ultrasons et ondes élastiques. Résultat en kPa (fibrose) et dB/m (stéatose CAP). Durée 10-15 minutes.",
+        "followup": "Résultats disponibles immédiatement. Consultation de suivi programmée pour interprétation dans le contexte clinique complet.",
+        "performer": {
+          "@type": "Physician",
+          "name": "Pr. Adil Ait Errami",
+          "url": "https://www.draiterrami.com/",
+          "telephone": "+212663627258",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "CHU Mohammed VI",
+            "addressLocality": "Marrakech",
+            "addressCountry": "MA"
+          }
         }
       },
       {
-        "@type": "Question",
-        "name": "Combien de temps dure un FibroScan à Marrakech ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Un FibroScan dure environ 10 à 15 minutes. L'examen est totalement indolore et ne nécessite aucune préparation particulière, sauf d'être à jeun depuis au moins 2 heures pour de meilleurs résultats. Les résultats sont disponibles immédiatement après l'examen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quelle différence entre FibroScan et échographie hépatique ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "L'échographie hépatique visualise la morphologie du foie (taille, contours, lésions), mais ne mesure pas la fibrose. Le FibroScan mesure précisément la rigidité du foie par ondes élastiques (en kPa), ce qui correspond au degré de fibrose. Ces deux examens sont complémentaires et souvent réalisés ensemble lors du bilan hépatique."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Dans quels cas le médecin prescrit-il un FibroScan ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le FibroScan est prescrit pour évaluer la fibrose hépatique dans l'hépatite chronique B ou C, la NASH (stéatohépatite non alcoolique), la cirrhose alcoolique, ou toute maladie chronique du foie. Il est aussi utilisé pour le suivi après traitement d'une hépatite virale. Le Pr. Adil Ait Errami réalise cet examen au CHU Mohammed VI et en clinique privée à Marrakech."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Le FibroScan remplace-t-il la biopsie du foie ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dans la grande majorité des cas, oui. Le FibroScan permet d'évaluer la fibrose hépatique de manière non invasive et remplace la biopsie pour le suivi des hépatites B et C, de la NASH et de la cirrhose. La biopsie peut rester nécessaire dans certains cas complexes ou lorsque le FibroScan donne des résultats non interprétables (obésité morbide, ascite importante)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps dure un FibroScan à Marrakech ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Un FibroScan dure environ 10 à 15 minutes. L'examen est totalement indolore et ne nécessite pas de sédation. Il suffit d'être à jeun depuis au moins 2 heures pour de meilleurs résultats. Les résultats sont disponibles immédiatement après l'examen." }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle différence entre FibroScan et échographie hépatique ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "L'échographie hépatique visualise la morphologie du foie (taille, contours, lésions), mais ne mesure pas la fibrose. Le FibroScan mesure précisément la rigidité du foie par ondes élastiques (en kPa) — ce qui correspond au degré de fibrose — ainsi que la stéatose (score CAP). Ces deux examens sont complémentaires et souvent réalisés ensemble lors du bilan hépatique." }
+          },
+          {
+            "@type": "Question",
+            "name": "Dans quels cas le médecin prescrit-il un FibroScan ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Le FibroScan est prescrit pour évaluer la fibrose hépatique dans l'hépatite chronique B ou C, la NASH (stéatohépatite non alcoolique), la cirrhose alcoolique, ou toute maladie chronique du foie. Il est aussi utilisé pour le suivi après traitement d'une hépatite virale et pour le dépistage du foie gras métabolique." }
+          },
+          {
+            "@type": "Question",
+            "name": "Le FibroScan est-il remboursé au Maroc ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Le FibroScan réalisé au CHU Mohammed VI de Marrakech est pris en charge dans le cadre du RAMED et de l'AMO. En clinique privée, la prise en charge dépend de votre assurance complémentaire. Renseignez-vous auprès de votre organisme d'assurance avant l'examen." }
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on faire un FibroScan si on est en surpoids ou obèse ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui, le FibroScan peut être réalisé chez les personnes en surpoids. Cependant, en cas d'obésité morbide (IMC > 40) ou d'ascite (liquide dans l'abdomen), la mesure peut être difficile ou non interprétable. Dans ce cas, le Pr. Adil Ait Errami utilise la sonde XL spécifique pour l'obésité, qui améliore significativement la fiabilité des résultats." }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que le score CAP du FibroScan ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Le score CAP (Controlled Attenuation Parameter), mesuré en dB/m, évalue le degré de stéatose hépatique (accumulation de graisse dans le foie). Il est calculé simultanément avec la mesure de fibrose lors du FibroScan. Les seuils validés permettent de classer la stéatose en S0 (absence), S1 (légère), S2 (modérée) et S3 (sévère)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il être à jeun pour un FibroScan ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Un jeûne de 2 heures minimum est recommandé avant le FibroScan pour optimiser la qualité des mesures — un repas récent peut augmenter artificiellement la rigidité hépatique. Idéalement, l'examen est réalisé le matin à jeun. Cependant, ce jeûne n'est pas aussi strict que pour d'autres examens endoscopiques — de l'eau est autorisée." }
+          }
+        ]
       }
     ]
   }
@@ -100,57 +150,112 @@
 <section class="hero">
   <div class="tag">Hépatologie · Examen non invasif</div>
   <h1>FibroScan® à Marrakech</h1>
-  <p>Élastographie hépatique transitoire — mesure précise et non invasive de la fibrose du foie, sans piqûre ni biopsie, au CHU Mohammed VI de Marrakech.</p>
+  <p>Élastographie hépatique transitoire — mesure précise et non invasive de la fibrose du foie, sans piqûre ni biopsie, résultat immédiat — au CHU Mohammed VI de Marrakech.</p>
 </section>
 
 <main>
+
+  <!-- ===== QU'EST-CE QUE LE FIBROSCAN ===== -->
   <section class="section container">
     <h2>Qu'est-ce que le FibroScan® ?</h2>
-    <p>Le <strong>FibroScan®</strong> (ou élastographie hépatique transitoire) est un appareil de mesure non invasive de la <strong>rigidité du foie</strong>. Il fonctionne sur le principe des ultrasons et des ondes élastiques : une sonde posée sur la peau envoie une légère vibration vers le foie, et mesure la vitesse de propagation de cette onde à travers le tissu hépatique.</p>
-    <p>Plus le foie est <strong>fibrosé</strong> (cicatrisé), plus il est rigide et plus l'onde se propage vite. Cette mesure, exprimée en <strong>kilopascals (kPa)</strong>, permet d'évaluer précisément le stade de fibrose hépatique — de F0 (aucune fibrose) à F4 (cirrhose).</p>
-
+    <p>Le <strong>FibroScan®</strong> (ou élastographie hépatique transitoire) est un appareil de mesure non invasive de la <strong>rigidité du foie</strong>. Il fonctionne sur le principe des ultrasons et des ondes élastiques : une sonde posée sur la peau envoie une légère vibration vers le foie et mesure la vitesse de propagation de cette onde à travers le tissu hépatique.</p>
+    <p>Plus le foie est <strong>fibrosé</strong> (cicatrisé), plus il est rigide et plus l'onde se propage vite. Cette mesure, exprimée en <strong>kilopascals (kPa)</strong>, permet d'évaluer précisément le stade de fibrose — de F0 (aucune fibrose) à F4 (cirrhose). L'appareil mesure simultanément le <strong>score CAP</strong> (stéatose hépatique).</p>
     <div class="highlight">
-      <strong>Révolution diagnostique :</strong> Le FibroScan® remplace dans la grande majorité des cas la <strong>biopsie hépatique</strong> — un acte invasif, douloureux et avec des risques. L'examen dure 10 minutes, est totalement indolore et donne un résultat immédiat.
+      <strong><i class="fas fa-star" style="color:var(--accent)"></i> Révolution diagnostique :</strong> Le FibroScan® remplace dans la grande majorité des cas la <strong>biopsie hépatique</strong> — acte invasif, douloureux et avec des risques. L'examen dure <strong>10 minutes</strong>, est totalement indolore, sans sédation, et donne un résultat immédiat.
     </div>
+  </section>
 
-    <h3>Qui doit faire un FibroScan ?</h3>
-    <p>Le FibroScan est indiqué pour toute personne avec une maladie du foie chronique :</p>
-    <ul>
-      <li><strong>Hépatite B chronique</strong> — évaluation de la fibrose avant de décider d'un traitement antiviral</li>
-      <li><strong>Hépatite C chronique</strong> — bilan avant et suivi après traitement (antiviraux à action directe)</li>
-      <li><strong>Stéatohépatite non alcoolique (NASH / NAFLD)</strong> — maladie du foie gras liée à l'obésité ou au diabète</li>
-      <li><strong>Cirrhose suspectée</strong> — confirmation non invasive et suivi de l'évolution</li>
-      <li><strong>Consommation chronique d'alcool</strong> — évaluation des lésions hépatiques</li>
-      <li><strong>Maladies cholestatiques</strong> — cirrhose biliaire primitive, cholangite sclérosante</li>
-      <li><strong>Transaminases élevées inexpliquées</strong> — bilan hépatique anormal persistant</li>
-    </ul>
+  <!-- ===== INDICATIONS ===== -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Qui doit faire un FibroScan ?</h2>
+      <p style="margin-bottom:1.5rem;color:#555;">Le Pr. Adil Ait Errami prescrit un FibroScan dans les situations suivantes :</p>
+      <div class="indic-grid">
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-virus"></i></div>
+          <h4>Hépatite B chronique</h4>
+          <p>Évaluation de la fibrose avant de décider d'un traitement antiviral. Suivi sous traitement.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-bacterium"></i></div>
+          <h4>Hépatite C chronique</h4>
+          <p>Bilan avant et suivi après traitement par antiviraux à action directe (DAA). Vérification de la guérison virologique.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-weight"></i></div>
+          <h4>NASH / Foie gras (NAFLD)</h4>
+          <p>Maladie du foie gras liée à l'obésité, au diabète ou au syndrome métabolique — évaluation de la stéatose et de la fibrose.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-wine-glass"></i></div>
+          <h4>Alcool chronique</h4>
+          <p>Évaluation des lésions hépatiques liées à une consommation chronique d'alcool — fibrose, stéatohépatite alcoolique.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <h4>Transaminases élevées</h4>
+          <p>Bilan hépatique anormal persistant inexpliqué — recherche d'une fibrose ou d'une stéatose sous-jacente.</p>
+        </div>
+        <div class="indic-card">
+          <div class="indic-icon"><i class="fas fa-procedures"></i></div>
+          <h4>Cirrhose / Maladies chroniques</h4>
+          <p>Suivi de l'évolution, dépistage des complications (hypertension portale). Maladies cholestatiques (CBP, CSP).</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h3>Comment se déroule l'examen ?</h3>
-    <p>L'examen est simple, rapide et sans douleur :</p>
-    <ul>
-      <li>Le patient est allongé sur le dos, bras droit en extension</li>
-      <li>Le médecin applique la sonde FibroScan entre les côtes, sur la peau (avec un gel conducteur)</li>
-      <li>La sonde effectue 10 mesures successives, chacune durant une fraction de seconde</li>
-      <li>Le résultat est calculé automatiquement et fourni immédiatement en kPa et en score CAP (stéatose)</li>
-      <li>Durée totale : <strong>10 à 15 minutes</strong></li>
-    </ul>
-
-    <h3>Interprétation des résultats</h3>
+  <!-- ===== INTERPRÉTATION DES RÉSULTATS ===== -->
+  <section class="section container">
+    <h2>Interprétation des résultats</h2>
     <p>Le FibroScan fournit deux mesures complémentaires :</p>
     <ul>
-      <li><strong>Rigidité hépatique (kPa)</strong> — évalue le stade de fibrose (F0 à F4 selon les seuils validés par maladie)</li>
+      <li><strong>Rigidité hépatique (kPa)</strong> — évalue le stade de fibrose selon les seuils validés par maladie</li>
       <li><strong>Score CAP (dB/m)</strong> — évalue le degré de stéatose (accumulation de graisse dans le foie)</li>
     </ul>
-    <p>Ces résultats sont interprétés par le Pr. Ait Errami dans le contexte clinique complet du patient (biologie, imagerie, antécédents) pour établir le stade de la maladie et adapter la prise en charge.</p>
+    <table class="fibro-table">
+      <thead>
+        <tr>
+          <th>Stade Fibrose</th>
+          <th>Résultat indicatif (hépatite C)</th>
+          <th>Signification clinique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="stage f0f1">F0-F1</td>
+          <td>&lt; 7 kPa</td>
+          <td>Pas ou peu de fibrose — surveillance simple</td>
+        </tr>
+        <tr>
+          <td class="stage f2">F2</td>
+          <td>7 – 9,5 kPa</td>
+          <td>Fibrose significative — traitement souvent recommandé</td>
+        </tr>
+        <tr>
+          <td class="stage f3">F3</td>
+          <td>9,5 – 12,5 kPa</td>
+          <td>Fibrose avancée — traitement impératif</td>
+        </tr>
+        <tr>
+          <td class="stage f4">F4</td>
+          <td>&gt; 12,5 kPa</td>
+          <td>Cirrhose — suivi spécialisé, dépistage CHC</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">* Les seuils varient selon la maladie hépatique. L'interprétation se fait toujours dans le contexte clinique complet.</p>
 
-    <h3>Préparation</h3>
+    <h3 style="margin-top:2rem;">Préparation à l'examen</h3>
     <ul>
-      <li>Jeûne de 2 heures minimum avant l'examen (idéalement à jeun le matin)</li>
-      <li>Pas de sport intense la veille</li>
+      <li>Jeûne de <strong>2 heures minimum</strong> (idéalement le matin à jeun)</li>
+      <li>Pas de sport intense la veille de l'examen</li>
       <li>Aucune préparation médicamenteuse spécifique</li>
+      <li>L'examen peut être réalisé en ambulatoire — pas d'accompagnant obligatoire</li>
     </ul>
   </section>
 
+  <!-- ===== MÉDECIN ===== -->
   <section class="section-alt">
     <div class="container">
       <h2>Hépatologue expert à Marrakech</h2>
@@ -163,12 +268,13 @@
         </div>
       </div>
       <p>Le Pr. Adil Ait Errami dispose du <strong>FibroScan® au CHU Mohammed VI de Marrakech</strong> et en clinique privée. Il interprète les résultats dans le cadre d'une consultation hépatologique complète : bilan biologique, imagerie (échographie, IRM hépatique) et décision thérapeutique.</p>
-      <p>Son expertise en hépatologie couvre les hépatites virales B et C, la NASH, la cirrhose et ses complications (hypertension portale, ascite, encéphalopathie hépatique) et le carcinome hépatocellulaire.</p>
+      <p>Son expertise en hépatologie couvre les hépatites virales B et C, la NASH, la cirrhose et ses complications (hypertension portale, ascite, encéphalopathie hépatique) et le carcinome hépatocellulaire (CHC). Il réalise également les <strong>ponctions-biopsies hépatiques</strong> guidées par échographie pour les cas complexes.</p>
     </div>
   </section>
 
+  <!-- ===== AUTRES SPÉCIALITÉS ===== -->
   <section class="section container">
-    <h2>Autres spécialités</h2>
+    <h2>Autres spécialités du Pr. Ait Errami</h2>
     <div class="related">
       <a href="/cpre" class="related-card">
         <span class="tag">ERCP</span>
@@ -182,43 +288,58 @@
         <span class="tag">EUS</span>
         <h4>Écho-endoscopie Thérapeutique</h4>
       </a>
-      <a href="/" class="related-card">
-        <span class="tag">Site complet</span>
-        <h4>Toutes les spécialités du Pr. Ait Errami</h4>
+      <a href="/gastroenterologue-marrakech" class="related-card">
+        <span class="tag">Profil</span>
+        <h4>Gastroentérologue Marrakech – Pr. Adil Ait Errami</h4>
       </a>
     </div>
   </section>
-</main>
 
+  <!-- ===== FAQ ===== -->
   <section class="section container">
     <div class="proc-faq">
-      <h2>Questions fréquentes sur le FibroScan</h2>
+      <h2>Questions fréquentes sur le FibroScan à Marrakech</h2>
+
       <div class="proc-faq-item">
         <button class="proc-faq-q">Le FibroScan remplace-t-il la biopsie du foie ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">Dans la majorité des cas, oui. Le FibroScan permet d'évaluer la fibrose hépatique de manière non invasive et remplace la biopsie pour le suivi des hépatites B et C, de la NASH et de la cirrhose. La biopsie peut rester nécessaire dans certains cas complexes.</div>
+        <div class="proc-faq-a">Dans la grande majorité des cas, <strong>oui</strong>. Le FibroScan évalue la fibrose hépatique de manière non invasive et remplace la biopsie pour le suivi des hépatites B et C, de la NASH et de la cirrhose. La biopsie peut rester nécessaire dans certains cas complexes ou lorsque le FibroScan donne des résultats non interprétables.</div>
       </div>
       <div class="proc-faq-item">
         <button class="proc-faq-q">Combien de temps dure un FibroScan à Marrakech ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">Un FibroScan dure environ 10 à 15 minutes. L'examen est totalement indolore et ne nécessite aucune préparation particulière, sauf d'être à jeun depuis au moins 2 heures. Les résultats sont disponibles immédiatement après l'examen.</div>
+        <div class="proc-faq-a">Un FibroScan dure environ <strong>10 à 15 minutes</strong>. L'examen est totalement indolore et ne nécessite pas de sédation. Il suffit d'être à jeun depuis au moins 2 heures. Les résultats sont disponibles immédiatement après l'examen.</div>
       </div>
       <div class="proc-faq-item">
         <button class="proc-faq-q">Quelle différence entre FibroScan et échographie hépatique ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">L'échographie visualise la morphologie du foie mais ne mesure pas la fibrose. Le FibroScan mesure précisément la rigidité du foie par ondes élastiques (en kPa), ce qui correspond au degré de fibrose. Ces deux examens sont complémentaires.</div>
+        <div class="proc-faq-a">L'échographie hépatique visualise la <strong>morphologie du foie</strong> (taille, contours, lésions) mais ne mesure pas la fibrose. Le FibroScan mesure précisément la <strong>rigidité du foie</strong> (en kPa) — ce qui correspond au degré de fibrose — ainsi que la stéatose (score CAP). Ces deux examens sont complémentaires et souvent réalisés ensemble.</div>
       </div>
       <div class="proc-faq-item">
         <button class="proc-faq-q">Dans quels cas le médecin prescrit-il un FibroScan ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">Le FibroScan est prescrit pour évaluer la fibrose dans l'hépatite chronique B ou C, la NASH, la cirrhose alcoolique, ou toute maladie chronique du foie. Il est aussi utilisé pour le suivi après traitement d'une hépatite virale.</div>
+        <div class="proc-faq-a">Le FibroScan est prescrit pour évaluer la fibrose dans : <strong>hépatite B ou C chronique</strong>, <strong>NASH / foie gras</strong>, <strong>cirrhose alcoolique</strong>, <strong>transaminases élevées inexpliquées</strong>, <strong>maladies cholestatiques</strong>. Il est aussi utilisé pour le suivi après traitement d'une hépatite virale.</div>
       </div>
-      <div class="share-bar">
-        <span>Partager cette page :</span>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Ffibroscan" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://wa.me/?text=FibroScan%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Ffibroscan" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Le FibroScan est-il remboursé au Maroc ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Le FibroScan réalisé au <strong>CHU Mohammed VI</strong> de Marrakech est pris en charge dans le cadre du <strong>RAMED et de l'AMO</strong>. En clinique privée, la prise en charge dépend de votre assurance complémentaire. Renseignez-vous auprès de votre organisme avant l'examen.</div>
       </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Peut-on faire un FibroScan si on est en surpoids ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Oui. En cas d'obésité morbide (IMC > 40) ou d'ascite, une <strong>sonde XL spécifique</strong> est utilisée pour améliorer la fiabilité des résultats. Dans les rares cas où le FibroScan reste non interprétable, le Pr. Adil Ait Errami discutera d'autres options diagnostiques.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Qu'est-ce que le score CAP du FibroScan ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Le score <strong>CAP</strong> (Controlled Attenuation Parameter, en dB/m) évalue le degré de stéatose (graisse dans le foie), calculé simultanément avec la mesure de fibrose. Les seuils validés classent la stéatose en : S0 (absence), S1 (légère &lt;11%), S2 (modérée 11-33%), S3 (sévère &gt;33%).</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Faut-il être à jeun pour un FibroScan ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Un <strong>jeûne de 2 heures minimum</strong> est recommandé — un repas récent peut augmenter artificiellement la rigidité hépatique. L'examen est idéalement réalisé le matin à jeun. L'eau est autorisée. Ce jeûne est moins strict qu'avant une coloscopie ou une CPRE.</div>
+      </div>
+
     </div>
   </section>
 
+</main>
+
 <section class="cta-section">
-  <h2>Prendre rendez-vous pour un FibroScan</h2>
+  <h2>Prendre rendez-vous pour un FibroScan à Marrakech</h2>
   <p>CHU Mohammed VI de Marrakech · Clinique Privée · Tél. +212 663 627 258</p>
   <div class="cta-btns">
     <a href="tel:+212663627258" class="btn btn-white"><i class="fas fa-phone-alt"></i> Appeler maintenant</a>
@@ -232,6 +353,7 @@
     <a href="/">Accueil</a>
     <a href="/cpre">CPRE</a>
     <a href="/colonoscopie">Coloscopie</a>
+    <a href="/fibroscan">FibroScan</a>
     <a href="/echo-endoscopie">Écho-endoscopie</a>
     <a href="/#contact">Contact</a>
   </div>
