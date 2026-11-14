@@ -83,6 +83,12 @@ a:hover { text-decoration: underline; }
 .related-card .tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: 8px; display: block; }
 .related-card h4 { font-size: 0.95rem; color: var(--primary); font-weight: 700; }
 
+/* Language pills */
+.lang-pills { display: flex; gap: 4px; align-items: center; background: rgba(255,255,255,.12); border-radius: 20px; padding: 3px 6px; }
+.lang-pills a, .lang-pills .lang-active { padding: 2px 9px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.75); text-decoration: none; transition: background .15s; }
+.lang-pills .lang-active { background: #fff; color: var(--primary); }
+.lang-pills a:hover { color: #fff; background: rgba(255,255,255,.25); }
+
 /* FAQ Section */
 .proc-faq { margin-top: 40px; }
 .proc-faq h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--primary); margin-bottom: 20px; }

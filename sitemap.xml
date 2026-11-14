@@ -113,6 +113,29 @@
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/cpre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.draiterrami.com/cpre-en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.draiterrami.com/cpre-ar"/>
+  </url>
+
+  <url>
+    <loc>https://www.draiterrami.com/cpre-en</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/cpre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.draiterrami.com/cpre-en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.draiterrami.com/cpre-ar"/>
+  </url>
+
+  <url>
+    <loc>https://www.draiterrami.com/cpre-ar</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.draiterrami.com/cpre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.draiterrami.com/cpre-en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.draiterrami.com/cpre-ar"/>
   </url>
 
   <url>
