@@ -3,42 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CPRE à Marrakech – Pr. Adil Ait Errami | Cholangiopancréatographie Rétrograde Endoscopique</title>
-  <meta name="description" content="La CPRE (cholangiopancréatographie rétrograde endoscopique) à Marrakech est réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI. Traitement endoscopique des calculs biliaires et maladies des voies biliaires. Rdv : +212 663 627 258." />
+  <title>CPRE à Marrakech – Pr. Adil Ait Errami | Calculs biliaires sans chirurgie</title>
+  <meta name="description" content="CPRE (calculs biliaires, sténoses voies biliaires) à Marrakech par le Pr. Adil Ait Errami, expert en ERCP au CHU Mohammed VI. Traitement sans chirurgie, retour à domicile en 24h. Rdv : +212 663 627 258." />
+  <meta name="keywords" content="CPRE Marrakech, ERCP Marrakech, calculs biliaires sans chirurgie Maroc, lithiase cholédoque Marrakech, sténose biliaire Marrakech, gastroentérologue endoscopie biliaire Maroc" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.draiterrami.com/cpre" />
-  <meta property="og:title" content="CPRE à Marrakech – Pr. Adil Ait Errami" />
-  <meta property="og:description" content="Cholangiopancréatographie Rétrograde Endoscopique réalisée par le Pr. Adil Ait Errami, gastroentérologue expert à Marrakech, CHU Mohammed VI." />
+  <meta property="og:title" content="CPRE à Marrakech – Calculs biliaires sans chirurgie | Pr. Adil Ait Errami" />
+  <meta property="og:description" content="La CPRE à Marrakech est réalisée par le Pr. Adil Ait Errami, expert ERCP au CHU Mohammed VI. Extraction de calculs biliaires, sténoses, prothèses — sans chirurgie, en une séance." />
   <meta property="og:url" content="https://www.draiterrami.com/cpre" />
   <meta property="og:image" content="https://www.draiterrami.com/photo.jpg" />
   <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-10-01" />
+  <meta property="article:modified_time" content="2026-11-14" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="procedure.css" />
+  <style>
+    /* CPRE Page specifics */
+    .cpre-video-wrap { margin: 32px 0; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 4px 24px rgba(0,0,0,.18); }
+    .cpre-video-wrap video { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+    .video-caption { font-size: 0.82rem; color: var(--text-muted); padding: 10px 14px; background: #f5f7fb; border-top: 1px solid var(--border); }
+
+    .indication-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 20px; }
+    .indication-card { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; }
+    .indication-card i { color: var(--accent); margin-right: 8px; }
+    .indication-card strong { color: var(--primary); font-size: 0.95rem; display: block; margin-bottom: 4px; }
+    .indication-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+    .steps-list { counter-reset: steps; list-style: none; padding: 0; margin: 20px 0; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .steps-list li:last-child { border-bottom: none; }
+    .step-num { background: var(--primary); color: #fff; border-radius: 50%; width: 32px; height: 32px; min-width: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+    .step-body strong { color: var(--primary); display: block; margin-bottom: 4px; }
+    .step-body p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+    .compare-table th { padding: 12px 16px; text-align: left; }
+    .compare-table th:first-child { background: transparent; }
+    .compare-table th.th-cpre { background: var(--primary); color: #fff; border-radius: 8px 8px 0 0; }
+    .compare-table th.th-chir { background: #718096; color: #fff; border-radius: 8px 8px 0 0; }
+    .compare-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .compare-table td:first-child { font-weight: 600; color: var(--primary); background: var(--surface); }
+    .compare-table td.td-cpre { background: #f0f7ff; }
+    .compare-table td.td-chir { background: #f7f7f7; color: #555; }
+    .compare-table .ok { color: #22c55e; font-weight: 700; margin-right: 4px; }
+    .compare-table .ko { color: #ef4444; font-weight: 700; margin-right: 4px; }
+
+    .prep-checklist { list-style: none; padding: 0; margin: 16px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+    .prep-checklist li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; }
+    .prep-checklist li i { color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+
+    .suites-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 20px; }
+    .suite-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .suite-card i { font-size: 1.4rem; color: var(--accent); margin-bottom: 10px; display: block; }
+    .suite-card strong { color: var(--primary); font-size: 0.95rem; display: block; margin-bottom: 6px; }
+    .suite-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+    .risk-list { list-style: none; padding: 0; }
+    .risk-list li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
+    .risk-list li:last-child { border-bottom: none; }
+    .risk-list li::before { content: '⚠'; position: absolute; left: 0; color: var(--accent); }
+    .risk-common { color: #2d3748; }
+    .risk-rare { color: #718096; font-size: 0.85rem; }
+
+    @media (max-width: 600px) {
+      .compare-table, .compare-table thead, .compare-table tbody, .compare-table th, .compare-table td, .compare-table tr { display: block; }
+      .compare-table th.th-cpre, .compare-table th.th-chir { display: none; }
+      .compare-table td:first-child { background: var(--primary); color: #fff; border-radius: 6px 6px 0 0; padding: 8px 12px; }
+      .compare-table td { padding: 8px 12px; }
+      .compare-table td::before { font-weight: 700; display: block; font-size: 0.75rem; color: #888; margin-bottom: 2px; }
+      .compare-table td.td-cpre::before { content: 'CPRE'; }
+      .compare-table td.td-chir::before { content: 'Chirurgie'; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
     "name": "CPRE – Cholangiopancréatographie Rétrograde Endoscopique",
-    "alternateName": "ERCP",
-    "description": "Procédure endoscopique permettant d'explorer et de traiter les voies biliaires et pancréatiques sans chirurgie.",
+    "alternateName": ["ERCP", "Endoscopie biliaire", "Cholangiographie endoscopique"],
+    "description": "Procédure endoscopique avancée permettant d'explorer et de traiter les maladies des voies biliaires et du pancréas sans chirurgie. Extraction de calculs, sténoses, prothèses biliaires.",
     "procedureType": "https://schema.org/TherapeuticProcedure",
-    "bodyLocation": "Voies biliaires, Pancréas, Duodénum",
-    "followup": "Surveillance post-procédure de quelques heures en unité d'endoscopie.",
+    "bodyLocation": "Voies biliaires, Canal cholédoque, Pancréas, Duodénum",
+    "followup": "Surveillance post-procédure de 2 à 6 heures en unité d'endoscopie. Reprise alimentaire le soir ou le lendemain.",
+    "preparation": "Jeûne strict de 6 heures. Arrêt temporaire des anticoagulants. Bilan sanguin préalable. Accompagnant obligatoire.",
+    "howPerformed": "Introduction d'un duodénoscope par voie orale jusqu'au duodénum, cathétérisme du canal biliaire sous fluoroscopie, puis geste thérapeutique : sphinctérotomie, extraction de calculs, pose de prothèse ou dilatation.",
     "performer": {
       "@type": "Physician",
       "name": "Pr. Adil Ait Errami",
+      "jobTitle": "Gastroentérologue – Professeur Universitaire",
       "url": "https://www.draiterrami.com/",
       "telephone": "+212663627258",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "CHU Mohammed VI",
         "addressLocality": "Marrakech",
+        "postalCode": "40000",
         "addressCountry": "MA"
       }
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "CPRE en action – Pr. Adil Ait Errami, Marrakech",
+    "description": "Vidéo authentique d'une procédure de CPRE (Cholangiopancréatographie Rétrograde Endoscopique) réalisée par le Pr. Adil Ait Errami, gastroentérologue au CHU Mohammed VI de Marrakech.",
+    "thumbnailUrl": "https://www.draiterrami.com/photo.jpg",
+    "contentUrl": "https://www.draiterrami.com/videos/cpre.mp4",
+    "uploadDate": "2026-08-25",
+    "duration": "PT13S",
+    "publisher": {
+      "@type": "Person",
+      "name": "Pr. Adil Ait Errami",
+      "url": "https://www.draiterrami.com/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.draiterrami.com/"},
+      {"@type":"ListItem","position":2,"name":"Gastroentérologue Marrakech","item":"https://www.draiterrami.com/gastroenterologue-marrakech"},
+      {"@type":"ListItem","position":3,"name":"CPRE à Marrakech","item":"https://www.draiterrami.com/cpre"}
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -49,34 +142,42 @@
       {
         "@type": "Question",
         "name": "La CPRE est-elle douloureuse ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La CPRE est réalisée sous anesthésie générale ou sédation profonde, elle est donc totalement indolore pendant l'examen. Après la procédure, une légère gêne abdominale peut persister quelques heures. Le patient est surveillé en salle de réveil puis peut rentrer le même jour ou le lendemain."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "Non. La CPRE est réalisée sous anesthésie générale ou sédation profonde, elle est donc totalement indolore pendant l'examen. Après la procédure, une légère gêne abdominale ou des ballonnements peuvent persister quelques heures. Le patient est surveillé en salle de réveil et peut rentrer le même jour ou le lendemain."}
       },
       {
         "@type": "Question",
         "name": "Combien de temps dure une CPRE à Marrakech ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La CPRE dure entre 30 minutes et 1h30 selon la complexité de l'acte (simple sphinctérotomie, extraction de calculs multiples, pose de prothèse biliaire). La durée totale de la journée, incluant la préparation et la surveillance post-procédure, est généralement de 4 à 6 heures."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "La CPRE dure entre 20 et 90 minutes selon la complexité (sphinctérotomie simple, extraction de calculs multiples, pose de prothèse). La durée totale de prise en charge, incluant la préparation anesthésique et la surveillance post-procédure, est généralement de 4 à 6 heures."}
       },
       {
         "@type": "Question",
         "name": "Peut-on extraire les calculs biliaires sans chirurgie à Marrakech ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. La CPRE réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech permet d'extraire les calculs du cholédoque (calculs biliaires) sans chirurgie, par voie endoscopique. Cette technique évite une opération abdominale et permet un retour rapide à domicile."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "Oui. La CPRE réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech permet d'extraire les calculs du cholédoque par voie endoscopique, sans aucune chirurgie. Cette technique est définitive et permet un retour à domicile sous 24 heures."}
+      },
+      {
+        "@type": "Question",
+        "name": "La CPRE est-elle remboursée au Maroc ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "La CPRE réalisée au CHU Mohammed VI de Marrakech est prise en charge par les assurances maladies obligatoires marocaines (CNOPS, CNSS/AMO). En clinique privée, une prise en charge partielle est possible selon votre assurance complémentaire. Renseignez-vous auprès du service d'admission du CHU Mohammed VI."}
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les risques de la CPRE ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "La CPRE est une procédure sûre entre des mains expertes. Les complications les plus fréquentes sont une pancréatite post-CPRE (3-5%) généralement bénigne, et un saignement (1-2%) après sphinctérotomie. Les complications graves (perforation, cholangite sévère) sont rares (<1%). Le Pr. Adil Ait Errami prend toutes les précautions nécessaires pour minimiser ces risques, et chaque patient bénéficie d'une surveillance post-procédure."}
       },
       {
         "@type": "Question",
         "name": "Quelle est la différence entre CPRE et écho-endoscopie ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "L'écho-endoscopie (EUS) est un examen diagnostique qui visualise les voies biliaires et le pancréas par ultrasons. La CPRE est une procédure thérapeutique qui permet d'intervenir directement sur les voies biliaires (extraction de calculs, pose de prothèse, sphinctérotomie). Ces deux techniques sont souvent complémentaires."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "L'écho-endoscopie (EUS) est un examen diagnostique qui visualise les voies biliaires et le pancréas par ultrasons depuis l'intérieur du tube digestif. La CPRE est une procédure thérapeutique qui permet d'intervenir directement sur les voies biliaires. Ces deux techniques sont complémentaires : souvent, une écho-endoscopie confirme le diagnostic, puis une CPRE traite la cause."}
+      },
+      {
+        "@type": "Question",
+        "name": "Que faire avant une CPRE ? Comment se préparer ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Avant une CPRE, il faut : être à jeun strict depuis au moins 6 heures ; réaliser un bilan sanguin (NFS, coagulation, groupe sanguin) ; arrêter temporairement les anticoagulants et antiagrégants (après accord médical) ; prévoir un accompagnant le jour de la procédure ; ne pas conduire de véhicule le jour même. Le Pr. Adil Ait Errami vous remettra une ordonnance de préparation complète lors de la consultation pré-CPRE."}
+      },
+      {
+        "@type": "Question",
+        "name": "Que peut-on manger après une CPRE ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Dans les heures qui suivent la CPRE, l'alimentation est progressivement reprise selon la tolérance : d'abord des liquides, puis une alimentation légère (riz, soupe, pâtes). Il est recommandé d'éviter les aliments gras, l'alcool et les repas copieux pendant 24 à 48 heures. En l'absence de complication, l'alimentation normale est possible dès le lendemain."}
       }
     ]
   }
@@ -96,119 +197,376 @@
 </nav>
 
 <div class="breadcrumb container">
-  <a href="/">Accueil</a><span>›</span><a href="/#consultation">Spécialités</a><span>›</span>CPRE
+  <a href="/">Accueil</a><span>›</span><a href="/gastroenterologue-marrakech">Gastroentérologue Marrakech</a><span>›</span>CPRE
 </div>
 
 <section class="hero">
-  <div class="tag">Endoscopie interventionnelle</div>
+  <div class="tag">Endoscopie interventionnelle · CHU Mohammed VI</div>
   <h1>CPRE à Marrakech</h1>
-  <p>Cholangiopancréatographie Rétrograde Endoscopique — traitement endoscopique des voies biliaires et pancréatiques, sans chirurgie, au CHU Mohammed VI de Marrakech.</p>
+  <p>Cholangiopancréatographie Rétrograde Endoscopique (ERCP) — extraction de calculs biliaires, traitement des sténoses et maladies des voies biliaires <strong>sans chirurgie</strong>, en une seule séance.</p>
+  <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+    <a href="tel:+212663627258" class="btn btn-white" style="background:#fff;color:#0d3b7a;padding:10px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.95rem;"><i class="fas fa-phone-alt"></i> Appeler</a>
+    <a href="https://wa.me/212663627258?text=Bonjour%20Pr.%20Ait%20Errami%2C%20je%20souhaite%20un%20rendez-vous%20pour%20une%20CPRE." target="_blank" rel="noopener" class="btn btn-wa" style="background:#25d366;color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.95rem;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
 </section>
 
 <main>
+
+  <!-- === VIDEO === -->
   <section class="section container">
-    <h2>Qu'est-ce que la CPRE ?</h2>
-    <p>La <strong>CPRE (Cholangiopancréatographie Rétrograde Endoscopique)</strong>, aussi appelée <strong>ERCP</strong> en anglais, est une procédure endoscopique avancée qui permet d'explorer et de traiter les maladies des voies biliaires et du pancréas. Elle combine une endoscopie digestive haute et une imagerie radiologique en temps réel (fluoroscopie).</p>
-    <p>Contrairement à la chirurgie ouverte ou laparoscopique, la CPRE ne nécessite aucune incision. Elle est réalisée par voie naturelle, en introduisant un endoscope flexible par la bouche jusqu'au duodénum, là où les canaux biliaires et pancréatiques se rejoignent.</p>
-
-    <div class="highlight">
-      <strong>Avantage principal :</strong> La CPRE permet de traiter des pathologies des voies biliaires en une seule séance, sans chirurgie et avec une convalescence très courte — souvent moins de 24 heures.
+    <h2>Vidéo d'une CPRE réalisée par le Pr. Ait Errami</h2>
+    <p>Cette vidéo montre une procédure de CPRE authentique réalisée par le Pr. Adil Ait Errami à l'Unité d'Endoscopie Digestive du CHU Mohammed VI de Marrakech.</p>
+    <div class="cpre-video-wrap">
+      <video controls preload="none" poster="photo.jpg" aria-label="Vidéo CPRE – Pr. Adil Ait Errami Marrakech">
+        <source src="videos/cpre.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture vidéo HTML5.
+      </video>
+      <div class="video-caption"><i class="fas fa-film"></i> CPRE en direct — Unité d'Endoscopie Digestive, CHU Mohammed VI, Marrakech · Pr. Adil Ait Errami</div>
     </div>
-
-    <h3>Indications de la CPRE</h3>
-    <p>La CPRE est recommandée pour :</p>
-    <ul>
-      <li><strong>Calculs du cholédoque</strong> — extraction des calculs biliaires bloquant le canal cholédoque (lithiase de la voie biliaire principale)</li>
-      <li><strong>Sténoses des voies biliaires</strong> — rétrécissements d'origine bénigne (post-chirurgicale, sclérosante) ou maligne (cancer du pancréas, cholangiocarcinome)</li>
-      <li><strong>Pose de prothèses biliaires</strong> — stenting pour drainer la bile et soulager l'ictère obstructif</li>
-      <li><strong>Sphinctérotomie endoscopique</strong> — section du sphincter d'Oddi pour faciliter le passage de la bile</li>
-      <li><strong>Maladies du pancréas</strong> — pancréatite chronique, calculs pancréatiques, sténoses du canal de Wirsung</li>
-      <li><strong>Bilan des voies biliaires</strong> — exploration en cas d'ictère, de douleur biliaire ou d'anomalie au scanner/IRM</li>
-    </ul>
-
-    <h3>Déroulement de la CPRE</h3>
-    <p>La procédure se déroule en unité d'endoscopie sous <strong>sédation profonde ou anesthésie générale</strong>, supervisée par un médecin anesthésiste. Le patient est à jeun depuis au moins 6 heures.</p>
-    <p>L'endoscope est introduit par la bouche et guidé jusqu'au duodénum. Un cathéter est ensuite inséré dans le canal biliaire pour injecter un produit de contraste, permettant de visualiser les voies biliaires sur l'écran de fluoroscopie. Selon la pathologie, le médecin procède à l'extraction de calculs, la dilatation d'une sténose ou la pose d'une prothèse.</p>
-    <p>La durée de la procédure varie de <strong>20 à 60 minutes</strong> selon la complexité. Une surveillance postopératoire de quelques heures est nécessaire.</p>
-
-    <h3>Préparation du patient</h3>
-    <ul>
-      <li>Jeûne strict de 6 heures avant la procédure</li>
-      <li>Bilan sanguin préalable (NFS, coagulation, groupe sanguin)</li>
-      <li>Arrêt temporaire des anticoagulants et antiagrégants (à discuter avec le médecin)</li>
-      <li>Présence d'un accompagnant le jour de la procédure obligatoire</li>
-      <li>Pas de conduite automobile le jour même</li>
-    </ul>
   </section>
 
+  <!-- === QU'EST-CE QUE LA CPRE === -->
   <section class="section-alt">
     <div class="container">
-      <h2>Expert en CPRE à Marrakech</h2>
-      <div class="doc-card">
-        <img src="photo.jpg" alt="Pr. Adil Ait Errami gastroentérologue Marrakech" loading="lazy" />
-        <div class="doc-info">
-          <h3>Pr. Adil Ait Errami</h3>
-          <p>Gastroentérologue – Professeur Universitaire<br>
-          Chef de l'Unité d'Endoscopie Digestive<br>
-          CHU Mohammed VI de Marrakech</p>
-        </div>
+      <h2>Qu'est-ce que la CPRE ?</h2>
+      <p>La <strong>CPRE (Cholangiopancréatographie Rétrograde Endoscopique)</strong>, appelée <strong>ERCP</strong> en anglais, est une procédure endoscopique avancée qui permet d'<strong>explorer et traiter les maladies des voies biliaires et du pancréas sans chirurgie</strong>. Elle combine une endoscopie digestive haute et une imagerie radiologique en temps réel (fluoroscopie).</p>
+      <p>L'endoscope est introduit par la bouche jusqu'au duodénum. Un cathéter fin est ensuite inséré dans le canal biliaire pour y injecter un produit de contraste, rendant les voies biliaires visibles à l'écran. Le médecin peut alors agir directement : extraire des calculs, dilater une sténose, poser une prothèse biliaire.</p>
+      <div class="highlight">
+        <strong><i class="fas fa-check-circle" style="color:#22c55e;margin-right:6px;"></i>Avantage principal :</strong> La CPRE traite des pathologies des voies biliaires <strong>en une seule séance, sans incision, avec un retour à domicile sous 24 heures</strong>. Elle remplace dans la grande majorité des cas une chirurgie abdominale ouverte ou laparoscopique.
       </div>
-      <p>Le Pr. Adil Ait Errami est le référent en CPRE au <strong>CHU Mohammed VI de Marrakech</strong>. Il a bénéficié d'une formation spécialisée en CPRE au <strong>CHU El Kasr El Ayni du Caire</strong> (2019) et dans des centres européens d'excellence. Il réalise des centaines de CPRE chaque année avec un taux de succès élevé et un profil de sécurité optimal.</p>
-      <p>Son expertise couvre la CPRE standard (extraction de calculs, sphinctérotomie) et la CPRE complexe (sténoses malignes, prothèses biliaires multiples, CPRE pré-chirurgicale). Il exerce également en clinique privée à Marrakech pour les patients souhaitant un suivi ambulatoire.</p>
     </div>
   </section>
 
+  <!-- === INDICATIONS === -->
+  <section class="section container">
+    <h2>Pour qui est indiquée la CPRE ?</h2>
+    <p>Votre médecin peut vous prescrire une CPRE si vous présentez l'une des situations suivantes :</p>
+    <div class="indication-grid">
+      <div class="indication-card">
+        <i class="fas fa-circle-dot"></i>
+        <strong>Calculs du cholédoque</strong>
+        <p>Calculs biliaires bloqués dans le canal cholédoque, causant douleurs, jaunisse ou fièvre (angiocholite).</p>
+      </div>
+      <div class="indication-card">
+        <i class="fas fa-circle-dot"></i>
+        <strong>Jaunisse obstructive (ictère)</strong>
+        <p>Coloration jaune de la peau et des yeux due à une obstruction des voies biliaires (calcul, tumeur, sténose).</p>
+      </div>
+      <div class="indication-card">
+        <i class="fas fa-circle-dot"></i>
+        <strong>Sténose des voies biliaires</strong>
+        <p>Rétrécissement du canal biliaire d'origine bénigne (post-chirurgicale) ou maligne (cancer du pancréas, cholangiocarcinome).</p>
+      </div>
+      <div class="indication-card">
+        <i class="fas fa-circle-dot"></i>
+        <strong>Pancréatite biliaire</strong>
+        <p>Inflammation du pancréas causée par un calcul biliaire migrant dans le canal de Wirsung.</p>
+      </div>
+      <div class="indication-card">
+        <i class="fas fa-circle-dot"></i>
+        <strong>Maladies du pancréas</strong>
+        <p>Pancréatite chronique calcifiante, calculs pancréatiques, sténose du canal de Wirsung, fistules pancréatiques.</p>
+      </div>
+      <div class="indication-card">
+        <i class="fas fa-circle-dot"></i>
+        <strong>Drainage biliaire palliatif</strong>
+        <p>Pose de prothèse biliaire pour drainer la bile en cas de tumeur pancréatique ou biliaire non opérable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === DEROULEMENT ETAPE PAR ETAPE === -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Comment se déroule la CPRE ? — Étape par étape</h2>
+      <ol class="steps-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Consultation pré-CPRE</strong>
+            <p>Le Pr. Ait Errami vous reçoit en consultation pour expliquer la procédure, recueillir votre consentement éclairé, prescrire le bilan sanguin préalable et adapter votre traitement habituel (anticoagulants, etc.).</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Admission et préparation</strong>
+            <p>Le matin de la procédure, vous êtes admis à l'Unité d'Endoscopie du CHU Mohammed VI. Une perfusion intraveineuse est posée. L'anesthésiste évalue votre dossier et explique la sédation ou l'anesthésie générale.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Anesthésie ou sédation profonde</strong>
+            <p>Vous êtes endormi (anesthésie générale) ou fortement sédaté pour votre confort. Vous ne ressentez rien et vous ne vous souveniez pas de la procédure.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Introduction du duodénoscope</strong>
+            <p>L'endoscope est doucement guidé par la bouche, l'œsophage et l'estomac jusqu'au duodénum. Sous fluoroscopie, le Pr. Ait Errami identifie l'orifice de la papille de Vater, là où débouchent les canaux biliaire et pancréatique.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <strong>Cathétérisme et injection de contraste</strong>
+            <p>Un cathéter fin est introduit dans le canal biliaire. L'injection d'un produit de contraste rend les voies biliaires visibles en temps réel sur l'écran de radioscopie. Le médecin confirme le diagnostic et localise le problème précisément.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <strong>Geste thérapeutique</strong>
+            <p>Selon la pathologie : <em>sphinctérotomie</em> (section du sphincter pour libérer le passage), <em>extraction de calculs</em> avec ballon ou panier de Dormia, <em>dilatation</em> d'une sténose au ballon, ou <em>pose d'une prothèse biliaire</em> (stent plastique ou métallique).</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">7</div>
+          <div class="step-body">
+            <strong>Réveil et surveillance</strong>
+            <p>Après la procédure (20 à 90 min), vous êtes transféré en salle de réveil. Une surveillance de 2 à 6 heures est réalisée : surveillance du pouls, de la tension artérielle et des enzymes pancréatiques si nécessaire.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">8</div>
+          <div class="step-body">
+            <strong>Retour à domicile</strong>
+            <p>En l'absence de complication, le retour à domicile est possible le soir même ou le lendemain matin. Un accompagnant est obligatoire. Le Pr. Ait Errami vous donne des instructions de surveillance à domicile et les signes d'alerte à surveiller.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- === CPRE VS CHIRURGIE === -->
+  <section class="section container">
+    <h2>CPRE vs Chirurgie : pourquoi préférer l'endoscopie ?</h2>
+    <p>Avant la CPRE, les calculs du cholédoque et les sténoses biliaires étaient traités par chirurgie abdominale. La CPRE représente une avancée majeure pour les patients.</p>
+    <table class="compare-table" aria-label="Comparaison CPRE et chirurgie">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="th-cpre"><i class="fas fa-circle-dot"></i> CPRE (Endoscopie)</th>
+          <th class="th-chir"><i class="fas fa-scalpel"></i> Chirurgie abdominale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Incision</td>
+          <td class="td-cpre"><span class="ok">✓</span> Aucune incision — voie naturelle par la bouche</td>
+          <td class="td-chir"><span class="ko">✗</span> Incision abdominale (ouverte ou laparoscopique)</td>
+        </tr>
+        <tr>
+          <td>Durée de la procédure</td>
+          <td class="td-cpre"><span class="ok">✓</span> 20 à 90 minutes</td>
+          <td class="td-chir">1 à 3 heures</td>
+        </tr>
+        <tr>
+          <td>Hospitalisation</td>
+          <td class="td-cpre"><span class="ok">✓</span> Ambulatoire ou 1 nuit</td>
+          <td class="td-chir"><span class="ko">✗</span> 3 à 7 jours</td>
+        </tr>
+        <tr>
+          <td>Convalescence</td>
+          <td class="td-cpre"><span class="ok">✓</span> 24 à 48 heures</td>
+          <td class="td-chir"><span class="ko">✗</span> 2 à 6 semaines</td>
+        </tr>
+        <tr>
+          <td>Douleur post-procédure</td>
+          <td class="td-cpre"><span class="ok">✓</span> Légère gêne abdominale</td>
+          <td class="td-chir">Douleur de cicatrice, traitement antalgique prolongé</td>
+        </tr>
+        <tr>
+          <td>Reprise du travail</td>
+          <td class="td-cpre"><span class="ok">✓</span> 2 à 3 jours</td>
+          <td class="td-chir">3 à 6 semaines</td>
+        </tr>
+        <tr>
+          <td>Anesthésie</td>
+          <td class="td-cpre">Sédation ou AG légère</td>
+          <td class="td-chir">Anesthésie générale profonde</td>
+        </tr>
+        <tr>
+          <td>Résultat</td>
+          <td class="td-cpre"><span class="ok">✓</span> Définitif dans 95 % des cas</td>
+          <td class="td-chir">Définitif</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;font-size:0.85rem;color:var(--text-muted);">La CPRE ne remplace pas la cholécystectomie (ablation de la vésicule biliaire) lorsqu'elle est indiquée — les deux peuvent être réalisées lors de la même hospitalisation.</p>
+  </section>
+
+  <!-- === PREPARATION === -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Comment se préparer à la CPRE ?</h2>
+      <p>Une bonne préparation est essentielle pour le succès de la procédure et votre sécurité. Voici les instructions habituelles :</p>
+      <ul class="prep-checklist">
+        <li><i class="fas fa-ban"></i><div><strong>Jeûne strict de 6 heures</strong> avant la procédure — ni nourriture, ni boissons (sauf médicaments essentiels avec une toute petite gorgée d'eau).</div></li>
+        <li><i class="fas fa-vial"></i><div><strong>Bilan sanguin préalable</strong> : NFS, coagulation (TP, TCA), groupe sanguin, créatinine, bilan hépatique. À réaliser dans les 7 jours précédents.</div></li>
+        <li><i class="fas fa-pills"></i><div><strong>Anticoagulants et antiagrégants</strong> (Warfarine, Plavix, Aspégic…) : arrêt temporaire selon les instructions du Pr. Ait Errami. Ne jamais arrêter sans avis médical.</div></li>
+        <li><i class="fas fa-user-friends"></i><div><strong>Accompagnant obligatoire</strong> : une personne doit vous raccompagner à domicile après la procédure. Vous ne pouvez pas repartir seul ni conduire.</div></li>
+        <li><i class="fas fa-car-slash"></i><div><strong>Pas de conduite automobile</strong> le jour même de la procédure en raison de la sédation résiduelle.</div></li>
+        <li><i class="fas fa-tshirt"></i><div><strong>Vêtements confortables</strong> le jour J. Laissez bijoux et objets de valeur à la maison.</div></li>
+        <li><i class="fas fa-id-card"></i><div><strong>Documents à apporter</strong> : carte d'assurance maladie (CNOPS/CNSS/AMO), résultats du bilan sanguin, comptes-rendus d'imagerie récents (écho, IRM, scanner).</div></li>
+        <li><i class="fas fa-stethoscope"></i><div><strong>Signalez</strong> toute allergie connue, notamment aux produits iodés (produit de contraste).</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- === SUITES POST-CPRE === -->
+  <section class="section container">
+    <h2>Après la CPRE : que faut-il savoir ?</h2>
+    <div class="suites-grid">
+      <div class="suite-card">
+        <i class="fas fa-clock"></i>
+        <strong>Surveillance à l'hôpital</strong>
+        <p>2 à 6 heures en salle de réveil. Surveillance de la tension, du pouls et de la glycémie. Une prise de sang peut être effectuée 4 heures après pour vérifier les enzymes pancréatiques.</p>
+      </div>
+      <div class="suite-card">
+        <i class="fas fa-utensils"></i>
+        <strong>Reprise alimentaire</strong>
+        <p>Boissons puis alimentation légère progressivement. Évitez les repas gras, l'alcool et les aliments épicés pendant 48 heures. Alimentation normale dès J+1 en cas de suites simples.</p>
+      </div>
+      <div class="suite-card">
+        <i class="fas fa-home"></i>
+        <strong>Retour à domicile</strong>
+        <p>Possible le soir même ou le lendemain matin selon la complexité. Reprise des activités légères sous 24-48 heures. Évitez les efforts physiques intenses pendant 5 jours.</p>
+      </div>
+      <div class="suite-card">
+        <i class="fas fa-exclamation-triangle"></i>
+        <strong>Signes d'alerte — consultez en urgence</strong>
+        <p>Fièvre &gt; 38°C, douleurs abdominales intenses et persistantes, nausées/vomissements sévères, jaunisse croissante, saignements : consultez en urgence ou appelez le +212 663 627 258.</p>
+      </div>
+      <div class="suite-card">
+        <i class="fas fa-calendar-check"></i>
+        <strong>Suivi post-CPRE</strong>
+        <p>Une consultation de contrôle est programmée 2 à 4 semaines après la procédure. Des examens complémentaires peuvent être demandés (bilan hépatique, échographie).</p>
+      </div>
+      <div class="suite-card">
+        <i class="fas fa-capsules"></i>
+        <strong>Traitements à domicile</strong>
+        <p>Un traitement antispasmodique et/ou antidouleur léger peut être prescrit. Reprenez vos anticoagulants selon les instructions du médecin. Ne prenez aucun AINS (ibuprofène) sans avis médical.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === RISQUES === -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Risques et complications — ce qu'il faut savoir</h2>
+      <p>La CPRE est une procédure sûre lorsqu'elle est réalisée par un opérateur expérimenté. Comme toute intervention médicale invasive, elle comporte cependant un risque de complications. Le Pr. Ait Errami vous les expliquera lors de la consultation pré-CPRE :</p>
+      <ul class="risk-list">
+        <li><span class="risk-common"><strong>Pancréatite post-CPRE</strong> (3–5 %) :</span> inflammation du pancréas, le plus souvent bénigne et résolutive avec un traitement médical de quelques jours.</li>
+        <li><span class="risk-common"><strong>Saignement après sphinctérotomie</strong> (1–2 %) :</span> habituellement léger et contrôlé par voie endoscopique dans le même temps.</li>
+        <li><span class="risk-rare"><strong>Cholangite (infection biliaire)</strong> (&lt;1 %) :</span> traitable par antibiotiques et drainage biliaire.</li>
+        <li><span class="risk-rare"><strong>Perforation duodénale</strong> (&lt;0,5 %) :</span> rare, peut nécessiter une prise en charge chirurgicale.</li>
+        <li><span class="risk-rare"><strong>Réaction à l'anesthésie ou au produit de contraste</strong> :</span> très rare, évaluée lors de la consultation pré-anesthésique.</li>
+      </ul>
+      <div class="highlight" style="margin-top:18px;">
+        <strong>Important :</strong> Le risque de ne pas traiter la pathologie biliaire (calculs bloqués, sténose) est généralement supérieur au risque de la CPRE. La décision est toujours prise après évaluation personnalisée du rapport bénéfice/risque par le Pr. Ait Errami.
+      </div>
+    </div>
+  </section>
+
+  <!-- === EXPERT === -->
+  <section class="section container">
+    <h2>L'expert CPRE à Marrakech</h2>
+    <div class="doc-card">
+      <img src="photo.jpg" alt="Pr. Adil Ait Errami expert CPRE Marrakech CHU Mohammed VI" loading="lazy" width="130" height="130" />
+      <div class="doc-info">
+        <h3>Pr. Adil Ait Errami</h3>
+        <p>Gastroentérologue – Hépatologue – Professeur Universitaire<br>
+        Responsable de l'Unité d'Endoscopie Digestive<br>
+        CHU Mohammed VI de Marrakech · Faculté de Médecine, Université Cadi Ayyad</p>
+      </div>
+    </div>
+    <p>Le Pr. Adil Ait Errami est le référent en CPRE au <strong>CHU Mohammed VI de Marrakech</strong>. Il a reçu une formation spécialisée en CPRE au <strong>CHU El Kasr El Ayni du Caire</strong> et dans des centres de référence européens (EAGE). Il réalise des centaines de CPRE par an, aussi bien dans leur indication de base (calculs cholédociens) que dans des indications complexes (sténoses malignes, prothèses biliaires, CPRE pré-chirurgicale).</p>
+    <p>Sa maîtrise de l'<strong>écho-endoscopie</strong> complémentaire lui permet de réaliser en une même journée le bilan diagnostique et le traitement endoscopique — un gain précieux pour le patient.</p>
+    <ul style="margin-top:12px;">
+      <li>Formation CPRE au <strong>CHU El Kasr El Ayni, Le Caire</strong></li>
+      <li>Membre du groupe des Jeunes Endoscopistes de l'<strong>EAGE</strong> (Association Européenne de Gastroentérologie)</li>
+      <li>Formation interventionnelle au <strong>CHU Izmir (Turquie)</strong>, 2023 et <strong>Midas Hospital (Inde)</strong>, 2024</li>
+      <li>Auteur de publications scientifiques sur la CPRE et l'écho-endoscopie</li>
+    </ul>
+  </section>
+
+  <!-- === FAQ === -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="proc-faq">
+        <h2>Questions fréquentes sur la CPRE</h2>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">La CPRE est-elle douloureuse ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">Non. La CPRE est réalisée sous anesthésie générale ou sédation profonde — vous ne ressentez rien et ne vous souviendrez pas de la procédure. Après le réveil, une légère gêne abdominale ou des ballonnements peuvent persister quelques heures, puis disparaissent rapidement.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">Combien de temps dure une CPRE à Marrakech ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">La procédure elle-même dure de 20 à 90 minutes selon la complexité (extraction de calculs simples versus prothèse biliaire pour sténose maligne). La durée totale de la journée, incluant la préparation anesthésique et la surveillance post-procédure, est généralement de 4 à 6 heures.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">Peut-on extraire les calculs biliaires sans chirurgie à Marrakech ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">Oui, absolument. La CPRE réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech extrait les calculs du canal cholédoque par voie endoscopique, sans aucune incision. Dans 95 % des cas, une seule séance suffit pour libérer définitivement les voies biliaires.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">La CPRE est-elle remboursée au Maroc ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">La CPRE au CHU Mohammed VI de Marrakech est prise en charge par les assurances maladie obligatoires marocaines (CNOPS, CNSS/AMO). En clinique privée, une prise en charge partielle est possible selon votre assurance complémentaire. Contactez le service d'admission du CHU pour connaître les modalités exactes.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">Quels sont les risques de la CPRE ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">La CPRE est sûre entre des mains expertes. La principale complication est la pancréatite post-CPRE (3-5%), généralement bénigne. Les saignements (1-2%) sont habituellement contrôlés sur place. Les complications graves (perforation, cholangite sévère) sont rares (&lt;1%). Chaque patient bénéficie d'une surveillance post-procédure dédiée.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">Quelle est la différence entre CPRE et écho-endoscopie ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">L'écho-endoscopie (EUS) est un examen diagnostique : elle visualise les voies biliaires et le pancréas par ultrasons depuis l'intérieur du tube digestif. La CPRE est un geste thérapeutique : elle intervient directement pour extraire des calculs, dilater une sténose ou poser une prothèse. Les deux sont souvent complémentaires : l'EUS confirme le diagnostic, puis la CPRE traite.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">Comment se préparer à une CPRE ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">Les principales consignes : jeûne strict de 6 heures, bilan sanguin récent (NFS, coagulation, groupe sanguin), arrêt temporaire des anticoagulants selon avis médical, accompagnant obligatoire, pas de conduite le jour même. Le Pr. Ait Errami vous remettra une ordonnance de préparation complète lors de la consultation.</div>
+        </div>
+        <div class="proc-faq-item">
+          <button class="proc-faq-q">Que peut-on manger après une CPRE ?<span class="arrow">&#9660;</span></button>
+          <div class="proc-faq-a">Les premières heures : uniquement des liquides. Puis alimentation légère progressivement (soupe, riz, pâtes). Évitez les aliments gras, frits, l'alcool et les repas copieux pendant 48 heures. Alimentation normale possible dès le lendemain si les suites sont simples.</div>
+        </div>
+        <div class="share-bar">
+          <span>Partager cette page :</span>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Fcpre" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="https://wa.me/?text=CPRE%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Fcpre" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === AUTRES PROCEDURES === -->
   <section class="section container">
     <h2>Autres procédures endoscopiques</h2>
     <div class="related">
       <a href="/echo-endoscopie" class="related-card">
         <span class="tag">EUS</span>
-        <h4>Écho-endoscopie Thérapeutique</h4>
+        <h4>Écho-endoscopie — Bilan pancréas &amp; voies biliaires</h4>
       </a>
       <a href="/colonoscopie" class="related-card">
         <span class="tag">Coloscopie</span>
-        <h4>Coloscopie diagnostique & thérapeutique</h4>
+        <h4>Coloscopie diagnostique &amp; thérapeutique</h4>
       </a>
       <a href="/fibroscan" class="related-card">
         <span class="tag">Hépatologie</span>
-        <h4>FibroScan® – Élastographie hépatique</h4>
+        <h4>FibroScan® – Fibrose hépatique sans biopsie</h4>
       </a>
-      <a href="/" class="related-card">
-        <span class="tag">Site complet</span>
-        <h4>Toutes les spécialités du Pr. Ait Errami</h4>
+      <a href="/gastroenterologue-marrakech" class="related-card">
+        <span class="tag">Toutes spécialités</span>
+        <h4>Pr. Adil Ait Errami — Gastroentérologue Marrakech</h4>
       </a>
-    </div>
-
-    <div class="proc-faq">
-      <h2>Questions fréquentes sur la CPRE</h2>
-      <div class="proc-faq-item">
-        <button class="proc-faq-q">La CPRE est-elle douloureuse ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">La CPRE est réalisée sous anesthésie générale ou sédation profonde, elle est donc totalement indolore pendant l'examen. Après la procédure, une légère gêne abdominale peut persister quelques heures. Le patient est surveillé en salle de réveil puis peut rentrer le même jour ou le lendemain.</div>
-      </div>
-      <div class="proc-faq-item">
-        <button class="proc-faq-q">Combien de temps dure une CPRE à Marrakech ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">La CPRE dure entre 30 minutes et 1h30 selon la complexité de l'acte (simple sphinctérotomie, extraction de calculs multiples, pose de prothèse biliaire). La durée totale de la journée, incluant la préparation et la surveillance post-procédure, est généralement de 4 à 6 heures.</div>
-      </div>
-      <div class="proc-faq-item">
-        <button class="proc-faq-q">Peut-on extraire les calculs biliaires sans chirurgie à Marrakech ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">Oui. La CPRE réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech permet d'extraire les calculs du cholédoque sans chirurgie, par voie endoscopique. Cette technique évite une opération abdominale et permet un retour rapide à domicile.</div>
-      </div>
-      <div class="proc-faq-item">
-        <button class="proc-faq-q">Quelle est la différence entre CPRE et écho-endoscopie ?<span class="arrow">&#9660;</span></button>
-        <div class="proc-faq-a">L'écho-endoscopie (EUS) est un examen diagnostique qui visualise les voies biliaires et le pancréas par ultrasons. La CPRE est une procédure thérapeutique qui permet d'intervenir directement sur les voies biliaires. Ces deux techniques sont souvent complémentaires.</div>
-      </div>
-      <div class="share-bar">
-        <span>Partager cette page :</span>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Fcpre" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://wa.me/?text=CPRE%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Fcpre" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
     </div>
   </section>
+
 </main>
 
 <section class="cta-section">
-  <h2>Prendre rendez-vous pour une CPRE</h2>
-  <p>CHU Mohammed VI de Marrakech · Clinique Privée · Tél. +212 663 627 258</p>
+  <h2>Prendre rendez-vous pour une CPRE à Marrakech</h2>
+  <p>CHU Mohammed VI de Marrakech · Clinique Privée · Lun–Ven · +212 663 627 258</p>
   <div class="cta-btns">
     <a href="tel:+212663627258" class="btn btn-white"><i class="fas fa-phone-alt"></i> Appeler maintenant</a>
     <a href="https://wa.me/212663627258?text=Bonjour%20Pr.%20Ait%20Errami%2C%20je%20souhaite%20un%20rendez-vous%20pour%20une%20CPRE." class="btn btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -216,9 +574,10 @@
 </section>
 
 <footer class="footer">
-  <p>© 2026 <a href="/">Pr. Adil Ait Errami</a> — Gastroentérologue · Professeur Universitaire · Marrakech</p>
+  <p>© 2026 <a href="/">Pr. Adil Ait Errami</a> — Gastroentérologue · Hépatologue · Professeur Universitaire · Marrakech</p>
   <div class="footer-links">
     <a href="/">Accueil</a>
+    <a href="/gastroenterologue-marrakech">Gastroentérologue Marrakech</a>
     <a href="/colonoscopie">Coloscopie</a>
     <a href="/fibroscan">FibroScan</a>
     <a href="/echo-endoscopie">Écho-endoscopie</a>
