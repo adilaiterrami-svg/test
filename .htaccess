@@ -9,6 +9,12 @@
   # Forcer www.
   RewriteCond %{HTTP_HOST} ^draiterrami\.com [NC]
   RewriteRule ^(.*)$ https://www.draiterrami.com/$1 [L,R=301]
+
+  # URLs propres sans extension .html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([^.]+)$ $1.html [L]
 </IfModule>
 
 # ===== Types MIME =====
