@@ -41,6 +41,46 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "La CPRE est-elle douloureuse ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La CPRE est réalisée sous anesthésie générale ou sédation profonde, elle est donc totalement indolore pendant l'examen. Après la procédure, une légère gêne abdominale peut persister quelques heures. Le patient est surveillé en salle de réveil puis peut rentrer le même jour ou le lendemain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps dure une CPRE à Marrakech ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La CPRE dure entre 30 minutes et 1h30 selon la complexité de l'acte (simple sphinctérotomie, extraction de calculs multiples, pose de prothèse biliaire). La durée totale de la journée, incluant la préparation et la surveillance post-procédure, est généralement de 4 à 6 heures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on extraire les calculs biliaires sans chirurgie à Marrakech ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. La CPRE réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech permet d'extraire les calculs du cholédoque (calculs biliaires) sans chirurgie, par voie endoscopique. Cette technique évite une opération abdominale et permet un retour rapide à domicile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la différence entre CPRE et écho-endoscopie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'écho-endoscopie (EUS) est un examen diagnostique qui visualise les voies biliaires et le pancréas par ultrasons. La CPRE est une procédure thérapeutique qui permet d'intervenir directement sur les voies biliaires (extraction de calculs, pose de prothèse, sphinctérotomie). Ces deux techniques sont souvent complémentaires."
+        }
+      }
+    ]
+  }
+  </script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7P9F37FCC5"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7P9F37FCC5',{anonymize_ip:true});</script>
@@ -138,6 +178,31 @@
         <h4>Toutes les spécialités du Pr. Ait Errami</h4>
       </a>
     </div>
+
+    <div class="proc-faq">
+      <h2>Questions fréquentes sur la CPRE</h2>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">La CPRE est-elle douloureuse ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La CPRE est réalisée sous anesthésie générale ou sédation profonde, elle est donc totalement indolore pendant l'examen. Après la procédure, une légère gêne abdominale peut persister quelques heures. Le patient est surveillé en salle de réveil puis peut rentrer le même jour ou le lendemain.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Combien de temps dure une CPRE à Marrakech ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La CPRE dure entre 30 minutes et 1h30 selon la complexité de l'acte (simple sphinctérotomie, extraction de calculs multiples, pose de prothèse biliaire). La durée totale de la journée, incluant la préparation et la surveillance post-procédure, est généralement de 4 à 6 heures.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Peut-on extraire les calculs biliaires sans chirurgie à Marrakech ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Oui. La CPRE réalisée par le Pr. Adil Ait Errami au CHU Mohammed VI de Marrakech permet d'extraire les calculs du cholédoque sans chirurgie, par voie endoscopique. Cette technique évite une opération abdominale et permet un retour rapide à domicile.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Quelle est la différence entre CPRE et écho-endoscopie ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">L'écho-endoscopie (EUS) est un examen diagnostique qui visualise les voies biliaires et le pancréas par ultrasons. La CPRE est une procédure thérapeutique qui permet d'intervenir directement sur les voies biliaires. Ces deux techniques sont souvent complémentaires.</div>
+      </div>
+      <div class="share-bar">
+        <span>Partager cette page :</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Fcpre" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://wa.me/?text=CPRE%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Fcpre" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -161,5 +226,10 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.proc-faq-q').forEach(btn => {
+  btn.addEventListener('click', () => btn.closest('.proc-faq-item').classList.toggle('open'));
+});
+</script>
 </body>
 </html>

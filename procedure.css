@@ -83,6 +83,25 @@ a:hover { text-decoration: underline; }
 .related-card .tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: 8px; display: block; }
 .related-card h4 { font-size: 0.95rem; color: var(--primary); font-weight: 700; }
 
+/* FAQ Section */
+.proc-faq { margin-top: 40px; }
+.proc-faq h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--primary); margin-bottom: 20px; }
+.proc-faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; }
+.proc-faq-q { width: 100%; background: var(--surface); border: none; padding: 16px 20px; text-align: left; font-size: 0.97rem; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.proc-faq-q:hover { background: #f0f5ff; }
+.proc-faq-q .arrow { color: var(--primary); font-size: 0.75rem; transition: transform 0.2s; flex-shrink: 0; }
+.proc-faq-item.open .proc-faq-q { background: #eef4ff; color: var(--primary); }
+.proc-faq-item.open .arrow { transform: rotate(180deg); }
+.proc-faq-a { display: none; padding: 14px 20px 16px; background: #fafcff; font-size: 0.93rem; color: #2d3748; border-top: 1px solid var(--border); }
+.proc-faq-item.open .proc-faq-a { display: block; }
+
+/* Social Share Bar */
+.share-bar { display: flex; align-items: center; gap: 10px; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.88rem; color: var(--text-muted); flex-wrap: wrap; }
+.share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 6px; font-size: 0.84rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+.share-btn:hover { opacity: 0.85; text-decoration: none; }
+.share-fb { background: #1877f2; color: #fff; }
+.share-wa { background: #25d366; color: #fff; }
+
 @media (max-width: 600px) {
   .doc-card { flex-direction: column; text-align: center; }
   .topbar { justify-content: center; }

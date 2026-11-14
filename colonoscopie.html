@@ -39,6 +39,46 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "À partir de quel âge faut-il faire une coloscopie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le dépistage du cancer colorectal par coloscopie est recommandé à partir de 50 ans pour les personnes sans facteur de risque particulier. En cas d'antécédent familial de cancer colorectal ou de polypes, la coloscopie est recommandée dès 40 ans ou 10 ans avant l'âge du diagnostic familial. Votre gastroentérologue évalue votre situation personnelle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La coloscopie est-elle douloureuse ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La coloscopie est réalisée sous sédation consciente ou anesthésie générale, selon le cas. Elle est donc indolore pendant l'examen. Une légère distension abdominale peut être ressentie après la procédure et disparaît en quelques heures. Le Pr. Adil Ait Errami adapte la sédation à chaque patient pour un maximum de confort."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on enlever les polypes pendant la coloscopie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. La coloscopie thérapeutique permet d'enlever (exérèse) les polypes découverts lors de l'examen, dans le même temps. Cette procédure s'appelle la polypectomie. Pour les polypes plus complexes, la technique EMR (mucosectomie) ou ESD est utilisée. Cela évite une chirurgie abdominale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment se préparer à une coloscopie à Marrakech ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La préparation à la coloscopie comprend un régime sans résidus pendant 3 jours avant l'examen, puis l'ingestion d'une solution laxative la veille ou le matin de l'examen. Cette préparation est indispensable pour nettoyer le côlon et permettre une exploration complète. Le Pr. Adil Ait Errami vous remettra des instructions détaillées lors de la consultation."
+        }
+      }
+    ]
+  }
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7P9F37FCC5"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7P9F37FCC5',{anonymize_ip:true});</script>
 </head>
@@ -146,6 +186,33 @@
       </a>
     </div>
   </section>
+
+  <section class="section container">
+    <div class="proc-faq">
+      <h2>Questions fréquentes sur la coloscopie</h2>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">À partir de quel âge faut-il faire une coloscopie ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Le dépistage du cancer colorectal par coloscopie est recommandé à partir de 50 ans pour les personnes sans facteur de risque particulier. En cas d'antécédent familial, la coloscopie est recommandée dès 40 ans ou 10 ans avant l'âge du diagnostic familial.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">La coloscopie est-elle douloureuse ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La coloscopie est réalisée sous sédation consciente ou anesthésie générale, elle est donc indolore pendant l'examen. Une légère distension abdominale peut être ressentie après la procédure et disparaît en quelques heures.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Peut-on enlever les polypes pendant la coloscopie ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Oui. La coloscopie thérapeutique permet d'enlever les polypes découverts lors de l'examen dans le même temps (polypectomie). Pour les polypes complexes, la technique EMR (mucosectomie) est utilisée. Cela évite une chirurgie abdominale.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Comment se préparer à une coloscopie à Marrakech ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">La préparation comprend un régime sans résidus pendant 3 jours, puis l'ingestion d'une solution laxative la veille ou le matin de l'examen. Le Pr. Adil Ait Errami vous remettra des instructions détaillées lors de la consultation.</div>
+      </div>
+      <div class="share-bar">
+        <span>Partager cette page :</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Fcoloscopie" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://wa.me/?text=Coloscopie%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Fcoloscopie" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <section class="cta-section">
@@ -168,5 +235,10 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.proc-faq-q').forEach(btn => {
+  btn.addEventListener('click', () => btn.closest('.proc-faq-item').classList.toggle('open'));
+});
+</script>
 </body>
 </html>

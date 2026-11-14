@@ -40,6 +40,46 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Le FibroScan remplace-t-il la biopsie du foie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dans la majorité des cas, oui. Le FibroScan permet d'évaluer la fibrose hépatique de manière non invasive et remplace la biopsie hépatique pour le suivi des hépatites B et C, de la NASH et de la cirrhose. La biopsie peut rester nécessaire dans certains cas complexes ou lorsque le FibroScan donne des résultats non interprétables."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps dure un FibroScan à Marrakech ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un FibroScan dure environ 10 à 15 minutes. L'examen est totalement indolore et ne nécessite aucune préparation particulière, sauf d'être à jeun depuis au moins 2 heures pour de meilleurs résultats. Les résultats sont disponibles immédiatement après l'examen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle différence entre FibroScan et échographie hépatique ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'échographie hépatique visualise la morphologie du foie (taille, contours, lésions), mais ne mesure pas la fibrose. Le FibroScan mesure précisément la rigidité du foie par ondes élastiques (en kPa), ce qui correspond au degré de fibrose. Ces deux examens sont complémentaires et souvent réalisés ensemble lors du bilan hépatique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dans quels cas le médecin prescrit-il un FibroScan ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le FibroScan est prescrit pour évaluer la fibrose hépatique dans l'hépatite chronique B ou C, la NASH (stéatohépatite non alcoolique), la cirrhose alcoolique, ou toute maladie chronique du foie. Il est aussi utilisé pour le suivi après traitement d'une hépatite virale. Le Pr. Adil Ait Errami réalise cet examen au CHU Mohammed VI et en clinique privée à Marrakech."
+        }
+      }
+    ]
+  }
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7P9F37FCC5"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7P9F37FCC5',{anonymize_ip:true});</script>
 </head>
@@ -150,6 +190,33 @@
   </section>
 </main>
 
+  <section class="section container">
+    <div class="proc-faq">
+      <h2>Questions fréquentes sur le FibroScan</h2>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Le FibroScan remplace-t-il la biopsie du foie ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Dans la majorité des cas, oui. Le FibroScan permet d'évaluer la fibrose hépatique de manière non invasive et remplace la biopsie pour le suivi des hépatites B et C, de la NASH et de la cirrhose. La biopsie peut rester nécessaire dans certains cas complexes.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Combien de temps dure un FibroScan à Marrakech ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Un FibroScan dure environ 10 à 15 minutes. L'examen est totalement indolore et ne nécessite aucune préparation particulière, sauf d'être à jeun depuis au moins 2 heures. Les résultats sont disponibles immédiatement après l'examen.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Quelle différence entre FibroScan et échographie hépatique ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">L'échographie visualise la morphologie du foie mais ne mesure pas la fibrose. Le FibroScan mesure précisément la rigidité du foie par ondes élastiques (en kPa), ce qui correspond au degré de fibrose. Ces deux examens sont complémentaires.</div>
+      </div>
+      <div class="proc-faq-item">
+        <button class="proc-faq-q">Dans quels cas le médecin prescrit-il un FibroScan ?<span class="arrow">&#9660;</span></button>
+        <div class="proc-faq-a">Le FibroScan est prescrit pour évaluer la fibrose dans l'hépatite chronique B ou C, la NASH, la cirrhose alcoolique, ou toute maladie chronique du foie. Il est aussi utilisé pour le suivi après traitement d'une hépatite virale.</div>
+      </div>
+      <div class="share-bar">
+        <span>Partager cette page :</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.draiterrami.com%2Ffibroscan" target="_blank" rel="noopener" class="share-btn share-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://wa.me/?text=FibroScan%20%C3%A0%20Marrakech%20par%20le%20Pr.%20Adil%20Ait%20Errami%20%E2%80%94%20https%3A%2F%2Fwww.draiterrami.com%2Ffibroscan" target="_blank" rel="noopener" class="share-btn share-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
 <section class="cta-section">
   <h2>Prendre rendez-vous pour un FibroScan</h2>
   <p>CHU Mohammed VI de Marrakech · Clinique Privée · Tél. +212 663 627 258</p>
@@ -170,5 +237,10 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.proc-faq-q').forEach(btn => {
+  btn.addEventListener('click', () => btn.closest('.proc-faq-item').classList.toggle('open'));
+});
+</script>
 </body>
 </html>
